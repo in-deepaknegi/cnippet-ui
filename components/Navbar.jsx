@@ -60,7 +60,7 @@ const Navbar = () => {
                 <div className="flex items-center justify-between border-b border-gray-100 bg-white px-6 py-4 lg:px-8">
                     <div className="flex lg:flex-none">
                         <a href="/" className="-m-1.5 p-1.5 text-2xl text-black">
-                            Cnippet <span className="text-base">Ui.</span>
+                            Cnippet <span className="text-base">Blog.</span>
                         </a>
                     </div>
                     <div className="flex lg:hidden">

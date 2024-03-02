@@ -1,21 +1,26 @@
 ```tsx
-import Navbar from '@/components/Navbar'
-import Footer from '@/components/Footer'
-import Hero from '@/components/routes/home/Hero'
-import Components from '@/components/routes/home/Component'
-import Pricing from '@/components/routes/home/Pricing'
-
-export default function Home() {
-  return (
-    <>
-      <Navbar />
-      <main>
-        <Hero />
-        <Components />
-        <Pricing/>
-      </main>
-      <Footer />
-    </>
-  );
+const Navbar = () => {
+    return (
+        <header className="relative isolate bg-white overflow-hidden">
+            <nav className="flex items-center justify-between px-6 py-5 lg:px-8">
+                <div className="flex">
+                    <Link href="/" className="-m-1.5 p-1.5 text-2xl">
+                        Cnippet <span className="text-sm">Ui.</span>
+                    </Link>
+                </div>
+                <div className="hidden lg:flex lg:gap-x-12">
+                    {links.map((link) => (
+                        <Link
+                            key={link.id}
+                            href={link.url}
+                            className="text-sm font-semibold leading-6 text-gray-800 hover:text-gray-950"
+                        >
+                            {link.title}
+                        </Link>
+                    ))}
+                </div>
+            </nav>
+        </header>
+    )
 }
 ```

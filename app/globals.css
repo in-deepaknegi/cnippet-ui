@@ -7,7 +7,12 @@
     overflow-x: auto;
     padding: 1rem 0;
     background-color: black;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .gradient-cool {
+    background: url('/gradient/g0.jpg');
+    background-size: 100%;
   }
 }

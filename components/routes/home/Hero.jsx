@@ -1,21 +1,12 @@
 import React from "react";
-import Image from "next/image";
-import Hero1 from "@/public/gradient.webp";
+import Button from '@/components/ui/Button';
 
 const Hero = () => {
     return (
         <section className="relative isolate overflow-hidden">
-            <Image
-                src={Hero1}
-                alt="hero-image"
-                priority={true}
-                className="absolute inset-0 z-[-10] h-full w-full rotate-180 object-cover"
-            />
-            <div className="absolute z-[-9] h-full w-full bg-gradient-to-b from-black/10 via-black/30 to-black"></div>
-
-            <div className="mx-auto max-w-4xl px-6 py-16 lg:px-0 lg:py-32">
-                <div className="hidden sm:mb-8 sm:flex">
-                    <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-200 ring-1 ring-gray-100/10 hover:ring-gray-100">
+            <div className="mx-auto max-w-4xl px-6 py-16 lg:px-0 lg:py-24">
+                <div className="hidden sm:mb-8 sm:flex justify-center">
+                    <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-dusk-800 ring-1 ring-gray-900/30 hover:ring-gray-300">
                         Announcing our next round of funding.{" "}
                         <a href="#" className="font-semibold text-indigo-600">
                             <span className="absolute inset-0" aria-hidden="true"></span>Read
@@ -23,24 +14,20 @@ const Hero = () => {
                         </a>
                     </div>
                 </div>
-                <h1 className="text-left text-5xl font-semibold text-white md:text-6xl">
+                <h1 className="gradient-cool text-center text-5xl font-semibold md:text-6xl inline-block text-transparent bg-clip-text">
                     Boost your creativity with our advanced tools and resources.
                 </h1>
-                <p className="mt-6 text-left text-base font-light text-gray-100 md:text-lg">
+                <p className="mt-6 text-center text-base font-light text-dusk-500 md:text-lg">
                     Exquisitely designed and skillfully crafted elements and templates
                     that are ideal for initiating your upcoming project and ensuring a
                     professional and polished result.
                 </p>
-                <div className="mt-10 flex gap-x-6">
+                <div className="mt-10 flex flex-col items-center sm:gap-y-0 gap-y-4 sm:flex-row gap-x-6 justify-center">
+                    <Button text="Get Started" url={"#"} />
+                    
                     <a
                         href="#"
-                        className="rounded-md bg-black px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-                    >
-                        Get Started
-                    </a>
-                    <a
-                        href="#"
-                        className="my-auto text-sm font-semibold leading-6 text-gray-300"
+                        className="my-auto text-sm font-semibold leading-6 text-dusk-700"
                     >
                         Read more <span aria-hidden="true">→</span>
                     </a>
