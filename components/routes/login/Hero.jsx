@@ -16,10 +16,6 @@ const Hero = () => {
         setLoading(true);
 
         await signIn("google");
-
-        setTimeout(() => {
-            setLoading(false);
-        }, 1500);
     }
 
     useEffect(() => {
@@ -123,7 +119,7 @@ const Hero = () => {
                         Don&apos;t have an account?
                     </p>
                     <a
-                        className="inline-flex justify-center rounded-lg px-4 py-2.5 text-sm text-slate-900 ring-1 ring-slate-900/10 hover:ring-slate-900/20"
+                        className="items-center inline-flex justify-center rounded-lg px-4 py-2.5 text-sm text-slate-900 ring-1 ring-slate-900/10 hover:ring-slate-900/20"
                         href="/signup"
                     >
                         <span>
