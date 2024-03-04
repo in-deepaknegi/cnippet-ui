@@ -1,5 +1,6 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { signIn, signOut, useSession } from "next-auth/react";
 
 const links = [
     {
@@ -30,6 +31,15 @@ const Navbar = () => {
     const toggleMobileMenu = () => {
         setMobileMenu(!mobilemenu);
     };
+    const { status, data: session } = useSession();
+
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        setTimeout(() => {
+            setLoading(false);
+        }, 1500);
+    });
 
     return (
         <header className="relative z-10 overflow-hidden">
@@ -46,13 +56,36 @@ const Navbar = () => {
                             </a>
                         </div>
                         <div className="flex lg:flex-1 ml-auto lg:items-center lg:justify-end lg:gap-2">
-                            <a href="/login" className="text-sm text-gray-100">
-                                Sign In
-                            </a>
-                            <span className="mx-2 h-4 w-[1px] bg-gray-200"></span>
-                            <a href="/signup" className="text-sm text-gray-100">
-                                Create an account
-                            </a>
+                            {loading ? (
+                                <span className="ldr mb-4 mr-20"></span>
+                            ) : (
+                                <>
+                                    {status === "authenticated" ? (
+                                        <>
+                                            <span className="text-sm text-gray-100">
+                                                Welcome {session.user.name}
+                                            </span>
+                                            <span className="mx-2 h-4 w-[1px] bg-gray-200"></span>
+                                            <button
+                                                onClick={() => signOut()}
+                                                className="text-sm text-gray-100"
+                                            >
+                                                Sign Out
+                                            </button>
+                                        </>
+                                    ) : (
+                                        <>
+                                            <a href="/login" className="text-sm text-gray-100">
+                                                Sign In
+                                            </a>
+                                            <span className="mx-2 h-4 w-[1px] bg-gray-200"></span>
+                                            <a href="/signup" className="text-sm text-gray-100">
+                                                Create an account
+                                            </a>
+                                        </>
+                                    )}
+                                </>
+                            )}
                         </div>
                     </div>
                 </div>
@@ -60,7 +93,7 @@ const Navbar = () => {
                 <div className="flex items-center justify-between border-b border-gray-100 bg-white px-6 py-4 lg:px-8">
                     <div className="flex lg:flex-none">
                         <a href="/" className="-m-1.5 p-1.5 text-2xl text-black">
-                            Cnippet <span className="text-base">Blog.</span>
+                            Cnippet <span className="text-base">Ui.</span>
                         </a>
                     </div>
                     <div className="flex lg:hidden">
