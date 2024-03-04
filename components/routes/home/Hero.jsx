@@ -14,7 +14,7 @@ const Hero = () => {
                         </a>
                     </div>
                 </div>
-                <h1 className=" bg-gradient-to-br from-rose-600 via-purple-950 to-teal-500 text-center text-5xl font-semibold md:text-6xl inline-block text-transparent bg-clip-text">
+                <h1 className="bg-gradient-to-br from-rose-600 via-purple-950 to-teal-500 text-center text-5xl font-semibold md:text-6xl inline-block text-transparent bg-clip-text">
                     Boost your creativity with our advanced tools and resources.
                 </h1>
                 <p className="mt-6 text-center text-base text-dusk-700 md:text-lg">

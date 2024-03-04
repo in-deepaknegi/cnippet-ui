@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { signIn, signOut, useSession } from "next-auth/react";
 import Image from "next/image";
 
@@ -32,6 +32,8 @@ const Navbar = () => {
     const [loading, setLoading] = useState(true);
     const [profile, setProfile] = useState(false);
 
+    const sectionRef = useRef(null);
+
     const toggleMobileMenu = () => {
         setMobileMenu(!mobilemenu);
     };
@@ -39,10 +41,22 @@ const Navbar = () => {
         setProfile(!profile);
     }
 
+    const clickOutside = (e) => {
+        if (sectionRef.current && !sectionRef.current.contains(e.target)) {
+            setProfile(false);
+        }
+    }
+
     useEffect(() => {
         setTimeout(() => {
             setLoading(false);
         }, 1500);
+
+        document.addEventListener('click', clickOutside);
+
+        return () => {
+            document.removeEventListener('click', clickOutside)
+        }
     });
 
     return (
@@ -70,13 +84,6 @@ const Navbar = () => {
                                             <span className="text-sm text-gray-100">
                                                 Welcome {session.user.name}
                                             </span>
-                                            <span className="mx-2 h-4 w-[1px] bg-gray-200"></span>
-                                            <button
-                                                onClick={() => signOut()}
-                                                className="text-sm text-gray-100"
-                                            >
-                                                Sign Out
-                                            </button>
                                         </>
                                     ) : (
                                         <>
@@ -96,7 +103,7 @@ const Navbar = () => {
                 </div>
             </nav>
 
-            <header className="">
+            <header className="sticky top-0 bg-white z-20">
                 <div className="flex items-center justify-between border-b border-gray-100 bg-white px-6 py-4 lg:px-8">
                     <div className="flex lg:flex-none">
                         <a href="/" className="-m-1.5 p-1.5 text-2xl text-black">
@@ -167,7 +174,8 @@ const Navbar = () => {
                         <a href="#" className='text-gray-700'>Help</a>
                         <span className='h-5 w-[1px] bg-gray-500'></span> */}
                         <button
-                            onClick={toggleProfile}>
+                            onClick={toggleProfile}
+                            ref={sectionRef}>
                             <span className="sr-only">profile</span>
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
@@ -187,7 +195,7 @@ const Navbar = () => {
                         </button>
 
                         {profile && (
-                            <div className="absolute top-16 right-7 mt-8 px-6 py-3 w-56 bg-white border rounded-lg shadow-xl">
+                            <div className="absolute top-6 z-50 right-7 mt-8 px-6 py-3 w-56 bg-white border rounded-lg shadow-xl">
                                 {status === 'authenticated' ? (
                                     <div className="relative isolate inset-0" >
                                         <div className="flex flex-col justify-center items-center space-y-2">
@@ -205,17 +213,29 @@ const Navbar = () => {
                                                 {session.user.email}
                                             </span>
                                         </div>
-                                        {/* <ul className="mt-3 gap-y-2 flex flex-col text-sm cursor-pointer text-gray-600">
-                                            <li className=" border-l-2 pl-3">
+                                        <ul className="mt-3 gap-y-2 flex flex-col text-sm cursor-pointer text-gray-600">
+                                            <li className="border-l-2 pl-3 hover:border-gray-600 hover:text-black">
                                                 <a href="#">
                                                     Account
                                                 </a>
                                             </li>
-                                            <li className=" border-l-2 pl-3 ">Sign Out</li>
-                                        </ul> */}
+                                            <li className="border-l-2 pl-3 hover:border-gray-600 hover:text-black">
+                                                <a href="#" onClick={() => signOut()}>
+                                                    Sign Out
+                                                </a>
+                                            </li>
+                                        </ul>
                                     </div>
                                 ) : (
-                                    <div>Log in</div>
+                                    <div>
+                                        <ul className="py-1 gap-y-2 flex flex-col text-sm cursor-pointer text-gray-600">
+                                            <li className="border-l-2 pl-3 hover:border-gray-600 hover:text-black">
+                                                <a href="/login" className="">
+                                                    Sign in
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
                                 )}
                             </div>
                         )}
