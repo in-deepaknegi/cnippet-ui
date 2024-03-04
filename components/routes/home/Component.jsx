@@ -29,7 +29,7 @@ const Components = () => {
                             <div className="group relative before:absolute before:-inset-2.5 before:rounded-[20px] before:bg-gray-50 before:opacity-0 hover:before:opacity-100">
                                 <div className="relative aspect-[2/1] overflow-hidden rounded-lg bg-gray-100 ring-1 ring-gray-900/10">
                                     <Image
-                                        src={component.imageURL}
+                                        src={component.image}
                                         alt="navbar-img"
                                         className="absolute inset-0 h-full w-full"
                                     />

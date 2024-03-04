@@ -4,16 +4,12 @@ import Footer from '@/components/Footer';
 import components from '@/data/components';
 import Layout from '@/components/Layout';
 
-type Props = {
-    searchParams: { [key: string]: string | string[] | undefined }
-}
 
 const Product = ({ params }: { params: { slug: string } }) => {
     const id = params.slug
-
-    console.log(id)
-    const _id = id;
-    const component = components.find((component) => component.slug === _id)
+    // console.log(id)
+    const component = components.find((component) => component.slug === id)
+    const a = component?.slug
 
     if (!component) {
         return <div>component Not Found</div>
@@ -51,3 +47,23 @@ const Product = ({ params }: { params: { slug: string } }) => {
 }
 
 export default Product
+
+export async function generateMetadata({ params }: { params: { slug: string } }) {
+    const id = params.slug
+
+    const component = components.find((component) => component.slug === id)
+    const name = 'Ui - ' + component?.name;
+    return {
+        title: name,
+        description: component?.name,
+        metadataBase: new URL('http://anjaanbackpackers.com/'),
+        openGraph: {
+            images: [
+                {
+                    url: component?.imgurl
+                }
+            ]
+        }
+    }
+
+}
