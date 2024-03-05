@@ -14,6 +14,9 @@ import N2 from '@/ui/navbar/S2';
 import N3 from '@/ui/navbar/S3';
 import CN1 from '@/ui/navbar/C1.mdx';
 
+import F1 from '@/ui/footer/S1';
+import F2 from '@/ui/footer/S2';
+
 import H1 from '@/ui/hero/S1'
 
 const components = [
@@ -57,13 +60,13 @@ const components = [
         data: [
             {
                 id: 1,
-                title: 'simple footer 1',
-                component: <H1 />
+                title: 'Simple footer 1',
+                component: <F1 />
             },
             {
                 id: 2,
-                title: 'simple footer 2',
-                component: <H1 />
+                title: 'Simple footer 2',
+                component: <F2 />
             }
         ]
     },
