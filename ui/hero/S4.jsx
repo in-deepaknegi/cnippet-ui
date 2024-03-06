@@ -70,13 +70,10 @@ const Hero = () => {
                                         </div>
                                     </div>
                                     <h1 className="text-5xl max-w-3xl font-semibold text-white md:text-6xl md:text-left text-center">
-                                        Experience the beauty of soil painting with us
+                                    Data to enrich your online bussiness
                                     </h1>
                                     <p className="mt-6 text-base text-center md:text-right md:ml-auto max-w-3xl text-gray-200 md:font-light md:text-lg">
-                                        On an endless journey to create experiences that inspire
-                                        others. Always motived by design that&apos;s honest,
-                                        aesthetic and natural. Probably the only designer
-                                        you&apos;ll ever need.
+                                    Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.
                                     </p>
                                 </div>
                             </SwiperSlide>

@@ -21,6 +21,7 @@ import H1 from '@/ui/hero/S1'
 import H2 from '@/ui/hero/S2'
 import H3 from '@/ui/hero/S3'
 import H4 from '@/ui/hero/S4'
+import H5 from '@/ui/hero/S5'
 
 const components = [
     {
@@ -101,8 +102,13 @@ const components = [
             {
                 id: 4,
                 title: 'Simple hero 4',
+                component: <H5 />
+            },
+            {
+                id: 5,
+                title: 'Simple hero 5',
                 component: <H4 />
-            }
+            },
         ]
     },
     {

@@ -6,6 +6,11 @@ const Button = ({ text, color, url }) => {
     let bg = 'bg-black';
     let hbg = 'hover:bg-dusk-800';
 
+    if (color) {
+        bg = color;
+        hbg = 'hover:bg-dusk-900';
+    }
+
     return (
         <button>
             <Link

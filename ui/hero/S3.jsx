@@ -36,7 +36,7 @@ const C3 = () => {
                                 fugiat aliqua.
                             </p>
                             <div className="mt-10 flex gap-x-6">
-                            <Button text="Get started" url={'#'} />
+                                <Button text="Get started" url={'#'} />
                                 <a
                                     href="#"
                                     className="my-auto text-sm font-semibold leading-6 text-gray-900"
