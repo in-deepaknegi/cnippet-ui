@@ -18,6 +18,8 @@ import F1 from '@/ui/footer/S1';
 import F2 from '@/ui/footer/S2';
 
 import H1 from '@/ui/hero/S1'
+import H2 from '@/ui/hero/S2'
+import H3 from '@/ui/hero/S3'
 
 const components = [
     {
@@ -82,13 +84,18 @@ const components = [
         data: [
             {
                 id: 1,
-                title: 'simple hero 1',
+                title: 'Simple hero 1',
                 component: <H1 />
             },
             {
                 id: 2,
-                title: 'simple hero 2',
-                component: <H1 />
+                title: 'Simple hero 2',
+                component: <H2 />
+            },
+            {
+                id: 3,
+                title: 'Simple hero 3',
+                component: <H3 />
             }
         ]
     },

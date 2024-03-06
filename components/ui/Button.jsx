@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 const Button = ({ text, color, url }) => {
 
-    let bg = 'bg-dusk-900';
+    let bg = 'bg-black';
     let hbg = 'hover:bg-dusk-800';
 
     return (
