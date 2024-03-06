@@ -23,6 +23,11 @@ import H3 from '@/ui/hero/S3'
 import H4 from '@/ui/hero/S4'
 import H5 from '@/ui/hero/S5'
 
+import HE1 from '@/ui/header/S1'
+import HE2 from '@/ui/header/S2'
+import HE3 from '@/ui/header/S3'
+
+
 const components = [
     {
         id: 1,
@@ -123,14 +128,19 @@ const components = [
         data: [
             {
                 id: 1,
-                title: 'simple header 1',
-                component: <H1 />
+                title: 'Simple header 1',
+                component: <HE1 />
             },
             {
                 id: 2,
-                title: 'simple header 2',
-                component: <H1 />
-            }
+                title: 'Simple header 2',
+                component: <HE2 />
+            },
+            {
+                id: 3,
+                title: 'Simple header 2',
+                component: <HE3 />
+            },
         ]
     },
     // {
