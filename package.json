@@ -20,7 +20,8 @@
     "react-dom": "^18",
     "rehype-pretty-code": "^0.13.0",
     "sharp": "^0.33.2",
-    "shiki": "^1.1.7"
+    "shiki": "^1.1.7",
+    "swiper": "^11.0.7"
   },
   "devDependencies": {
     "@types/node": "^20",
