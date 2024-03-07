@@ -104,7 +104,7 @@ const Navbar = () => {
             </nav>
 
             <header className="sticky top-0 bg-white z-20">
-                <div className="flex items-center justify-between border-b border-gray-100 bg-white px-6 py-4 lg:px-8">
+                <div className="flex items-center justify-between border-b border-gray-100 bg-white px-6 py-6 lg:px-8">
                     <div className="flex lg:flex-none">
                         <a href="/" className="-m-1.5 p-1.5 text-2xl text-black">
                             Cnippet <span className="text-base">Ui.</span>
@@ -170,9 +170,6 @@ const Navbar = () => {
                     </div>
 
                     <div className="hidden lg:ml-8 lg:flex lg:flex-none lg:items-center lg:gap-4 lg:pl-8">
-                        {/* <a href="#" className='text-gray-700'>Search</a>
-                        <a href="#" className='text-gray-700'>Help</a>
-                        <span className='h-5 w-[1px] bg-gray-500'></span> */}
                         <button
                             onClick={toggleProfile}
                             ref={sectionRef}>

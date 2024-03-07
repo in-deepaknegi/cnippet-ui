@@ -1,3 +1,4 @@
+```tsx
 import React from "react";
 import Link from "next/link";
 
@@ -7,29 +8,15 @@ const links = [
         title: "Components",
         url: "#",
     },
-    {
-        id: 2,
-        title: "Templates",
-        url: "#",
-    },
-    {
-        id: 3,
-        title: "About",
-        url: "#",
-    },
-    {
-        id: 4,
-        title: "Contacts",
-        url: "#",
-    },
+    // add more links here
 ];
 
-const Navbar3 = () => {
+const Navbar = () => {
     return (
         <header className="relative overflow-hidden">
             <nav>
                 <div className="bg-black">
-                    <div className="mx-auto flex h-10 items-center justify-between px-4 sm:px-6 lg:px-8">
+                    <div className="mx-auto flex h-10 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
                         <div className="hidden text-sm text-white lg:block lg:flex-1">
                             English
                         </div>
@@ -123,4 +110,5 @@ const Navbar3 = () => {
     );
 };
 
-export default Navbar3;
+export default Navbar;
+```

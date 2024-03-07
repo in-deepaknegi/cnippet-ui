@@ -12,7 +12,11 @@ import Blogs from '@/public/images/components/blogs.png'
 import N1 from '@/ui/navbar/S1';
 import N2 from '@/ui/navbar/S2';
 import N3 from '@/ui/navbar/S3';
+import N4 from '@/ui/navbar/S4';
 import CN1 from '@/ui/navbar/C1.mdx';
+import CN2 from '@/ui/navbar/C2.mdx';
+import CN3 from '@/ui/navbar/C3.mdx';
+import CN4 from '@/ui/navbar/C4.mdx';
 
 import F1 from '@/ui/footer/S1';
 import F2 from '@/ui/footer/S2';
@@ -42,23 +46,31 @@ const components = [
         source: "/components/navbar",
         image: Navbar,
         imgurl: '/images/components/navbar.png',
-        number: "3 components",
+        number: "4 components",
         data: [
             {
                 id: 1,
-                title: 'simple navbar 1',
+                title: 'Simple navbar 1',
                 component: <N1 />,
-                code: <CN1 />
+                code: <CN1 />,
             },
             {
                 id: 2,
-                title: 'simple navbar 2',
-                component: <N2 />
+                title: 'Simple navbar 2',
+                component: <N2 />,
+                code: <CN2 />,
             },
             {
                 id: 3,
-                title: 'simple navbar 3',
-                component: <N3 />
+                title: 'Simple navbar 3',
+                component: <N3 />,
+                code: <CN3 />,
+            },
+            {
+                id: 4,
+                title: 'Simple sticky navbar 4',
+                component: <N4 />,
+                code: <CN4 />,
             }
         ]
     },
@@ -70,7 +82,7 @@ const components = [
         source: "/components/footer",
         image: Footer,
         imgurl: '/images/components/footer.png',
-        number: "3 components",
+        number: "2 components",
         data: [
             {
                 id: 1,
@@ -92,7 +104,7 @@ const components = [
         source: "/components/hero",
         image: Hero,
         imgurl: '/images/components/hero.png',
-        number: "3 components",
+        number: "5 components",
         data: [
             {
                 id: 1,
@@ -156,7 +168,7 @@ const components = [
         source: "/components/feature",
         image: Feature,
         imgurl: '/images/components/feature.png',
-        number: "3 components",
+        number: "2 components",
         data: [
             {
                 id: 1,
