@@ -37,6 +37,10 @@ import FL1 from '@/ui/feature-list/S1'
 import FL2 from '@/ui/feature-list/S2'
 import FL3 from '@/ui/feature-list/S3'
 
+import FM1 from '@/ui/flyout-menu/S1'
+import FM2 from '@/ui/flyout-menu/S2'
+
+
 const components = [
     {
         id: 1,
@@ -206,6 +210,28 @@ const components = [
                 id: 3,
                 title: 'Simple feature list 2',
                 component: <FL3 />
+            },
+        ]
+    },
+    {
+        id: 7,
+        slug: "flyout-menu",
+        name: "Flyout Menu",
+        desc: "Component description",
+        source: "/components/flyout-menu",
+        image: Navbar,
+        imgurl: '/images/components/feature-list.png',
+        number: "3 components",
+        data: [
+            {
+                id: 1,
+                title: 'Simple fly-out list 1',
+                component: <FM1 />
+            },
+            {
+                id: 2,
+                title: 'Simple fly-out list 2',
+                component: <FM2 />
             },
         ]
     },
