@@ -6,7 +6,7 @@ const S3 = () => {
             <div
                 className="relative isolate overflow-hidden rounded-2xl bg-white shadow-xl shadow-gray-400"
                 style={{
-                    backgroundImage: "url('/images/Hero/hero7.jpg')",
+                    backgroundImage: "url('/images/hero/hero7.jpg')",
                     backgroundPosition: "center",
                     backgroundSize: "cover",
                 }}>

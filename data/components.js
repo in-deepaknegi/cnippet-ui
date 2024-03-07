@@ -27,6 +27,11 @@ import HE1 from '@/ui/header/S1'
 import HE2 from '@/ui/header/S2'
 import HE3 from '@/ui/header/S3'
 
+import FE1 from '@/ui/feature/S1'
+import FE2 from '@/ui/feature/S2'
+import FL1 from '@/ui/feature-list/S1'
+import FL2 from '@/ui/feature-list/S2'
+import FL3 from '@/ui/feature-list/S3'
 
 const components = [
     {
@@ -143,20 +148,56 @@ const components = [
             },
         ]
     },
-    // {
-    //     id: 4,
-    //     name: "Header",
-    //     source: "/components/header",
-    //     imageURL: Header,
-    //     number: "3 components",
-    // },
-    // {
-    //     id: 5,
-    //     name: "Feature",
-    //     source: "/components/feature",
-    //     imageURL: Feature,
-    //     number: "4 components",
-    // },
+    {
+        id: 5,
+        slug: "feature",
+        name: "Feature",
+        desc: "Component description",
+        source: "/components/feature",
+        image: Feature,
+        imgurl: '/images/components/feature.png',
+        number: "3 components",
+        data: [
+            {
+                id: 1,
+                title: 'Simple header 1',
+                component: <FE1 />
+            },
+            {
+                id: 2,
+                title: 'Simple header 2',
+                component: <FE2 />
+            },
+        ]
+    },
+    {
+        id: 6,
+        slug: "feature-list",
+        name: "Feature List",
+        desc: "Component description",
+        source: "/components/feature-list",
+        image: FeatureList,
+        imgurl: '/images/components/feature-list.png',
+        number: "3 components",
+        data: [
+            {
+                id: 1,
+                title: 'Simple feature list 1',
+                component: <FL1 />
+            },
+            {
+                id: 2,
+                title: 'Simple feature list 2',
+                component: <FL2 />
+            },
+            {
+                id: 3,
+                title: 'Simple feature list 2',
+                component: <FL3 />
+            },
+        ]
+    },
+
     // {
     //     id: 6,
     //     name: "Feature List",
