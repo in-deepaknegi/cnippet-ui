@@ -1,10 +1,10 @@
+```jsx
 "use client"
 import React, { useState } from 'react'
 import Image from 'next/image';
 import { ChevronDown, PieChart, Fingerprint } from 'lucide-react';
 
-import H1 from '@/public/images/hero/hero11.jpg'
-import H2 from '@/public/images/hero/hero8.jpg'
+import H1 from '@/public/images/hero1.jpg'
 
 const menu = [
     {
@@ -19,30 +19,13 @@ const menu = [
             },
             {
                 name: 'Integrations',
-                description: 'Build strategic funnels that will convert',
+                description: 'Connect with third-party tools',
                 href: '#',
                 icon: Fingerprint,
             },
         ]
     },
-    {
-        title: "Analytics",
-        image: H2,
-        solutions: [
-            {
-                name: 'Analytics',
-                description: 'Get a better understanding of your traffic',
-                href: '#',
-                icon: PieChart,
-            },
-            {
-                name: 'Integrations',
-                description: 'Build strategic funnels that will convert',
-                href: '#',
-                icon: Fingerprint,
-            },
-        ]
-    }
+    // add more items here
 ]
 
 const S1 = () => {
@@ -103,3 +86,4 @@ const S1 = () => {
 }
 
 export default S1
+```

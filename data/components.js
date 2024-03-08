@@ -39,7 +39,10 @@ import FL3 from '@/ui/feature-list/S3'
 
 import FM1 from '@/ui/flyout-menu/S1'
 import FM2 from '@/ui/flyout-menu/S2'
-
+import FM3 from '@/ui/flyout-menu/S3'
+import CFM1 from '@/ui/flyout-menu/C1.mdx'
+import CFM2 from '@/ui/flyout-menu/C2.mdx'
+import CFM3 from '@/ui/flyout-menu/C3.mdx'
 
 const components = [
     {
@@ -225,13 +228,21 @@ const components = [
         data: [
             {
                 id: 1,
-                title: 'Simple fly-out list 1',
-                component: <FM1 />
+                title: 'Simple fly-out menu 1',
+                component: <FM1 />,
+                code: <CFM1 />
             },
             {
                 id: 2,
-                title: 'Simple fly-out list 2',
-                component: <FM2 />
+                title: 'Simple fly-out menu 2',
+                component: <FM2 />,
+                code: <CFM2 />
+            },
+            {
+                id: 3,
+                title: 'Simple fly-out menu 3',
+                component: <FM3 />,
+                code: <CFM3 />
             },
         ]
     },
