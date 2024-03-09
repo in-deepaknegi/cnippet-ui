@@ -44,6 +44,11 @@ import CFM1 from '@/ui/flyout-menu/C1.mdx'
 import CFM2 from '@/ui/flyout-menu/C2.mdx'
 import CFM3 from '@/ui/flyout-menu/C3.mdx'
 
+import FED1 from '@/ui/feedback/S1'
+import FED2 from '@/ui/feedback/S2'
+import FED3 from '@/ui/feedback/S3'
+import FED4 from '@/ui/feedback/S4'
+
 const components = [
     {
         id: 1,
@@ -246,14 +251,39 @@ const components = [
             },
         ]
     },
+    {
+        id: 8,
+        slug: "feedback",
+        name: "Feedback",
+        desc: "Component description",
+        source: "/components/feedback",
+        image: Feedback,
+        imgurl: '/images/components/feadback.png',
+        number: "4 components",
+        data: [
+            {
+                id: 1,
+                title: 'Simple feedback 1',
+                component: <FED1 />,
+            },
+            {
+                id: 2,
+                title: 'Simple feedback 2',
+                component: <FED2 />,
+            },
+            {
+                id: 3,
+                title: 'Simple feedback 3',
+                component: <FED3 />,
+            },
+            {
+                id: 4,
+                title: 'Simple feedback 4',
+                component: <FED4 />,
+            },
+        ]
+    },
 
-    // {
-    //     id: 6,
-    //     name: "Feature List",
-    //     source: "/components/feature-list",
-    //     imageURL: FeatureList,
-    //     number: "3 components",
-    // },
     // {
     //     id: 7,
     //     name: "Feedback",
