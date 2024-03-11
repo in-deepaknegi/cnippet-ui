@@ -53,6 +53,10 @@ import NL1 from '@/ui/newsletter/S1'
 import NL2 from '@/ui/newsletter/S2'
 import NL3 from '@/ui/newsletter/S3'
 import NL4 from '@/ui/newsletter/S4'
+import CNL1 from '@/ui/newsletter/C1.mdx'
+import CNL2 from '@/ui/newsletter/C2.mdx'
+import CNL3 from '@/ui/newsletter/C3.mdx'
+import CNL4 from '@/ui/newsletter/C4.mdx'
 
 
 
@@ -304,21 +308,25 @@ const components = [
                 id: 1,
                 title: 'Simple newsletter 1',
                 component: <NL1 />,
+                code: <CNL1 />
             },
             {
                 id: 2,
                 title: 'Simple newsletter 2',
                 component: <NL2 />,
+                code: <CNL2 />
             },
             {
                 id: 3,
                 title: 'Simple newsletter 3',
                 component: <NL3 />,
+                code: <CNL3 />
             },
             {
                 id: 3,
                 title: 'Simple newsletter 3',
                 component: <NL4 />,
+                code: <CNL4 />
             },
         ]
     },
