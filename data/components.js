@@ -49,6 +49,13 @@ import FED2 from '@/ui/feedback/S2'
 import FED3 from '@/ui/feedback/S3'
 import FED4 from '@/ui/feedback/S4'
 
+import NL1 from '@/ui/newsletter/S1'
+import NL2 from '@/ui/newsletter/S2'
+import NL3 from '@/ui/newsletter/S3'
+import NL4 from '@/ui/newsletter/S4'
+
+
+
 const components = [
     {
         id: 1,
@@ -283,14 +290,39 @@ const components = [
             },
         ]
     },
+    {
+        id: 8,
+        slug: "newsletter",
+        name: "Newsletter",
+        desc: "Component description",
+        source: "/components/newsletter",
+        image: Newsletter,
+        imgurl: '/images/components/newsletter.png',
+        number: "4 components",
+        data: [
+            {
+                id: 1,
+                title: 'Simple newsletter 1',
+                component: <NL1 />,
+            },
+            {
+                id: 2,
+                title: 'Simple newsletter 2',
+                component: <NL2 />,
+            },
+            {
+                id: 3,
+                title: 'Simple newsletter 3',
+                component: <NL3 />,
+            },
+            {
+                id: 3,
+                title: 'Simple newsletter 3',
+                component: <NL4 />,
+            },
+        ]
+    },
 
-    // {
-    //     id: 7,
-    //     name: "Feedback",
-    //     source: "/components/feedback",
-    //     imageURL: Feedback,
-    //     number: "3 components",
-    // },
     // {
     //     id: 8,
     //     name: "Newsletter",
