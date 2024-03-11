@@ -58,6 +58,7 @@ import CNL2 from '@/ui/newsletter/C2.mdx'
 import CNL3 from '@/ui/newsletter/C3.mdx'
 import CNL4 from '@/ui/newsletter/C4.mdx'
 
+import BL4 from '@/ui/blogs/S4';
 
 
 const components = [
@@ -295,7 +296,7 @@ const components = [
         ]
     },
     {
-        id: 8,
+        id: 9,
         slug: "newsletter",
         name: "Newsletter",
         desc: "Component description",
@@ -327,6 +328,23 @@ const components = [
                 title: 'Simple newsletter 3',
                 component: <NL4 />,
                 code: <CNL4 />
+            },
+        ]
+    },
+    {
+        id: 10,
+        slug: "blogs",
+        name: "Blogs",
+        desc: "Component description",
+        source: "/components/blogs",
+        image: Blogs,
+        imgurl: '/images/components/blogs.png',
+        number: "4 components",
+        data: [
+            {
+                id: 1,
+                title: 'Simple newsletter 1',
+                component: <BL4 />,
             },
         ]
     },
