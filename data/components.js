@@ -58,7 +58,13 @@ import CNL2 from '@/ui/newsletter/C2.mdx'
 import CNL3 from '@/ui/newsletter/C3.mdx'
 import CNL4 from '@/ui/newsletter/C4.mdx'
 
+import BL1 from '@/ui/blogs/S1';
+import BL2 from '@/ui/blogs/S2';
+import BL3 from '@/ui/blogs/S3';
 import BL4 from '@/ui/blogs/S4';
+import CBL1 from '@/ui/blogs/C1.mdx';
+import CBL2 from '@/ui/blogs/C2.mdx';
+import CBL3 from '@/ui/blogs/C3.mdx';
 import CBL4 from '@/ui/blogs/C4.mdx';
 
 
@@ -344,7 +350,25 @@ const components = [
         data: [
             {
                 id: 1,
-                title: 'Simple newsletter 1',
+                title: 'Simple blog 1',
+                component: <BL1 />,
+                code: <CBL1/>
+            },
+            {
+                id: 2,
+                title: 'Simple blog 2',
+                component: <BL2 />,
+                code: <CBL2/>
+            },
+            {
+                id: 3,
+                title: 'Simple blog 3',
+                component: <BL3 />,
+                code: <CBL3/>
+            },
+            {
+                id: 1,
+                title: 'Simple blog 4',
                 component: <BL4 />,
                 code: <CBL4/>
             },

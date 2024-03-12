@@ -1,6 +1,25 @@
+```jsx
 import React from "react";
 import Image from "next/image";
-import posts from "@/data/constants/blogs";
+const posts = [
+    {
+        id: 1,
+        title: "Boost your conversion rate",
+        href: "#",
+        img: Hero1,
+        description: "Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.",
+        date: "Feb 16, 2024",
+        datetime: "2024-02-16",
+        category: { title: "Marketing", href: "#" },
+        author: {
+            name: "Michael Foster",
+            role: "Co-Founder / CTO",
+            href: "#",
+            imageUrl: Author1,
+        },
+    },
+    // More posts...
+];
 
 const Blog2 = () => {
     return (
@@ -15,7 +34,7 @@ const Blog2 = () => {
                     </p>
                 </div>
                 <div className="mx-auto mt-16 grid max-w-xl grid-cols-1 gap-x-8 gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">
-                    {posts.slice(0,3).map((post) => (
+                    {posts.map((post) => (
                         <article key={post.id} className="flex flex-col items-start">
                             <div className="relative w-full">
                                 <Image
@@ -74,3 +93,4 @@ const Blog2 = () => {
 };
 
 export default Blog2;
+```
