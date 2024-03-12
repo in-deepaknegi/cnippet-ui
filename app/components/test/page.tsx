@@ -34,14 +34,14 @@ const Blog4 = () => {
                             //   spaceBetween: 20,
                             // },
                             768: {
-                                slidesPerView: 2,
-                                spaceBetween: 30,
+                              slidesPerView: 2,
+                              spaceBetween: 30,
                             },
                             1024: {
-                                slidesPerView: 3,
-                                spaceBetween: 40,
+                              slidesPerView: 3,
+                              spaceBetween: 40,
                             },
-                        }}
+                          }}
                         modules={[FreeMode]}
                         className="mySwiper overscroll-x-none -translate-x-2 md:-translate-x-6 :pt-10"
                         style={{

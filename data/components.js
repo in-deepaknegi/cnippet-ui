@@ -59,6 +59,7 @@ import CNL3 from '@/ui/newsletter/C3.mdx'
 import CNL4 from '@/ui/newsletter/C4.mdx'
 
 import BL4 from '@/ui/blogs/S4';
+import CBL4 from '@/ui/blogs/C4.mdx';
 
 
 const components = [
@@ -345,6 +346,7 @@ const components = [
                 id: 1,
                 title: 'Simple newsletter 1',
                 component: <BL4 />,
+                code: <CBL4/>
             },
         ]
     },
