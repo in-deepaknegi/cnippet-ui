@@ -67,6 +67,9 @@ import CBL2 from '@/ui/blogs/C2.mdx';
 import CBL3 from '@/ui/blogs/C3.mdx';
 import CBL4 from '@/ui/blogs/C4.mdx';
 
+import PR1 from '@/ui/pricing/S1';
+import PR2 from '@/ui/pricing/S2';
+
 
 const components = [
     {
@@ -374,28 +377,30 @@ const components = [
             },
         ]
     },
+    {
+        id: 11,
+        slug: "pricing",
+        name: "Pricing",
+        desc: "Component description",
+        source: "/components/pricing",
+        image: Blogs,
+        imgurl: '/images/components/blogs.png',
+        number: "4 components",
+        data: [
+            {
+                id: 1,
+                title: 'Simple blog 1',
+                component: <PR1 />,
+            },
+            {
+                id: 2,
+                title: 'Simple blog 2',
+                component: <PR2 />,
+            },
 
-    // {
-    //     id: 8,
-    //     name: "Newsletter",
-    //     source: "/components/newsletter",
-    //     imageURL: Newsletter,
-    //     number: "3 components",
-    // },
-    // {
-    //     id: 9,
-    //     name: "Blog",
-    //     source: "/components/blog",
-    //     imageURL: Blogs,
-    //     number: "3 components",
-    // },
-    // {
-    //     id: 10,
-    //     name: "Pricing",
-    //     source: "/components/pricing",
-    //     imageURL: Blogs,
-    //     number: "2 components",
-    // },
+        ]
+    },
+
     // {
     //     id: 11,
     //     name: "Faq",
