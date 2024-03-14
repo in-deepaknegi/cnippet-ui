@@ -1,7 +1,7 @@
 ```jsx
 "use client";
 import React, { useState } from "react";
-import { ChevronDown, BarChartBig, PieChart } from "lucide-react";
+import { ChevronDown, PieChart } from "lucide-react";
 
 const solutions = [
     {
@@ -12,7 +12,7 @@ const solutions = [
     },
 ];
 
-const S1 = () => {
+const Flyoutmenu = () => {
     const [open, setOpen] = useState(false);
 
     const toggleOpen = () => {
@@ -20,20 +20,19 @@ const S1 = () => {
     };
 
     return (
-        <header className="relative isolate py-8 md:pb-40 overflow-visible">
-            <div className="relative max-w-lg mx-auto">
+        <header className="relative isolate overflow-visible py-8 md:pb-40">
+            <div className="relative mx-auto max-w-lg">
                 <div className="relative hidden lg:flex lg:gap-x-12">
                     <button
                         onMouseEnter={toggleOpen}
                         onMouseLeave={toggleOpen}
-                        onFocus={toggleOpen}
-                        className="inline-flex justify-center items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900"
+                        className="inline-flex items-center justify-center gap-x-1 text-sm font-semibold leading-6 text-gray-900"
                     >
                         <span>Solutions</span>
                         <ChevronDown className="h-5 w-5" aria-hidden="true" />
 
                         {open && (
-                            <div className="absolute -left-5 z-10 top-3 pt-4 flex w-screen max-w-max px-4">
+                            <div className="absolute -left-5 top-3 z-10 flex w-screen max-w-max px-4 pt-4">
                                 <div className="w-screen max-w-md flex-auto overflow-hidden rounded-3xl bg-white text-sm leading-6 shadow-lg ring-1 ring-gray-900/5">
                                     <div className="p-2">
                                         {solutions.map((item) => (
@@ -72,5 +71,5 @@ const S1 = () => {
     );
 };
 
-export default S1;
+export default Flyoutmenu;
 ```

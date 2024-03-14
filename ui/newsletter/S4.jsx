@@ -1,6 +1,6 @@
 import React from "react";
 
-const Newsletter3 = () => {
+const Newsletter4 = () => {
     return (
         <section className="px-6 py-6 lg:px-8 lg:py-20">
             <div
@@ -38,7 +38,7 @@ const Newsletter3 = () => {
                             />
                             <button
                                 type="submit"
-                                className="rounded-md max-w-md mx-auto font-semibold px-3.5 tracking-wide py-2.5 bg-black text-sm text-white shadow-sm"
+                                className="mx-auto max-w-md rounded-md bg-black px-3.5 py-2.5 text-sm font-semibold tracking-wide text-white shadow-sm"
                             >
                                 Subscribe
                             </button>
@@ -50,4 +50,4 @@ const Newsletter3 = () => {
     );
 };
 
-export default Newsletter3;
+export default Newsletter4;

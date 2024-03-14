@@ -5,7 +5,7 @@ import Profile1 from "@/public/images/profile/profile4.jpg";
 const Feedback1 = () => {
     return (
         <section className="relative isolate overflow-hidden bg-white py-8 sm:py-16">
-            <div className="mx-auto max-w-xl px-6 lg:px-8 lg:max-w-2xl">
+            <div className="mx-auto max-w-xl px-6 lg:max-w-2xl lg:px-8">
                 <figure className="items-center gap-8">
                     <div className="col-span-2 font-sans">
                         <div className="relative">
@@ -29,12 +29,12 @@ const Feedback1 = () => {
                                 <div className="text-lg font-semibold">Judith Black</div>
                                 <a
                                     href="#"
-                                    className="text-sm tracking-wide font-semibold text-blue-600"
+                                    className="text-sm font-semibold tracking-wide text-blue-600"
                                 >
                                     @judithblack
                                 </a>
                             </div>
-                            <div className="mx-3 my-auto h-10 w-[1px] bg-gray-400 md:block hidden"></div>
+                            <div className="mx-3 my-auto hidden h-10 w-[1px] bg-gray-400 md:block"></div>
                             <div className="my-auto hidden md:flex">
                                 {[...Array(4).keys()].map((index) => (
                                     <div key={index}>

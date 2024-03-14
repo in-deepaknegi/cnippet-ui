@@ -6,10 +6,10 @@ const Newsletter1 = () => {
             <div className="mx-auto max-w-7xl px-6 lg:px-8">
                 <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-2">
                     <div className="max-w-xl lg:max-w-lg">
-                        <h2 className="text-3xl font-bold tracking-tight text-olive-900 sm:text-4xl">
+                        <h2 className="text-olive-900 text-3xl font-bold tracking-tight sm:text-4xl">
                             Subscribe to our newsletter.
                         </h2>
-                        <p className="mt-4 text-lg leading-8 text-olive-500">
+                        <p className="text-olive-500 mt-4 text-lg leading-8">
                             Nostrud amet eu ullamco nisi aute in ad minim nostrud adipisicing
                             velit quis. Duis tempor incididunt dolore.
                         </p>
@@ -29,7 +29,7 @@ const Newsletter1 = () => {
                             />
                             <button
                                 type="submit"
-                                className="rounded-md max-w-md mx-auto font-semibold px-3.5 tracking-wide py-2.5 bg-black text-sm text-white shadow-sm"
+                                className="mx-auto max-w-md rounded-md bg-black px-3.5 py-2.5 text-sm font-semibold tracking-wide text-white shadow-sm"
                             >
                                 Subscribe
                             </button>
@@ -53,10 +53,10 @@ const Newsletter1 = () => {
                                     />
                                 </svg>
                             </div>
-                            <dt className="mt-4 font-semibold text-olive-800">
+                            <dt className="text-olive-800 mt-4 font-semibold">
                                 Weekly articles
                             </dt>
-                            <dd className="mt-2 leading-7 text-olive-500">
+                            <dd className="text-olive-500 mt-2 leading-7">
                                 Non laboris consequat cupidatat laborum magna. Eiusmod non irure
                                 cupidatat duis commodo amet.
                             </dd>
@@ -78,8 +78,8 @@ const Newsletter1 = () => {
                                     />
                                 </svg>
                             </div>
-                            <dt className="mt-4 font-semibold text-olive-800">No spam</dt>
-                            <dd className="mt-2 leading-7 text-olive-500">
+                            <dt className="text-olive-800 mt-4 font-semibold">No spam</dt>
+                            <dd className="text-olive-500 mt-2 leading-7">
                                 Officia excepteur ullamco ut sint duis proident non adipisicing.
                                 Voluptate incididunt anim.
                             </dd>

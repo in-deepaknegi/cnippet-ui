@@ -1,123 +1,82 @@
 import React from "react";
 import Image from "next/image";
-import Button from "@/components/ui/Button";
+import Profile1 from "@/public/images/profile/profile4.jpg";
 
-import Hero1 from "@/public/images/hero/hero8.jpg";
-
-const features = [
-    {
-        name: "Push to deploy.",
-        description:
-            "Morbi viverra dui mi arcu sed. Tellus semper adipiscing suspendisse semper morbi. Odio urna massa nunc massa.",
-    },
-    {
-        name: "SSL certificates.",
-        description:
-            "Sit quis amet rutrum tellus ullamcorper ultricies libero dolor eget. Sem sodales gravida quam turpis enim lacus amet.",
-    },
-];
-
-const Feature2 = () => {
+const Feedback1 = () => {
     return (
+        <section className="relative isolate overflow-hidden bg-white py-8 sm:py-16">
+            <div className="mx-auto max-w-xl px-6 lg:px-8 lg:max-w-2xl">
+                <figure className="items-center gap-8">
+                    <div className="col-span-2 font-sans">
+                        <div className="relative">
+                            <blockquote className="text-center text-xl text-gray-900 sm:text-2xl sm:leading-8">
+                                <p>
+                                    Commodo amet fugiat excepteur sunt qui ea elit cupidatat
+                                    ullamco consectetur ipsum elit consequat. Elit sunt proident
+                                    ea nulla ad nulla dolore ad pariatur tempor non. Sint veniam
+                                    minim et ea.
+                                </p>
+                            </blockquote>
+                        </div>
 
-        <>
-            <section className="relative bg-white py-16 sm:py-20">
-                <div className="mx-auto max-w-7xl px-6 lg:px-8">
-                    <div className="mx-auto flex h-full flex-col gap-x-0 gap-y-10 lg:flex-row lg:gap-x-10 lg:gap-y-0">
-                        <div className="order-last max-w-full lg:order-first">
-                            <h2 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
-                                Everything you need to deploy your app
-                            </h2>
-                            <p className="mt-6 text-base text-gray-700 md:text-lg">
-                                Quis tellus eget adipiscing convallis sit sit eget aliquet quis.
-                                Suspendisse eget egestas a elementum pulvinar et feugiat blandit
-                                at. In mi viverra elit nunc.
-                            </p>
-
-                            <div className="mt-10 grid max-w-xl gap-x-4 space-y-4 text-base leading-7 text-gray-600 md:grid-cols-2 md:space-y-0 lg:max-w-none">
-                                {features.map((feature) => (
-                                    <div key={feature.name}>
+                        <figcaption className="mx-auto mt-8 flex justify-center">
+                            <Image
+                                src={Profile1}
+                                alt="profile-1"
+                                className="h-12 w-12 rounded-full object-cover"
+                            />
+                            <div className="ml-5">
+                                <div className="text-lg font-semibold">Judith Black</div>
+                                <a
+                                    href="#"
+                                    className="text-sm tracking-wide font-semibold text-blue-600"
+                                >
+                                    @judithblack
+                                </a>
+                            </div>
+                            <div className="mx-3 my-auto h-10 w-[1px] bg-gray-400 md:block hidden"></div>
+                            <div className="my-auto hidden md:flex">
+                                {[...Array(4).keys()].map((index) => (
+                                    <div key={index}>
                                         <svg
-                                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" >
-                                            <rect width="6" height="16" x="4" y="2" rx="2" />
-                                            <rect width="6" height="9" x="14" y="9" rx="2" />
-                                            <path d="M22 22H2" />
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 20 20"
+                                            fill="currentColor"
+                                            aria-hidden="true"
+                                            className="h-5 w-5 text-blue-600"
+                                        >
+                                            <path
+                                                fillRule="evenodd"
+                                                d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
+                                                clipRule="evenodd"
+                                            ></path>
                                         </svg>
-                                        <h2 className="text-2x my-2 font-semibold text-gray-900">
-                                            {feature.name}
-                                        </h2>
-                                        <p>{feature.description}</p>
+                                    </div>
+                                ))}
+                                {[...Array(1).keys()].map((index) => (
+                                    <div key={index}>
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 20 20"
+                                            fill="currentColor"
+                                            aria-hidden="true"
+                                            className="h-5 w-5 text-gray-200"
+                                        >
+                                            <path
+                                                fillRule="evenodd"
+                                                d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
+                                                clipRule="evenodd"
+                                            ></path>
+                                        </svg>
                                     </div>
                                 ))}
                             </div>
-
-                            <div className="mt-10 flex gap-x-6">
-                                <a
-                                    href="#"
-                                    className="rounded-md bg-black px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-gray-800"
-                                >
-                                    Discover more
-                                </a>
-                                <a
-                                    href="#"
-                                    className="my-auto text-sm font-semibold leading-6 text-gray-900"
-                                >
-                                    Join us <span aria-hidden="true">→</span>
-                                </a>
-                            </div>
-                        </div>
-                        <div className="relative order-first mx-auto lg:max-w-[40%] lg:order-last">
-                            <Image
-                                src={Hero1}
-                                alt="Product screenshot"
-                                quality={100}
-                                loading="eager"
-                                className="h-full w-full rounded-2xl object-cover"
-                            />
-                        </div>
+                        </figcaption>
                     </div>
-                </div>
-            </section>
-
-
-            <section className="relative isolate overflow-hidden bg-white py-16 sm:py-20">
-                <div className="mx-auto px-6 lg:px-8">
-                    <div className="mx-auto grid grid-cols-12 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none">
-                        <div className="col-span-12 lg:col-span-7 lg:py-4 lg:pr-8">
-                            <h2 className="mt-2 text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
-                                Everything you need to deploy your app
-                            </h2>
-                            <p className="mt-6 text-base text-gray-700 md:text-lg">
-                                Quis tellus eget adipiscing convallis sit sit eget aliquet quis.
-                                Suspendisse eget egestas a elementum pulvinar et feugiat blandit
-                                at. In mi viverra elit nunc.
-                            </p>
-                            
-                            <div className="mt-10 flex gap-x-6">
-                                <Button text={'Discover more'} url={'#'} />
-                                <a
-                                    href="#"
-                                    className="my-auto text-sm font-semibold leading-6 text-gray-900"
-                                >
-                                    Join us <span aria-hidden="true">→</span>
-                                </a>
-                            </div>
-                        </div>
-                        <div className="col-span-12 lg:col-span-5">
-                            <Image
-                                src={Hero1}
-                                alt="Product screenshot"
-                                quality={100}
-                                loading="eager"
-                                className="h-full rounded-2xl object-cover"
-                            />
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </>
-
+                </figure>
+            </div>
+        </section>
     );
 };
 
-export default Feature2;
+export default Feedback1;
