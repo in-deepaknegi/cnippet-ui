@@ -1,6 +1,5 @@
 import React from "react";
 import Image from "next/image";
-import Button from "@/components/ui/Button";
 import Hero1 from "@/public/images/hero/hero5.jpg";
 import Hero2 from "@/public/images/hero/hero6.jpg";
 import Hero3 from "@/public/images/hero/hero7.jpg";
@@ -39,14 +38,19 @@ const S1 = () => {
                                 className="min-w-0 flex-auto rounded-xl border-0 bg-white/5 px-3.5 py-2 text-black shadow-sm ring-1 ring-inset ring-black/30 focus:ring-inset sm:text-sm sm:leading-6"
                                 placeholder="Enter your email"
                             />
-                            <Button text="Subscribe" url={'#'} />
+                            <button
+                                type="submit"
+                                className="mx-auto max-w-md rounded-md bg-black px-3.5 py-2.5 text-sm font-semibold tracking-wide text-white shadow-sm"
+                            >
+                                Subscribe
+                            </button>
                         </div>
                     </form>
                 </div>
             </div>
 
             <div className="relative mx-auto flex max-w-5xl flex-row items-center justify-center px-6 md:px-8">
-                <div className="mt-10 flex justify-end gap-4 sm:justify-start md:mt-16 xl:mt-0">
+                <div className="mt-4 flex justify-end gap-4 sm:justify-start md:mt-16 xl:mt-0">
                     <div className="mt-16 hidden w-full lg:block">
                         <div className="relative">
                             <Image
@@ -57,7 +61,7 @@ const S1 = () => {
                             />
                         </div>
                     </div>
-                    <div className="w-full ">
+                    <div className="hidden w-full sm:block">
                         <div className="relative">
                             <Image
                                 src={Hero2}
@@ -85,7 +89,7 @@ const S1 = () => {
                             />
                         </div>
                     </div>
-                    <div className="w-full ">
+                    <div className="w-full">
                         <div className="relative">
                             <Image
                                 src={Hero5}
@@ -94,7 +98,7 @@ const S1 = () => {
                                 className="aspect-[3/2] rounded-2xl bg-gray-50 object-cover shadow-xl"
                             />
                         </div>
-                        <div className="relative">
+                        <div className="relative hidden sm:block">
                             <Image
                                 src={Hero6}
                                 alt="hero image 2"

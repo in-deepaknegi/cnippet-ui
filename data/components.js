@@ -20,22 +20,29 @@ import CN4 from '@/ui/navbar/C4.mdx';
 
 import F1 from '@/ui/footer/S1';
 import F2 from '@/ui/footer/S2';
+import CF1 from '@/ui/footer/C1.mdx';
 
 import H1 from '@/ui/hero/S1'
 import H2 from '@/ui/hero/S2'
 import H3 from '@/ui/hero/S3'
 import H4 from '@/ui/hero/S4'
 import H5 from '@/ui/hero/S5'
+import CH1 from '@/ui/hero/C1.mdx';
 
 import HE1 from '@/ui/header/S1'
 import HE2 from '@/ui/header/S2'
 import HE3 from '@/ui/header/S3'
+import CHE1 from '@/ui/header/C1.mdx';
 
 import FE1 from '@/ui/feature/S1'
 import FE2 from '@/ui/feature/S2'
+import CFE1 from '@/ui/feature/C1.mdx';
+import CFE2 from '@/ui/feature/C2.mdx';
+
 import FL1 from '@/ui/feature-list/S1'
 import FL2 from '@/ui/feature-list/S2'
 import FL3 from '@/ui/feature-list/S3'
+import CFL1 from '@/ui/feature-list/C1.mdx';
 
 import FM1 from '@/ui/flyout-menu/S1'
 import FM2 from '@/ui/flyout-menu/S2'
@@ -48,6 +55,7 @@ import FED1 from '@/ui/feedback/S1'
 import FED2 from '@/ui/feedback/S2'
 import FED3 from '@/ui/feedback/S3'
 import FED4 from '@/ui/feedback/S4'
+import CFED1 from '@/ui/feedback/C1.mdx';
 
 import NL1 from '@/ui/newsletter/S1'
 import NL2 from '@/ui/newsletter/S2'
@@ -69,6 +77,7 @@ import CBL4 from '@/ui/blogs/C4.mdx';
 
 import PR1 from '@/ui/pricing/S1';
 import PR2 from '@/ui/pricing/S2';
+import CPR1 from '@/ui/pricing/C1.mdx';
 
 
 const components = [
@@ -121,7 +130,8 @@ const components = [
             {
                 id: 1,
                 title: 'Simple footer 1',
-                component: <F1 />
+                component: <F1 />,
+                code: <CF1 />
             },
             {
                 id: 2,
@@ -143,7 +153,8 @@ const components = [
             {
                 id: 1,
                 title: 'Simple hero 1',
-                component: <H1 />
+                component: <H1 />,
+                code: <CH1 />
             },
             {
                 id: 2,
@@ -180,7 +191,8 @@ const components = [
             {
                 id: 1,
                 title: 'Simple header 1',
-                component: <HE1 />
+                component: <HE1 />,
+                code: <CHE1 />
             },
             {
                 id: 2,
@@ -207,12 +219,14 @@ const components = [
             {
                 id: 1,
                 title: 'Simple header 1',
-                component: <FE1 />
+                component: <FE1 />,
+                code: <CFE1 />
             },
             {
                 id: 2,
                 title: 'Simple header 2',
-                component: <FE2 />
+                component: <FE2 />,
+                code: <CFE2 />
             },
         ]
     },
@@ -229,7 +243,8 @@ const components = [
             {
                 id: 1,
                 title: 'Simple feature list 1',
-                component: <FL1 />
+                component: <FL1 />,
+                code: <CFL1 />
             },
             {
                 id: 2,
@@ -287,6 +302,7 @@ const components = [
                 id: 1,
                 title: 'Simple feedback 1',
                 component: <FED1 />,
+                code: <CFED1 />
             },
             {
                 id: 2,
@@ -391,6 +407,7 @@ const components = [
                 id: 1,
                 title: 'Simple blog 1',
                 component: <PR1 />,
+                code: <CPR1 />
             },
             {
                 id: 2,

@@ -1,18 +1,23 @@
 ```jsx
 import React from "react";
 import Image from "next/image";
+
 import Hero1 from "@/public/images/hero/hero8.jpg";
 
 const features = [
     {
-        name: "Push to deploy",
+        name: "Push to deploy.",
         description:
             "Morbi viverra dui mi arcu sed. Tellus semper adipiscing suspendisse semper morbi. Odio urna massa nunc massa.",
     },
-    // add more data here ...
+    {
+        name: "SSL certificates.",
+        description:
+            "Sit quis amet rutrum tellus ullamcorper ultricies libero dolor eget. Sem sodales gravida quam turpis enim lacus amet.",
+    },
 ];
 
-const Feature = () => {
+const Feature2 = () => {
     return (
         <section className="relative bg-white py-16 sm:py-20">
             <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -27,23 +32,38 @@ const Feature = () => {
                             at. In mi viverra elit nunc.
                         </p>
 
-                        <ul className="ml-5 mt-10 max-w-xl space-y-2 text-base leading-7 text-gray-700 lg:max-w-none">
-                            {features.map((feature, i) => (
-                                <li key={i} className="list-disc">
-                                    <span className="font-semibold text-black">
-                                        {feature.name}:{" "}
-                                    </span>
-                                    {feature.description}
-                                </li>
+                        <div className="mt-10 grid max-w-xl gap-x-4 space-y-4 text-base leading-7 text-gray-600 md:grid-cols-2 md:space-y-0 lg:max-w-none">
+                            {features.map((feature) => (
+                                <div key={feature.name}>
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="24"
+                                        height="24"
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        strokeWidth="2"
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                    >
+                                        <rect width="6" height="16" x="4" y="2" rx="2" />
+                                        <rect width="6" height="9" x="14" y="9" rx="2" />
+                                        <path d="M22 22H2" />
+                                    </svg>
+                                    <h2 className="text-2x my-2 font-semibold text-gray-900">
+                                        {feature.name}
+                                    </h2>
+                                    <p>{feature.description}</p>
+                                </div>
                             ))}
-                        </ul>
+                        </div>
 
                         <div className="mt-10 flex gap-x-6">
                             <a
                                 href="#"
                                 className="rounded-md bg-black px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-gray-800"
                             >
-                               Discover more
+                                Discover more
                             </a>
                             <a
                                 href="#"
@@ -53,7 +73,7 @@ const Feature = () => {
                             </a>
                         </div>
                     </div>
-                    <div className="relative order-first mx-auto lg:max-w-[40%] lg:order-last">
+                    <div className="relative order-first mx-auto lg:order-last lg:max-w-[40%]">
                         <Image
                             src={Hero1}
                             alt="Product screenshot"
@@ -68,5 +88,5 @@ const Feature = () => {
     );
 };
 
-export default Feature;
+export default Feature2;
 ```
