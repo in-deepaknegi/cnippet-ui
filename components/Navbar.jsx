@@ -9,11 +9,11 @@ const links = [
         title: "Components",
         url: "/components",
     },
-    {
-        id: 2,
-        title: "Templates",
-        url: "/templates",
-    },
+    // {
+    //     id: 2,
+    //     title: "Templates",
+    //     url: "/templates",
+    // },
     {
         id: 3,
         title: "Contacts",
