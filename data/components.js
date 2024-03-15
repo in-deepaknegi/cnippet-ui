@@ -371,25 +371,25 @@ const components = [
                 id: 1,
                 title: 'Simple blog 1',
                 component: <BL1 />,
-                code: <CBL1/>
+                code: <CBL1 />
             },
             {
                 id: 2,
                 title: 'Simple blog 2',
                 component: <BL2 />,
-                code: <CBL2/>
+                code: <CBL2 />
             },
             {
                 id: 3,
                 title: 'Simple blog 3',
                 component: <BL3 />,
-                code: <CBL3/>
+                code: <CBL3 />
             },
             {
                 id: 1,
                 title: 'Simple blog 4',
                 component: <BL4 />,
-                code: <CBL4/>
+                code: <CBL4 />
             },
         ]
     },
@@ -424,6 +424,13 @@ const components = [
     //     source: "/components/faq",
     //     imageURL: Blogs,
     //     number: "2 components",
+    // },
+    // {
+    //     id: 12,
+    //     name: "Hiw",
+    //     source: "/components/article",
+    //     imageURL: Article,
+    //     number: "3 components",
     // },
     // {
     //     id: 12,
