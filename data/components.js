@@ -140,283 +140,283 @@ const components = [
             }
         ]
     },
-    {
-        id: 3,
-        slug: "hero",
-        name: "Hero",
-        desc: "Component description",
-        source: "/components/hero",
-        image: Hero,
-        imgurl: '/images/components/hero.png',
-        number: "5 components",
-        data: [
-            {
-                id: 1,
-                title: 'Simple hero 1',
-                component: <H1 />,
-                code: <CH1 />
-            },
-            {
-                id: 2,
-                title: 'Simple hero 2',
-                component: <H2 />
-            },
-            {
-                id: 3,
-                title: 'Simple hero 3',
-                component: <H3 />
-            },
-            {
-                id: 4,
-                title: 'Simple hero 4',
-                component: <H5 />
-            },
-            {
-                id: 5,
-                title: 'Simple hero 5',
-                component: <H4 />
-            },
-        ]
-    },
-    {
-        id: 4,
-        slug: "header",
-        name: "Header",
-        desc: "Component description",
-        source: "/components/header",
-        image: Header,
-        imgurl: '/images/components/header.png',
-        number: "3 components",
-        data: [
-            {
-                id: 1,
-                title: 'Simple header 1',
-                component: <HE1 />,
-                code: <CHE1 />
-            },
-            {
-                id: 2,
-                title: 'Simple header 2',
-                component: <HE2 />
-            },
-            {
-                id: 3,
-                title: 'Simple header 2',
-                component: <HE3 />
-            },
-        ]
-    },
-    {
-        id: 5,
-        slug: "feature",
-        name: "Feature",
-        desc: "Component description",
-        source: "/components/feature",
-        image: Feature,
-        imgurl: '/images/components/feature.png',
-        number: "2 components",
-        data: [
-            {
-                id: 1,
-                title: 'Simple header 1',
-                component: <FE1 />,
-                code: <CFE1 />
-            },
-            {
-                id: 2,
-                title: 'Simple header 2',
-                component: <FE2 />,
-                code: <CFE2 />
-            },
-        ]
-    },
-    {
-        id: 6,
-        slug: "feature-list",
-        name: "Feature List",
-        desc: "Component description",
-        source: "/components/feature-list",
-        image: FeatureList,
-        imgurl: '/images/components/feature-list.png',
-        number: "3 components",
-        data: [
-            {
-                id: 1,
-                title: 'Simple feature list 1',
-                component: <FL1 />,
-                code: <CFL1 />
-            },
-            {
-                id: 2,
-                title: 'Simple feature list 2',
-                component: <FL2 />
-            },
-            {
-                id: 3,
-                title: 'Simple feature list 2',
-                component: <FL3 />
-            },
-        ]
-    },
-    {
-        id: 7,
-        slug: "flyout-menu",
-        name: "Flyout Menu",
-        desc: "Component description",
-        source: "/components/flyout-menu",
-        image: Navbar,
-        imgurl: '/images/components/feature-list.png',
-        number: "3 components",
-        data: [
-            {
-                id: 1,
-                title: 'Simple fly-out menu 1',
-                component: <FM1 />,
-                code: <CFM1 />
-            },
-            {
-                id: 2,
-                title: 'Simple fly-out menu 2',
-                component: <FM2 />,
-                code: <CFM2 />
-            },
-            {
-                id: 3,
-                title: 'Simple fly-out menu 3',
-                component: <FM3 />,
-                code: <CFM3 />
-            },
-        ]
-    },
-    {
-        id: 8,
-        slug: "feedback",
-        name: "Feedback",
-        desc: "Component description",
-        source: "/components/feedback",
-        image: Feedback,
-        imgurl: '/images/components/feadback.png',
-        number: "4 components",
-        data: [
-            {
-                id: 1,
-                title: 'Simple feedback 1',
-                component: <FED1 />,
-                code: <CFED1 />
-            },
-            {
-                id: 2,
-                title: 'Simple feedback 2',
-                component: <FED2 />,
-            },
-            {
-                id: 3,
-                title: 'Simple feedback 3',
-                component: <FED3 />,
-            },
-            {
-                id: 4,
-                title: 'Simple feedback 4',
-                component: <FED4 />,
-            },
-        ]
-    },
-    {
-        id: 9,
-        slug: "newsletter",
-        name: "Newsletter",
-        desc: "Component description",
-        source: "/components/newsletter",
-        image: Newsletter,
-        imgurl: '/images/components/newsletter.png',
-        number: "4 components",
-        data: [
-            {
-                id: 1,
-                title: 'Simple newsletter 1',
-                component: <NL1 />,
-                code: <CNL1 />
-            },
-            {
-                id: 2,
-                title: 'Simple newsletter 2',
-                component: <NL2 />,
-                code: <CNL2 />
-            },
-            {
-                id: 3,
-                title: 'Simple newsletter 3',
-                component: <NL3 />,
-                code: <CNL3 />
-            },
-            {
-                id: 3,
-                title: 'Simple newsletter 3',
-                component: <NL4 />,
-                code: <CNL4 />
-            },
-        ]
-    },
-    {
-        id: 10,
-        slug: "blogs",
-        name: "Blogs",
-        desc: "Component description",
-        source: "/components/blogs",
-        image: Blogs,
-        imgurl: '/images/components/blogs.png',
-        number: "4 components",
-        data: [
-            {
-                id: 1,
-                title: 'Simple blog 1',
-                component: <BL1 />,
-                code: <CBL1 />
-            },
-            {
-                id: 2,
-                title: 'Simple blog 2',
-                component: <BL2 />,
-                code: <CBL2 />
-            },
-            {
-                id: 3,
-                title: 'Simple blog 3',
-                component: <BL3 />,
-                code: <CBL3 />
-            },
-            {
-                id: 1,
-                title: 'Simple blog 4',
-                component: <BL4 />,
-                code: <CBL4 />
-            },
-        ]
-    },
-    {
-        id: 11,
-        slug: "pricing",
-        name: "Pricing",
-        desc: "Component description",
-        source: "/components/pricing",
-        image: Blogs,
-        imgurl: '/images/components/blogs.png',
-        number: "4 components",
-        data: [
-            {
-                id: 1,
-                title: 'Simple blog 1',
-                component: <PR1 />,
-                code: <CPR1 />
-            },
-            {
-                id: 2,
-                title: 'Simple blog 2',
-                component: <PR2 />,
-            },
+    // {
+    //     id: 3,
+    //     slug: "hero",
+    //     name: "Hero",
+    //     desc: "Component description",
+    //     source: "/components/hero",
+    //     image: Hero,
+    //     imgurl: '/images/components/hero.png',
+    //     number: "5 components",
+    //     data: [
+    //         {
+    //             id: 1,
+    //             title: 'Simple hero 1',
+    //             component: <H1 />,
+    //             code: <CH1 />
+    //         },
+    //         {
+    //             id: 2,
+    //             title: 'Simple hero 2',
+    //             component: <H2 />
+    //         },
+    //         {
+    //             id: 3,
+    //             title: 'Simple hero 3',
+    //             component: <H3 />
+    //         },
+    //         {
+    //             id: 4,
+    //             title: 'Simple hero 4',
+    //             component: <H5 />
+    //         },
+    //         {
+    //             id: 5,
+    //             title: 'Simple hero 5',
+    //             component: <H4 />
+    //         },
+    //     ]
+    // },
+    // {
+    //     id: 4,
+    //     slug: "header",
+    //     name: "Header",
+    //     desc: "Component description",
+    //     source: "/components/header",
+    //     image: Header,
+    //     imgurl: '/images/components/header.png',
+    //     number: "3 components",
+    //     data: [
+    //         {
+    //             id: 1,
+    //             title: 'Simple header 1',
+    //             component: <HE1 />,
+    //             code: <CHE1 />
+    //         },
+    //         {
+    //             id: 2,
+    //             title: 'Simple header 2',
+    //             component: <HE2 />
+    //         },
+    //         {
+    //             id: 3,
+    //             title: 'Simple header 2',
+    //             component: <HE3 />
+    //         },
+    //     ]
+    // },
+    // {
+    //     id: 5,
+    //     slug: "feature",
+    //     name: "Feature",
+    //     desc: "Component description",
+    //     source: "/components/feature",
+    //     image: Feature,
+    //     imgurl: '/images/components/feature.png',
+    //     number: "2 components",
+    //     data: [
+    //         {
+    //             id: 1,
+    //             title: 'Simple header 1',
+    //             component: <FE1 />,
+    //             code: <CFE1 />
+    //         },
+    //         {
+    //             id: 2,
+    //             title: 'Simple header 2',
+    //             component: <FE2 />,
+    //             code: <CFE2 />
+    //         },
+    //     ]
+    // },
+    // {
+    //     id: 6,
+    //     slug: "feature-list",
+    //     name: "Feature List",
+    //     desc: "Component description",
+    //     source: "/components/feature-list",
+    //     image: FeatureList,
+    //     imgurl: '/images/components/feature-list.png',
+    //     number: "3 components",
+    //     data: [
+    //         {
+    //             id: 1,
+    //             title: 'Simple feature list 1',
+    //             component: <FL1 />,
+    //             code: <CFL1 />
+    //         },
+    //         {
+    //             id: 2,
+    //             title: 'Simple feature list 2',
+    //             component: <FL2 />
+    //         },
+    //         {
+    //             id: 3,
+    //             title: 'Simple feature list 2',
+    //             component: <FL3 />
+    //         },
+    //     ]
+    // },
+    // {
+    //     id: 7,
+    //     slug: "flyout-menu",
+    //     name: "Flyout Menu",
+    //     desc: "Component description",
+    //     source: "/components/flyout-menu",
+    //     image: Navbar,
+    //     imgurl: '/images/components/feature-list.png',
+    //     number: "3 components",
+    //     data: [
+    //         {
+    //             id: 1,
+    //             title: 'Simple fly-out menu 1',
+    //             component: <FM1 />,
+    //             code: <CFM1 />
+    //         },
+    //         {
+    //             id: 2,
+    //             title: 'Simple fly-out menu 2',
+    //             component: <FM2 />,
+    //             code: <CFM2 />
+    //         },
+    //         {
+    //             id: 3,
+    //             title: 'Simple fly-out menu 3',
+    //             component: <FM3 />,
+    //             code: <CFM3 />
+    //         },
+    //     ]
+    // },
+    // {
+    //     id: 8,
+    //     slug: "feedback",
+    //     name: "Feedback",
+    //     desc: "Component description",
+    //     source: "/components/feedback",
+    //     image: Feedback,
+    //     imgurl: '/images/components/feadback.png',
+    //     number: "4 components",
+    //     data: [
+    //         {
+    //             id: 1,
+    //             title: 'Simple feedback 1',
+    //             component: <FED1 />,
+    //             code: <CFED1 />
+    //         },
+    //         {
+    //             id: 2,
+    //             title: 'Simple feedback 2',
+    //             component: <FED2 />,
+    //         },
+    //         {
+    //             id: 3,
+    //             title: 'Simple feedback 3',
+    //             component: <FED3 />,
+    //         },
+    //         {
+    //             id: 4,
+    //             title: 'Simple feedback 4',
+    //             component: <FED4 />,
+    //         },
+    //     ]
+    // },
+    // {
+    //     id: 9,
+    //     slug: "newsletter",
+    //     name: "Newsletter",
+    //     desc: "Component description",
+    //     source: "/components/newsletter",
+    //     image: Newsletter,
+    //     imgurl: '/images/components/newsletter.png',
+    //     number: "4 components",
+    //     data: [
+    //         {
+    //             id: 1,
+    //             title: 'Simple newsletter 1',
+    //             component: <NL1 />,
+    //             code: <CNL1 />
+    //         },
+    //         {
+    //             id: 2,
+    //             title: 'Simple newsletter 2',
+    //             component: <NL2 />,
+    //             code: <CNL2 />
+    //         },
+    //         {
+    //             id: 3,
+    //             title: 'Simple newsletter 3',
+    //             component: <NL3 />,
+    //             code: <CNL3 />
+    //         },
+    //         {
+    //             id: 3,
+    //             title: 'Simple newsletter 3',
+    //             component: <NL4 />,
+    //             code: <CNL4 />
+    //         },
+    //     ]
+    // },
+    // {
+    //     id: 10,
+    //     slug: "blogs",
+    //     name: "Blogs",
+    //     desc: "Component description",
+    //     source: "/components/blogs",
+    //     image: Blogs,
+    //     imgurl: '/images/components/blogs.png',
+    //     number: "4 components",
+    //     data: [
+    //         {
+    //             id: 1,
+    //             title: 'Simple blog 1',
+    //             component: <BL1 />,
+    //             code: <CBL1 />
+    //         },
+    //         {
+    //             id: 2,
+    //             title: 'Simple blog 2',
+    //             component: <BL2 />,
+    //             code: <CBL2 />
+    //         },
+    //         {
+    //             id: 3,
+    //             title: 'Simple blog 3',
+    //             component: <BL3 />,
+    //             code: <CBL3 />
+    //         },
+    //         {
+    //             id: 1,
+    //             title: 'Simple blog 4',
+    //             component: <BL4 />,
+    //             code: <CBL4 />
+    //         },
+    //     ]
+    // },
+    // {
+    //     id: 11,
+    //     slug: "pricing",
+    //     name: "Pricing",
+    //     desc: "Component description",
+    //     source: "/components/pricing",
+    //     image: Blogs,
+    //     imgurl: '/images/components/blogs.png',
+    //     number: "4 components",
+    //     data: [
+    //         {
+    //             id: 1,
+    //             title: 'Simple blog 1',
+    //             component: <PR1 />,
+    //             code: <CPR1 />
+    //         },
+    //         {
+    //             id: 2,
+    //             title: 'Simple blog 2',
+    //             component: <PR2 />,
+    //         },
 
-        ]
-    },
+    //     ]
+    // },
 
     // {
     //     id: 11,

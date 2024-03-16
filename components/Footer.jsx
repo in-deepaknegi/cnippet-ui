@@ -21,11 +21,11 @@ const links = [
         title: "Terms",
         href: "/terms",
     },
-    {
-        id: 5,
-        title: "Shipping",
-        href: "/shipping",
-    },
+    // {
+    //     id: 5,
+    //     title: "Shipping",
+    //     href: "/shipping",
+    // },
 ];
 
 const Footer = () => {

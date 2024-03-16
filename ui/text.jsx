@@ -1,82 +1,45 @@
-import React from "react";
-import Image from "next/image";
-import Profile1 from "@/public/images/profile/profile4.jpg";
+"use client"
+import { useState } from 'react';
+import H1 from '@/ui/pricing/S1'
 
-const Feedback1 = () => {
+const Modal = () => {
+    const [isOpen, setIsOpen] = useState(false);
+
+    const toggleModal = () => {
+        setIsOpen(!isOpen);
+        document.body.style.overflow = isOpen ? 'auto' : 'hidden';
+    };
+
     return (
-        <section className="relative isolate overflow-hidden bg-white py-8 sm:py-16">
-            <div className="mx-auto max-w-xl px-6 lg:px-8 lg:max-w-2xl">
-                <figure className="items-center gap-8">
-                    <div className="col-span-2 font-sans">
-                        <div className="relative">
-                            <blockquote className="text-center text-xl text-gray-900 sm:text-2xl sm:leading-8">
-                                <p>
-                                    Commodo amet fugiat excepteur sunt qui ea elit cupidatat
-                                    ullamco consectetur ipsum elit consequat. Elit sunt proident
-                                    ea nulla ad nulla dolore ad pariatur tempor non. Sint veniam
-                                    minim et ea.
-                                </p>
-                            </blockquote>
-                        </div>
+        <>
+            <section className="h-[40vh] max-2xl mx-auto border overflow-hidden">
+                <button onClick={toggleModal} className="mt-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded absolute z-20">
+                    {isOpen ? 'Open modal' : 'Close modal'}
+                </button>
 
-                        <figcaption className="mx-auto mt-8 flex justify-center">
-                            <Image
-                                src={Profile1}
-                                alt="profile-1"
-                                className="h-12 w-12 rounded-full object-cover"
-                            />
-                            <div className="ml-5">
-                                <div className="text-lg font-semibold">Judith Black</div>
-                                <a
-                                    href="#"
-                                    className="text-sm tracking-wide font-semibold text-blue-600"
-                                >
-                                    @judithblack
-                                </a>
+                {isOpen && (
+                    <div onClick={toggleModal} className="fixed top-0 z-10 inset-0 overflow-y-auto bg-black bg-opacity-50 overflow-hidden">
+                        <div className="flex items-center justify-center min-h-screen">
+                            <div className="modal">
+                                <div className="modal-content bg-white">
+                                    <h1 className="text-xl font-bold">Modal Title</h1>
+                                    <p>This is the content of sdfdsfthe modal.</p>
+
+                                </div>
                             </div>
-                            <div className="mx-3 my-auto h-10 w-[1px] bg-gray-400 md:block hidden"></div>
-                            <div className="my-auto hidden md:flex">
-                                {[...Array(4).keys()].map((index) => (
-                                    <div key={index}>
-                                        <svg
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            viewBox="0 0 20 20"
-                                            fill="currentColor"
-                                            aria-hidden="true"
-                                            className="h-5 w-5 text-blue-600"
-                                        >
-                                            <path
-                                                fillRule="evenodd"
-                                                d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
-                                                clipRule="evenodd"
-                                            ></path>
-                                        </svg>
-                                    </div>
-                                ))}
-                                {[...Array(1).keys()].map((index) => (
-                                    <div key={index}>
-                                        <svg
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            viewBox="0 0 20 20"
-                                            fill="currentColor"
-                                            aria-hidden="true"
-                                            className="h-5 w-5 text-gray-200"
-                                        >
-                                            <path
-                                                fillRule="evenodd"
-                                                d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
-                                                clipRule="evenodd"
-                                            ></path>
-                                        </svg>
-                                    </div>
-                                ))}
-                            </div>
-                        </figcaption>
+                        </div>
+                        
                     </div>
-                </figure>
-            </div>
-        </section>
+                )}
+
+                
+            </section>
+            
+            <H1 />
+
+
+        </>
     );
 };
 
-export default Feedback1;
+export default Modal;

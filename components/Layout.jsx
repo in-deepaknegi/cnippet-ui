@@ -73,11 +73,12 @@ const Layout = ({ components }) => {
                                                 strokeLinecap="round"
                                                 strokeLinejoin="round"
                                             >
-                                                <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z" />
-                                                <circle cx="12" cy="12" r="3" />
+                                                <path d="m18 16 4-4-4-4" />
+                                                <path d="m6 8-4 4 4 4" />
+                                                <path d="m14.5 4-5 16" />
                                             </svg>
                                             <span className="sr-only text-stone-100 lg:not-sr-only lg:ml-2">
-                                                Preview
+                                                Code
                                             </span>
                                         </>
                                     ) : (
@@ -93,12 +94,11 @@ const Layout = ({ components }) => {
                                                 strokeLinecap="round"
                                                 strokeLinejoin="round"
                                             >
-                                                <path d="m18 16 4-4-4-4" />
-                                                <path d="m6 8-4 4 4 4" />
-                                                <path d="m14.5 4-5 16" />
+                                                <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z" />
+                                                <circle cx="12" cy="12" r="3" />
                                             </svg>
                                             <span className="sr-only text-stone-100 lg:not-sr-only lg:ml-2">
-                                                Code
+                                                Preview
                                             </span>
                                         </>
                                     )}
