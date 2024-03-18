@@ -1,45 +1,58 @@
-"use client"
-import { useState } from 'react';
-import H1 from '@/ui/pricing/S1'
+import React from "react";
+import Image from "next/image";
+import Button from "@/components/ui/Button";
 
-const Modal = () => {
-    const [isOpen, setIsOpen] = useState(false);
+import Hero1 from "@/public/images/hero/hero5.jpg";
+import Hero2 from "@/public/images/hero/hero6.jpg";
 
-    const toggleModal = () => {
-        setIsOpen(!isOpen);
-        document.body.style.overflow = isOpen ? 'auto' : 'hidden';
-    };
-
+const Hero = () => {
     return (
-        <>
-            <section className="h-[40vh] max-2xl mx-auto border overflow-hidden">
-                <button onClick={toggleModal} className="mt-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded absolute z-20">
-                    {isOpen ? 'Open modal' : 'Close modal'}
-                </button>
+        <section className="relative isolate bg-white overflow-hidden">
+            <div className="max-w-full relative w-full h-screen isolate">
+                <Image
+                    src={Hero2}
+                    alt='hero-img'
+                    quality={100}
+                    loading="eager"
+                    fill={true}
+                    sizes="100vw"
+                    className="w-full h-full rounded-2xl object-cover inset-0 z-[-10] brightness-110"
+                />
 
-                {isOpen && (
-                    <div onClick={toggleModal} className="fixed top-0 z-10 inset-0 overflow-y-auto bg-black bg-opacity-50 overflow-hidden">
-                        <div className="flex items-center justify-center min-h-screen">
-                            <div className="modal">
-                                <div className="modal-content bg-white">
-                                    <h1 className="text-xl font-bold">Modal Title</h1>
-                                    <p>This is the content of sdfdsfthe modal.</p>
+                <div className="absolute w-full h-full z-[-9] bg-gradient-to-b from-white/10 via-black/40 to-black rounded-2xl overflow-hidden"></div>
 
-                                </div>
-                            </div>
+                <div className="mx-auto px-8 pb-16 pt-[18.5rem] md:pt-64">
+                    <div className="hidden sm:mb-8 sm:flex">
+                        <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-200 ring-1 ring-gray-100/10 hover:ring-gray-100">
+                            Announcing our next round of funding.{" "}
+                            <a href="#" className="font-medium text-gray-100">
+                                <span
+                                    className="absolute inset-0"
+                                    aria-hidden="true"
+                                ></span>
+                                Read more <span aria-hidden="true">&rarr;</span>
+                            </a>
                         </div>
-                        
                     </div>
-                )}
-
-                
-            </section>
-            
-            <H1 />
-
-
-        </>
+                    <h1 className="text-5xl max-w-3xl font-semibold text-white md:text-6xl md:text-left text-center">
+                        Data to enrich your online bussiness
+                    </h1>
+                    <p className="mt-6 text-base text-center md:text-right md:ml-auto max-w-3xl text-gray-200 md:font-light md:text-lg">
+                        Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.
+                    </p>
+                    <div className="mt-3 ml-auto flex justify-end gap-x-6">
+                        <Button text="Get started" url={'#'} color={'bg-gray-800'} />
+                        <a
+                            href="#"
+                            className="my-auto text-sm font-semibold leading-6 text-gray-100"
+                        >
+                            Read more <span aria-hidden="true">→</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
     );
 };
 
-export default Modal;
+export default Hero;
