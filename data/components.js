@@ -79,8 +79,10 @@ import PR1 from '@/ui/pricing/S1';
 import PR2 from '@/ui/pricing/S2';
 import CPR1 from '@/ui/pricing/C1.mdx';
 
-import Hi1 from '@/ui/hiw/S1'
-import Hi2 from '@/ui/hiw/S2'
+import HI1 from '@/ui/hiw/S1'
+import HI2 from '@/ui/hiw/S2'
+import CHI1 from '@/ui/hiw/C1.mdx'
+import CHI2 from '@/ui/hiw/C2.mdx'
 
 
 const components = [
@@ -433,12 +435,14 @@ const components = [
             {
                 id: 1,
                 title: 'Simple how-it-works 1',
-                component: <Hi1 />,
+                component: <HI1 />,
+                code: <CHI1 />
             },
             {
                 id: 2,
                 title: 'Simple how-it-works 2',
-                component: <Hi2 />,
+                component: <HI2 />,
+                code: <CHI2 />
             },
 
         ]
