@@ -46,23 +46,13 @@ const S2 = () => {
                             <div key={i} className="flex gap-2 md:gap-6">
                                 <div className="items-center text-blue-700">
                                     <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        width="20"
-                                        height="20"
-                                        viewBox="0 0 24 24"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        strokeWidth="2"
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                        className="mx-auto"
+                                        viewBox="0 0 4 4"
+                                        className="mr-4 h-1 w-1 flex-none items-center mx-auto"
+                                        aria-hidden="true"
                                     >
-                                        <path d="M5.5 8.5 9 12l-3.5 3.5L2 12l3.5-3.5Z"></path>
-                                        <path d="m12 2 3.5 3.5L12 9 8.5 5.5 12 2Z"></path>
-                                        <path d="M18.5 8.5 22 12l-3.5 3.5L15 12l3.5-3.5Z"></path>
-                                        <path d="m12 15 3.5 3.5L12 22l-3.5-3.5L12 15Z"></path>
+                                        <circle cx="2" cy="2" r="2" fill="currentColor"></circle>
                                     </svg>
-                                    <div className="mx-auto mt-2 h-[90%] w-[1px] bg-gray-300 lg:static"></div>
+                                    <div className="mt-2 h-[90%] w-[2px] bg-blue-400 lg:static"></div>
                                 </div>
                                 <div>
                                     <p className="text-sm font-bold text-blue-700">

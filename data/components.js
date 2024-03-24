@@ -79,6 +79,9 @@ import PR1 from '@/ui/pricing/S1';
 import PR2 from '@/ui/pricing/S2';
 import CPR1 from '@/ui/pricing/C1.mdx';
 
+import Hi1 from '@/ui/hiw/S1'
+import Hi2 from '@/ui/hiw/S2'
+
 
 const components = [
     {
@@ -417,28 +420,39 @@ const components = [
 
         ]
     },
+    {
+        id: 12,
+        slug: "hiw",
+        name: "How it works",
+        desc: "Component description",
+        source: "/components/hiw",
+        image: Blogs,
+        imgurl: '/images/components/blogs.png',
+        number: "4 components",
+        data: [
+            {
+                id: 1,
+                title: 'Simple how-it-works 1',
+                component: <Hi1 />,
+            },
+            {
+                id: 2,
+                title: 'Simple how-it-works 2',
+                component: <Hi2 />,
+            },
 
-    // {
-    //     id: 11,
-    //     name: "Faq",
-    //     source: "/components/faq",
-    //     imageURL: Blogs,
-    //     number: "2 components",
-    // },
-    // {
-    //     id: 12,
-    //     name: "Hiw",
-    //     source: "/components/article",
-    //     imageURL: Article,
-    //     number: "3 components",
-    // },
-    // {
-    //     id: 12,
-    //     name: "Article",
-    //     source: "/components/article",
-    //     imageURL: Article,
-    //     number: "3 components",
-    // },
+        ]
+    },
+
+    // stats
+    // contact section
+    // team section 
+    // logo
+    // faq
+    // sidebar
+    // modals
+    // Hiw
+    // article
 ];
 
 export default components
