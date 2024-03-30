@@ -84,6 +84,11 @@ import HI2 from "@/ui/hiw/S2";
 import CHI1 from "@/ui/hiw/C1.mdx";
 import CHI2 from "@/ui/hiw/C2.mdx";
 
+import CON1 from '@/ui/container/S1';
+import CON2 from '@/ui/container/S2';
+import CCON1 from '@/ui/container/C1.mdx';
+import CCON2 from '@/ui/container/C2.mdx';
+
 const components = [
     {
         slug: "navbar",
@@ -379,6 +384,26 @@ const components = [
                 title: "Simple how-it-works 2",
                 component: <HI2 />,
                 code: <CHI2 />,
+            },
+        ],
+    },
+    {
+        slug: "container",
+        name: "Container",
+        desc: "Component description",
+        image: Blogs,
+        imgurl: "/images/components/blogs.png",
+        number: "4 components",
+        data: [
+            {
+                title: "Simple container using grid",
+                component: <CON1 />,
+                code: <CCON1 />,
+            },
+            {
+                title: "Simple conatiner using flex",
+                component: <CON2 />,
+                code: <CCON2 />,
             },
         ],
     },

@@ -3,8 +3,10 @@ import components from "@/data/components";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
-    const BASE_URL = 'https://ui.cnippet.com';
-    
+    const BASE_URL = process.env.NEXT_PUBLIC_URL
+        ? `https://${process.env.NEXT_PUBLIC_URL}`
+        : 'http://localhost:3000';
+
     const entries: MetadataRoute.Sitemap = components.map(({ slug }) => ({
         url: `${BASE_URL}/components/${slug}`,
         lastModified: new Date(),
