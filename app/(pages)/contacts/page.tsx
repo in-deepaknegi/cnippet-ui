@@ -5,7 +5,7 @@ import Form from '@/components/routes/contact/Form'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-    title: 'Contacts  - Cnippet',
+    title: 'Contacts | Cnippet Ui',
     description: 'Contact Us page',
 }
 

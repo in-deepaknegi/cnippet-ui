@@ -7,8 +7,21 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         ? `https://${process.env.NEXT_PUBLIC_URL}`
         : 'http://localhost:3000';
 
+    const urls = [
+        `${BASE_URL}/components`,
+        `${BASE_URL}/contacts`,
+        `${BASE_URL}/about`,
+    ]
+
     const entries: MetadataRoute.Sitemap = components.map(({ slug }) => ({
         url: `${BASE_URL}/components/${slug}`,
+        lastModified: new Date(),
+        changeFrequency: 'weekly',
+        priority: 0.8,
+    }))
+
+    const allUrls: MetadataRoute.Sitemap = urls.map((url) => ({
+        url,
         lastModified: new Date(),
         changeFrequency: 'weekly',
         priority: 0.8,
@@ -21,6 +34,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
             changeFrequency: 'weekly',
             priority: 1,
         },
+        ...allUrls, 
         ...entries,
     ]
 }

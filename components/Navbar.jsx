@@ -40,6 +40,10 @@ const menu = [
                 name: "Blogs",
                 href: "https://ui.cnippet.com/components/blogs",
             },
+            {
+                name: "Show more...",
+                href: "https://ui.cnippet.com/components/",
+            },
         ],
     },
 ];

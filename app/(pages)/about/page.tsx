@@ -5,7 +5,7 @@ import Hero from '@/components/routes/about/Hero'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-    title: 'About - Cnippet',
+    title: 'About | Cnippet Ui',
     description: 'About page',
 }
 
