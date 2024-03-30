@@ -2,7 +2,7 @@
 import { signIn, useSession } from "next-auth/react";
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
-import Hero1 from '@/public/gradient/g4.jpg'
+import Hero1 from "@/public/gradient/g4.jpg";
 import GoogleLogo from "@/public/google-logo.svg";
 
 const Layout = ({ components }) => {
@@ -35,14 +35,16 @@ const Layout = ({ components }) => {
             <div className=" mt-10 max-w-4xl">
                 <span className="text-xl">Loading ...</span>
             </div>
-        )
+        );
     }
 
-    if (status === 'authenticated') {
+    if (status === "authenticated") {
         return (
             <div className="mt-10 space-y-28 bg-white pb-px">
                 {components.map((component, index) => (
-                    <section key={component.id} id={`${component.title}`}>
+                    <section
+                        key={index}
+                        id={`${component.title}`}>
                         <div className="grid grid-cols-[1fr,auto] items-center">
                             <div className="flex min-w-0">
                                 <h2 className="truncate text-base font-medium leading-7 text-slate-900">
@@ -58,7 +60,7 @@ const Layout = ({ components }) => {
                             <div className="p-0.5">
                                 <button
                                     onClick={() => changeTab(index)}
-                                    className={`mx-auto flex justify-center rounded-lg w-28 items-center bg-black py-[0.45rem] pl-2 pr-2 text-sm lg:pr-3`}
+                                    className={`mx-auto flex w-28 items-center justify-center rounded-lg bg-black py-[0.45rem] pl-2 pr-2 text-sm lg:pr-3`}
                                 >
                                     {activeTab[index] === 0 ? (
                                         <>
@@ -125,7 +127,9 @@ const Layout = ({ components }) => {
         <>
             <div className="mt-10 space-y-28 bg-white pb-px">
                 {components.slice(0, 1).map((component, index) => (
-                    <section key={component.id} id={`feature-list${component.id}`}>
+                    <section
+                        key={index}
+                        id={`${component.title}${component.id}`}>
                         <div className="grid grid-cols-[1fr,auto] items-center">
                             <div className="flex min-w-0">
                                 <h2 className="truncate text-base font-medium leading-7 text-slate-900">
@@ -141,7 +145,7 @@ const Layout = ({ components }) => {
                             <div className="p-0.5">
                                 <button
                                     onClick={() => changeTab(index)}
-                                    className={`mx-auto flex justify-center rounded-lg w-28 items-center bg-black py-[0.45rem] pl-2 pr-2 text-sm lg:pr-3`}
+                                    className={`mx-auto flex w-28 items-center justify-center rounded-lg bg-black py-[0.45rem] pl-2 pr-2 text-sm lg:pr-3`}
                                 >
                                     {activeTab[index] === 0 ? (
                                         <>
@@ -217,7 +221,7 @@ const Layout = ({ components }) => {
                         <div className="w-full max-w-sm">
                             <button
                                 onClick={handleLogin}
-                                className="inline-flex w-full justify-center rounded-lg border border-olive-300 px-4 py-2.5 text-base text-white"
+                                className="border-olive-300 inline-flex w-full justify-center rounded-lg border px-4 py-2.5 text-base text-white"
                             >
                                 {load && (
                                     <svg
@@ -246,15 +250,15 @@ const Layout = ({ components }) => {
                                     alt="google-logo"
                                     width={20}
                                     height={20}
-                                    className="mx-3 text-olive-200"
+                                    className="text-olive-200 mx-3"
                                 />
                                 Log in with Google
                             </button>
                         </div>
                         <div className="my-4 flex  max-w-sm items-center">
-                            <div className="h-[0.025rem] w-[24rem] bg-olive-300"></div>
+                            <div className="bg-olive-300 h-[0.025rem] w-[24rem]"></div>
                             <div className="mx-2 text-dusk-300">or</div>
-                            <div className="h-[0.025rem] w-full bg-olive-300"></div>
+                            <div className="bg-olive-300 h-[0.025rem] w-full"></div>
                         </div>
                     </div>
                     <div className="relative shrink-0">
@@ -276,8 +280,7 @@ const Layout = ({ components }) => {
                 </div>
             </div>
         </>
-    )
-
+    );
 };
 
 export default Layout;

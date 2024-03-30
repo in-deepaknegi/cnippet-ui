@@ -52,11 +52,11 @@ export async function generateMetadata({ params }: { params: { slug: string } })
     const id = params.slug
 
     const component = components.find((component) => component.slug === id)
-    const name = 'Ui - ' + component?.name;
+    const name = 'Ui - ' + component?.name + ' | Cnippet Ui';
     return {
         title: name,
         description: component?.name,
-        metadataBase: new URL('http://anjaanbackpackers.com/'),
+        metadataBase: new URL('http://ui.cnippet.com/'),
         openGraph: {
             images: [
                 {

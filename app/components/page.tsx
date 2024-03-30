@@ -30,8 +30,8 @@ const page = () => {
 
                     <div className="relative mt-10 md:mt-8">
                         <ul className="grid-cols-[repeat(auto-fill,minmax(12rem, 1fr))] grid gap-x-8 gap-y-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-                            {components.map((component) => (
-                                <li key={component.id}>
+                            {components.map((component, i) => (
+                                <li key={i}>
                                     <div className="group relative before:absolute before:-inset-2.5 before:rounded-[20px] before:bg-gray-50 before:opacity-0 hover:before:opacity-100">
                                         <div className="relative aspect-[2/1] overflow-hidden rounded-lg bg-gray-100 ring-1 ring-gray-900/10">
                                             <Image
@@ -41,7 +41,7 @@ const page = () => {
                                             />
                                         </div>
                                         <h4 className="mt-4 text-sm font-medium text-slate-800 group-hover:text-indigo-600 ">
-                                            <a href={component.source}>
+                                            <a href={`components/${component.slug}`}>
                                                 <span className="absolute -inset-2.5 z-10"></span>
                                                 <span className="relative">{component.name}</span>
                                             </a>
