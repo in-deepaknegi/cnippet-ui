@@ -7,7 +7,7 @@ const C2 = () => {
     return (
         <section className="relative isolate bg-white">
             <div className="mx-auto grid max-w-full grid-cols-12 gap-y-10 lg:gap-8 lg:gap-y-0">
-                <div className="col-span-12 py-10 md:py-20 lg:py-48 xl:col-span-6">
+                <div className="col-span-12 py-10 md:py-20 lg:py-40 xl:col-span-6">
                     <div className="mx-auto max-w-full px-6 md:max-w-2xl lg:px-8">
                         <div className="hidden sm:mb-8 sm:flex">
                             <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
@@ -27,7 +27,7 @@ const C2 = () => {
                             fugiat aliqua.
                         </p>
                         <div className="mt-10 flex gap-x-6">
-                            <Button text="Get started" url={'#'} />
+                            <Button text="Get started" url={"#"} />
                             <a
                                 href="#"
                                 className="my-auto text-sm font-semibold leading-6 text-gray-900"
@@ -42,7 +42,7 @@ const C2 = () => {
                         src={Hero1}
                         alt="hero image 1"
                         priority={true}
-                        className="lg:aspect-auto aspect-[3/2] w-full object-cover object-bottom lg:absolute lg:inset-0 lg:h-full"
+                        className="aspect-[3/2] w-full object-cover object-bottom lg:absolute lg:inset-0 lg:aspect-auto lg:h-full"
                     />
                 </div>
             </div>

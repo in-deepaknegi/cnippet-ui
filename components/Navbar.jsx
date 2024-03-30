@@ -2,6 +2,9 @@
 import React, { useEffect, useRef, useState } from "react";
 import { signIn, signOut, useSession } from "next-auth/react";
 import Image from "next/image";
+import L1 from '@/public/logo.svg'
+import L2 from '@/public/site.svg'
+import L3 from '@/public/site2.svg'
 
 const links = [
     {
@@ -9,11 +12,11 @@ const links = [
         title: "Components",
         url: "/components",
     },
-    // {
-    //     id: 2,
-    //     title: "Templates",
-    //     url: "/templates",
-    // },
+    {
+        id: 2,
+        title: "Templates",
+        url: "/templates",
+    },
     {
         id: 3,
         title: "Contacts",
@@ -104,9 +107,14 @@ const Navbar = () => {
             </nav>
 
             <header className="sticky top-0 bg-white z-20">
-                <div className="flex items-center justify-between border-b border-gray-100 bg-white px-6 py-6 lg:px-8">
+                <div className="flex items-center justify-between border-b border-gray-100 bg-white px-6 py-5 shadow-lg shadow-purple-100/50 lg:px-8">
                     <div className="flex lg:flex-none">
-                        <a href="/" className="-m-1.5 p-1.5 text-2xl text-black">
+                        <a href="/" className="-m-1.5 p-1.5 text-2xl text-black flex items-center gap-x-2">
+                            <Image
+                                src={L3}
+                                alt="site-logo"
+                                className='w-9'
+                            />
                             Cnippet <span className="text-base">Ui.</span>
                         </a>
                     </div>
