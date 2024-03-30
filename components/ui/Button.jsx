@@ -14,7 +14,7 @@ const Button = ({ text, color, url }) => {
     return (
         <button type="submit">
             <Link
-                className={`rounded-md max-w-md mx-auto font-semibold px-3.5 tracking-wide py-2.5 text-sm text-white shadow-sm ${hbg} ${bg}`}
+                className={`rounded-md max-w-md mx-auto font-semibold px-3.5 tracking-wide py-2.5 text-sm text-white shadow-sm bg-gradient-to-br from-black to-purple-600`}
                 href={`${url}`}
             >
                 {text}

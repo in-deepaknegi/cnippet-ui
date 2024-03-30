@@ -2,30 +2,47 @@
 import React, { useEffect, useRef, useState } from "react";
 import { signIn, signOut, useSession } from "next-auth/react";
 import Image from "next/image";
+import { ChevronDown } from 'lucide-react'
 import L1 from '@/public/logo.svg'
 import L2 from '@/public/site.svg'
 import L3 from '@/public/site2.svg'
 
 const links = [
     {
-        id: 1,
-        title: "Components",
-        url: "/components",
-    },
-    {
-        id: 2,
         title: "Templates",
         url: "/templates",
     },
     {
-        id: 3,
         title: "Contacts",
         url: "/contacts",
     },
     {
-        id: 4,
         title: "About",
         url: "/about",
+    },
+];
+
+const menu = [
+    {
+        title: "Components",
+        solutions: [
+            {
+                name: "Hero",
+                href: "https://ui.cnippet.com/components/hero",
+            },
+            {
+                name: "Features",
+                href: "https://ui.cnippet.com/components/features",
+            },
+            {
+                name: "Flyout Menu",
+                href: "https://ui.cnippet.com/components/flyout-menu",
+            },
+            {
+                name: "Blogs",
+                href: "https://ui.cnippet.com/components/blogs",
+            },
+        ],
     },
 ];
 
@@ -36,6 +53,12 @@ const Navbar = () => {
     const [profile, setProfile] = useState(false);
 
     const sectionRef = useRef(null);
+
+    const [open, setOpen] = useState(null);
+
+    const toggleOpen = (index) => {
+        setOpen(open === index ? null : index);
+    };
 
     const toggleMobileMenu = () => {
         setMobileMenu(!mobilemenu);
@@ -166,11 +189,53 @@ const Navbar = () => {
                         )}
                     </div>
                     <div className="ml-10 hidden lg:flex lg:gap-x-12">
-                        {links.map((link) => (
+                        {menu.map((item, i) => (
+                            <div key={i} className="relative hidden lg:flex lg:gap-x-12">
+                                <button
+                                    onMouseEnter={() => toggleOpen(i)}
+                                    onMouseLeave={() => toggleOpen(i)}
+                                    className="inline-flex items-center justify-center gap-x-1 text-sm font-semibold leading-6 text-gray-900 hover:text-purple-800/95"
+                                >
+                                    <span>{item.title}</span>
+                                    <ChevronDown className="h-5 w-5" aria-hidden="true" />
+
+                                    {open === i && (
+                                        <div className="absolute -left-5 top-1 z-10 mt-5 flex w-screen max-w-max px-4 pt-2">
+                                            <div className="min-w-fit flex-auto overflow-hidden rounded-xl bg-white text-sm leading-6 shadow-lg ring-1 ring-gray-900/5">
+                                                <div className="p-2">
+                                                    <div className="grid grid-cols-1">
+                                                        {item.solutions.map((item, j) => (
+                                                            <div
+                                                                key={j}
+                                                                className="group relative flex flex-col gap-y-3 rounded-lg px-8 py-2.5 text-left hover:bg-gray-100"
+                                                            >
+
+                                                                <div>
+                                                                    <a
+                                                                        href={item.href}
+                                                                        className="font-semibold text-gray-900"
+                                                                    >
+                                                                        {item.name}
+                                                                        <span className="absolute inset-0" />
+                                                                    </a>
+
+                                                                </div>
+                                                            </div>
+                                                        ))}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    )}
+                                </button>
+                            </div>
+                        ))}
+
+                        {links.map((link, i) => (
                             <a
-                                key={link.id}
+                                key={i}
                                 href={link.url}
-                                className="text-sm font-semibold leading-6 text-gray-900"
+                                className="text-sm font-semibold leading-6 text-gray-900 hover:text-purple-800"
                             >
                                 {link.title}
                             </a>
@@ -182,25 +247,36 @@ const Navbar = () => {
                             onClick={toggleProfile}
                             ref={sectionRef}>
                             <span className="sr-only">profile</span>
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                fill="none"
-                                viewBox="0 0 24 24"
-                                strokeWidth="1.5"
-                                stroke="currentColor"
-                                aria-hidden="true"
-                                className="h-6 w-6 text-gray-600"
-                            >
-                                <path
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                    d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"
-                                ></path>
-                            </svg>
+                            {status === 'authenticated' ? (
+                                <Image
+                                    src={session.user.image}
+                                    alt="profile-image"
+                                    width={36}
+                                    height={36}
+                                    className=" rounded-full object-cover"
+                                />
+                            ) : (
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    strokeWidth="1.5"
+                                    stroke="currentColor"
+                                    aria-hidden="true"
+                                    className="h-6 w-6 text-gray-600"
+                                >
+                                    <path
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                        d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"
+                                    ></path>
+                                </svg>
+                            )}
+
                         </button>
 
                         {profile && (
-                            <div className="absolute top-6 z-50 right-7 mt-8 px-6 py-3 w-56 bg-white border rounded-lg shadow-xl">
+                            <div className="absolute top-6 z-50 right-7 mt-10 px-6 py-3 w-56 bg-white border rounded-lg shadow-xl">
                                 {status === 'authenticated' ? (
                                     <div className="relative isolate inset-0" >
                                         <div className="flex flex-col justify-center items-center space-y-2">
