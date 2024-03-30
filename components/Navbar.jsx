@@ -4,8 +4,6 @@ import { signIn, signOut, useSession } from "next-auth/react";
 import Image from "next/image";
 import { ChevronDown } from 'lucide-react'
 import L1 from '@/public/logo.svg'
-import L2 from '@/public/site.svg'
-import L3 from '@/public/site2.svg'
 
 const links = [
     {
@@ -32,7 +30,7 @@ const menu = [
             },
             {
                 name: "Features",
-                href: "https://ui.cnippet.com/components/features",
+                href: "https://ui.cnippet.com/components/feature",
             },
             {
                 name: "Flyout Menu",
@@ -134,9 +132,9 @@ const Navbar = () => {
                     <div className="flex lg:flex-none">
                         <a href="/" className="-m-1.5 p-1.5 text-2xl text-black flex items-center gap-x-2">
                             <Image
-                                src={L3}
+                                src={L1}
                                 alt="site-logo"
-                                className='w-9'
+                                className='w-7'
                             />
                             Cnippet <span className="text-base">Ui.</span>
                         </a>
