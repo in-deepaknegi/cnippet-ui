@@ -91,6 +91,11 @@ import CON2 from '@/ui/container/S2';
 import CCON1 from '@/ui/container/C1.mdx';
 import CCON2 from '@/ui/container/C2.mdx';
 
+import FAQ1 from '@/ui/faq/S1';
+import FAQ2 from '@/ui/faq/S2';
+import CFAQ1 from '@/ui/faq/C1.mdx';
+import CFAQ2 from '@/ui/faq/C2.mdx';
+
 const components = [
     {
         slug: "navbar",
@@ -358,7 +363,7 @@ const components = [
         desc: "Component description",
         image: Blogs,
         imgurl: "/images/components/blogs.png",
-        number: "4 components",
+        number: "2 components",
         data: [
             {
                 title: "Simple blog 1",
@@ -377,7 +382,7 @@ const components = [
         desc: "Component description",
         image: Blogs,
         imgurl: "/images/components/blogs.png",
-        number: "4 components",
+        number: "2 components",
         data: [
             {
                 title: "Simple how-it-works 1",
@@ -397,7 +402,7 @@ const components = [
         desc: "Component description",
         image: Blogs,
         imgurl: "/images/components/blogs.png",
-        number: "4 components",
+        number: "2 components",
         data: [
             {
                 title: "Simple container using grid",
@@ -411,7 +416,26 @@ const components = [
             },
         ],
     },
-    //container
+    {
+        slug: "faq",
+        name: "FAQ",
+        desc: "Component description",
+        image: Blogs,
+        imgurl: "/images/components/blogs.png",
+        number: "2 components",
+        data: [
+            {
+                title: "Simple faq 1",
+                component: <FAQ1 />,
+                code: <CFAQ1 />,
+            },
+            {
+                title: "Simple faq 2",
+                component: <FAQ2 />,
+                code: <CFAQ2 />,
+            },
+        ],
+    },
     // stats
     // contact section
     // team section
