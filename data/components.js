@@ -440,10 +440,8 @@ const components = [
     // contact section
     // team section
     // logo
-    // faq
     // sidebar
     // modals
-    // Hiw
     // article
 ];
 
