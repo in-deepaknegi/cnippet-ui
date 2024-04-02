@@ -8,8 +8,8 @@ import H4 from "@/public/images/home/T4.webp";
 
 const Hero = () => {
     return (
-        <section className="relative isolate h-screen overflow-hidden bg-white">
-            <div className="mx-auto max-w-7xl px-6 py-4 lg:px-8">
+        <section className="relative isolate h-screen overflow-hidden bg-white mx-20">
+            <div className="mx-auto max-w-full px-6 py-4 lg:px-12">
                 <div className="mx-auto gap-0 md:gap-x-8 lg:mx-0 md:flex lg:max-w-none">
 
                     <div className="mt-28 w-full max-w-full lg:max-w-xl lg:flex-shrink">

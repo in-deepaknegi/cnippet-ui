@@ -103,49 +103,6 @@ const Layout = ({ components }) => {
                                         </span>
                                     </button>
                                 </div>
-                                {/* <button
-                                    onClick={() => changeTab(index, 0)}
-                                    className={`mx-auto flex w-28 items-center justify-center rounded-lg bg-black py-[0.45rem] pl-2 pr-2 text-sm lg:pr-3`}>
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        width="20"
-                                        height="20"
-                                        viewBox="0 0 24 24"
-                                        fill="none"
-                                        stroke="#fff"
-                                        strokeWidth="2"
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                    >
-                                        <path d="m18 16 4-4-4-4" />
-                                        <path d="m6 8-4 4 4 4" />
-                                        <path d="m14.5 4-5 16" />
-                                    </svg>
-                                    <span className="sr-only text-stone-100 lg:not-sr-only lg:ml-2">
-                                        Code
-                                    </span>
-                                </button>
-                                <button
-                                    onClick={() => changeTab(index, 1)}
-                                    className={`mx-auto flex w-28 items-center justify-center rounded-lg bg-black py-[0.45rem] pl-2 pr-2 text-sm lg:pr-3`}>
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        width="20"
-                                        height="20"
-                                        viewBox="0 0 24 24"
-                                        fill="none"
-                                        stroke="#fff"
-                                        strokeWidth="2"
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                    >
-                                        <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z" />
-                                        <circle cx="12" cy="12" r="3" />
-                                    </svg>
-                                    <span className="sr-only text-stone-100 lg:not-sr-only lg:ml-2">
-                                        Preview
-                                    </span>
-                                </button> */}
                             </div>
 
                             <div className="col-span-2 row-start-2 mt-3 min-w-0 overflow-hidden rounded-2xl border border-gray-300">
@@ -182,53 +139,53 @@ const Layout = ({ components }) => {
                                 </p>
                             </div>
                             <div className="p-0.5">
-                                <button
-                                    onClick={() => changeTab(index)}
-                                    className={`mx-auto flex w-28 items-center justify-center rounded-lg bg-black py-[0.45rem] pl-2 pr-2 text-sm lg:pr-3`}
-                                >
-                                    {activeTab[index] === 0 ? (
-                                        <>
-                                            <svg
-                                                xmlns="http://www.w3.org/2000/svg"
-                                                width="20"
-                                                height="20"
-                                                viewBox="0 0 24 24"
-                                                fill="none"
-                                                stroke="#fff"
-                                                strokeWidth="2"
-                                                strokeLinecap="round"
-                                                strokeLinejoin="round"
-                                            >
-                                                <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z" />
-                                                <circle cx="12" cy="12" r="3" />
-                                            </svg>
-                                            <span className="sr-only text-stone-100 lg:not-sr-only lg:ml-2">
-                                                Preview
-                                            </span>
-                                        </>
-                                    ) : (
-                                        <>
-                                            <svg
-                                                xmlns="http://www.w3.org/2000/svg"
-                                                width="20"
-                                                height="20"
-                                                viewBox="0 0 24 24"
-                                                fill="none"
-                                                stroke="#fff"
-                                                strokeWidth="2"
-                                                strokeLinecap="round"
-                                                strokeLinejoin="round"
-                                            >
-                                                <path d="m18 16 4-4-4-4" />
-                                                <path d="m6 8-4 4 4 4" />
-                                                <path d="m14.5 4-5 16" />
-                                            </svg>
-                                            <span className="sr-only text-stone-100 lg:not-sr-only lg:ml-2">
-                                                Code
-                                            </span>
-                                        </>
-                                    )}
-                                </button>
+                                <div className="flex space-x-1 rounded-lg bg-slate-100 p-0.5">
+                                    <button
+                                        onClick={() => changeTab(index, 0)}
+                                        className={`flex items-center rounded-md py-[0.45rem] pl-2 pr-2 text-sm font-semibold lg:pr-3 ${activeTab[index] === 0 ? "bg-white shadow" : ""} transition-all ease-in-out duration-500`}
+                                    >
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            width="20"
+                                            height="20"
+                                            viewBox="0 0 24 24"
+                                            fill="none"
+                                            stroke="#0950f6"
+                                            strokeWidth="2"
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
+                                            className="text-purple-600"
+                                        >
+                                            <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z" />
+                                            <circle cx="12" cy="12" r="3" />
+                                        </svg>
+                                        <span className="sr-only text-stone-900 lg:not-sr-only lg:ml-2">
+                                            Preview
+                                        </span>
+                                    </button>
+                                    <button
+                                        onClick={() => changeTab(index, 1)}
+                                        className={`flex items-center rounded-md py-[0.45rem] pl-2 pr-2 text-sm font-semibold lg:pr-3 ${activeTab[index] === 1 ? "bg-white shadow" : ""} transition-all ease-in-out duration-500`}
+                                    >
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            width="20"
+                                            height="20"
+                                            viewBox="0 0 24 24"
+                                            fill="none"
+                                            stroke="#3e75f4"
+                                            strokeWidth="2"
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
+                                        >
+                                            <polyline points="16 18 22 12 16 6" />
+                                            <polyline points="8 6 2 12 8 18" />
+                                        </svg>
+                                        <span className="sr-only text-stone-900 lg:not-sr-only lg:ml-2">
+                                            Code
+                                        </span>
+                                    </button>
+                                </div>
                             </div>
 
                             <div className="col-span-2 row-start-2 mt-3 min-w-0 overflow-hidden rounded-2xl border border-gray-300">

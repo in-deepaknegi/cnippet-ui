@@ -92,7 +92,7 @@ const Navbar = () => {
         <>
             <nav>
                 <div className="bg-black">
-                    <div className="mx-auto flex h-10 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-0">
+                    <div className="mx-auto flex h-10 max-w-full items-center justify-between px-4 sm:px-6 lg:px-8">
                         <div className="hidden text-sm text-white lg:block lg:flex-1">
                             English
                         </div>

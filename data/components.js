@@ -96,6 +96,14 @@ import FAQ2 from '@/ui/faq/S2';
 import CFAQ1 from '@/ui/faq/C1.mdx';
 import CFAQ2 from '@/ui/faq/C2.mdx';
 
+import AR1 from '@/ui/article/S1';
+import AR2 from '@/ui/article/S2';
+import AR3 from '@/ui/article/S3';
+import CAR1 from '@/ui/article/C1.mdx';
+import CAR2 from '@/ui/article/C2.mdx';
+import CAR3 from '@/ui/article/C3.mdx';
+
+
 const components = [
     {
         slug: "navbar",
@@ -433,6 +441,31 @@ const components = [
                 title: "Simple faq 2",
                 component: <FAQ2 />,
                 code: <CFAQ2 />,
+            },
+        ],
+    },
+    {
+        slug: "article",
+        name: "Article",
+        desc: "Component description",
+        image: Blogs,
+        imgurl: "/images/components/blogs.png",
+        number: "2 components",
+        data: [
+            {
+                title: "Simple article 1",
+                component: <AR1 />,
+                code: <CAR1 />
+            },
+            {
+                title: "Simple article 2",
+                component: <AR2 />,
+                code: <CAR2 />
+            },
+            {
+                title: "Simple article 3",
+                component: <AR3 />,
+                code: <CAR3 />
             },
         ],
     },
