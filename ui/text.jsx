@@ -3,79 +3,41 @@ import Image from "next/image";
 import Hero1 from "@/public/images/hero/hero8.jpg";
 import Profile1 from "@/public/images/profile/profile5.jpg";
 
-const related = [
-    {
-        title: "Enterprise design tips",
-        description:
-            "Over the past year, Volosoft has undergone many changes! Aftermonths of preparation.",
-        href: "#",
-    },
-    {
-        title: "We partnered up with Google",
-        description:
-            "Over the past year, Volosoft has undergone many changes! Aftermonths of preparation.",
-        href: "#",
-    },
-    {
-        title: "Our first project with React",
-        description:
-            "Over the past year, Volosoft has undergone many changes! Aftermonths of preparation.",
-        href: "#",
-    },
-];
-
-const S2 = () => {
+const C3 = () => {
     return (
-        <main className="pb-16 pt-8 antialiased lg:pb-24 lg:pt-16">
-            <div className="mx-auto flex max-w-6xl justify-between px-4 lg:px-0">
-                <article className="relative mx-auto max-w-3xl pt-10">
+        <main className="antialiased">
+            <div className="border-b-2 border-gray-200 bg-gradient-to-b from-gray-200 px-6 pb-8 pt-8 text-center lg:px-8 lg:pt-16">
+                <div className="mx-auto max-w-5xl space-y-6">
                     <h1 className="text-2xl font-extrabold text-slate-900 md:text-4xl ">
                         Introducing Catalyst: A modern UI kit for&nbsp;React
                     </h1>
-                    <div className="text-sm leading-6">
+                    <div className="text-sm">
                         <dl>
                             <dt className="sr-only">Date</dt>
-                            <dd className="absolute inset-x-0 top-0 text-slate-700">
+                            <dd className=" text-slate-800">
                                 <time dateTime="2023-12-20T20:00:00.000Z">
-                                    Thursday, March 21, 2024
+                                    Thursday, December 21, 2023
                                 </time>
                             </dd>
                         </dl>
                     </div>
-                    <div className="mt-6 block lg:hidden">
-                        <ul className="-mx-5 -mt-6 flex flex-wrap text-sm leading-6">
-                            <li className="mt-6 flex items-center gap-4 whitespace-nowrap px-5 font-medium">
-                                <Image
-                                    src={Profile1}
-                                    alt="id-1"
-                                    className="h-8 w-8 rounded-full bg-gray-50 object-cover"
-                                />
-                                <div className="text-sm leading-4">
-                                    <div className="text-slate-900 ">Adam Wathan</div>
-                                    <div className="mt-1">
-                                        <a
-                                            href="#"
-                                            className="text-sky-500 hover:text-sky-600 dark:text-sky-400"
-                                        >
-                                            @adamwathan
-                                        </a>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
+                    <div className="mx-auto max-w-3xl">
+                        <Image
+                            src={Hero1}
+                            alt="featured-image"
+                            className="aspect-[16/9] rounded-xl object-cover object-center"
+                        />
                     </div>
-                    <div className="mt-12 flex flex-col gap-y-6 font-sans text-gray-800">
+                </div>
+            </div>
+
+            <div className="mx-auto mt-8 flex max-w-6xl justify-between px-4 lg:px-0">
+                <article className="relative mx-auto max-w-2xl pt-10">
+                    <div className="flex flex-col gap-y-6 font-sans text-gray-800">
                         <p className="text-lg">
                             Today the day — we just published the first development preview of
                             just in time for your holiday hacking sessions.
                         </p>
-                        <div className="mx-auto max-w-3xl">
-                            <Image
-                                src={Hero1}
-                                alt="featured-image"
-                                className="aspect-[16/9] rounded-xl object-cover object-center"
-                            />
-                        </div>
                         <p>
                             <strong>Catalyst</strong> is our first fully-componentized,
                             batteries-included application UI kit — real React components with
@@ -143,8 +105,8 @@ const S2 = () => {
                         </p>
                         <div className="inset-0 z-10 overflow-y-auto">
                             <div className="min-h-full p-0 text-center sm:items-center">
-                                <div className="relative ml-1 overflow-hidden rounded-lg border bg-white shadow-lg shadow-sky-100 ring-1 ring-sky-600 transition-all sm:my-8 sm:w-full sm:max-w-lg">
-                                    <div className="  p-3">
+                                <div className="relative ml-1 overflow-hidden rounded-lg border border-sky-600   bg-white shadow-lg shadow-sky-100 transition-all sm:my-8 sm:w-full sm:max-w-lg">
+                                    <div className="p-3">
                                         <div className="text-center sm:ml-4 sm:mt-0 sm:text-left">
                                             <h3
                                                 className="text-base font-semibold leading-6 text-gray-900"
@@ -166,7 +128,7 @@ const S2 = () => {
                         </div>
                     </div>
                 </article>
-                <aside className="hidden lg:block lg:w-72">
+                <aside className="hidden pt-10 lg:block lg:w-72">
                     <div className="sticky top-6">
                         <div className="mb-6 rounded-2xl border p-6 shadow-xl">
                             <a href="#" className="mb-4 flex items-center gap-4">
@@ -241,16 +203,33 @@ const S2 = () => {
                                 Related articles
                             </h3>
 
-                            {related.map((item, i) => (
-                                <a key={i} href={item.href}>
-                                    <div className="text-base font-semibold text-blue-600">
-                                        {item.title}
-                                    </div>
-                                    <p className="mb-4 line-clamp-2 text-sm text-slate-900">
-                                        {item.description}
-                                    </p>
-                                </a>
-                            ))}
+                            <a href="#">
+                                <div className="text-base font-semibold text-blue-600">
+                                    Enterprise design tips
+                                </div>
+                                <p className="mb-4 line-clamp-2 text-sm text-slate-900">
+                                    Over the past year, Volosoft has undergone many changes! After
+                                    months of preparation.
+                                </p>
+                            </a>
+                            <a href="#">
+                                <div className="text-base font-semibold text-blue-600">
+                                    We partnered up with Google
+                                </div>
+                                <p className="mb-4 line-clamp-2 text-sm text-slate-900">
+                                    Over the past year, Volosoft has undergone many changes! After
+                                    months of preparation.
+                                </p>
+                            </a>
+                            <a href="#">
+                                <div className="text-base font-semibold text-blue-600">
+                                    Our first project with React
+                                </div>
+                                <p className="mb-0 line-clamp-2 text-sm text-slate-900">
+                                    Over the past year, Volosoft has undergone many changes! After
+                                    months of preparation.
+                                </p>
+                            </a>
                         </div>
                     </div>
                 </aside>
@@ -259,4 +238,4 @@ const S2 = () => {
     );
 };
 
-export default S2;
+export default C3;
