@@ -30,7 +30,7 @@ const S1 = () => {
                         <p className="mt-4 leading-7 text-gray-500">
                             Can&apos;t find the answer you&apos;re looking for? Reach out to
                             our
-                            <a href="#" className="text-blue-600 font-semibold">
+                            <a href="#" className="font-semibold text-blue-600">
                                 {" "}
                                 customer support{" "}
                             </a>
