@@ -448,9 +448,9 @@ const components = [
         slug: "article",
         name: "Article",
         desc: "Component description",
-        image: Blogs,
+        image: Article,
         imgurl: "/images/components/blogs.png",
-        number: "2 components",
+        number: "3 components",
         data: [
             {
                 title: "Simple article 1",
@@ -469,13 +469,32 @@ const components = [
             },
         ],
     },
+    {
+        slug: "logo",
+        name: "Logo",
+        desc: "Component description",
+        image: Article,
+        imgurl: "/images/components/blogs.png",
+        number: "3 components",
+        data: [
+            {
+                title: "Simple article 1",
+                component: <AR1 />,
+                code: <CAR1 />
+            },
+            {
+                title: "Simple article 2",
+                component: <AR2 />,
+                code: <CAR2 />
+            },
+            ],
+    },
     // stats
     // contact section
     // team section
     // logo
     // sidebar
     // modals
-    // article
 ];
 
 export default components;
