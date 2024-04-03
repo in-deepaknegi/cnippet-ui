@@ -26,7 +26,7 @@ const logos = [
 
 const S2 = () => {
     return (
-        <div className="relative isolate bg-white py-24 sm:py-32">
+        <section className="relative isolate bg-white py-24 sm:py-32">
             <div className="mx-auto max-w-full px-6 lg:max-w-[80%] lg:px-7">
                 <h2 className="text-left text-lg font-semibold leading-8 text-gray-900">
                     Trusted by the world&apos;s most innovative teams
@@ -42,7 +42,7 @@ const S2 = () => {
                     ))}
                 </div>
             </div>
-        </div>
+        </section>
     );
 };
 
