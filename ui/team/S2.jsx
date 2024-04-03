@@ -46,8 +46,8 @@ const S2 = () => {
                     role="list"
                     className="mx-auto mt-20 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 md:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3 xl:grid-cols-4"
                 >
-                    {people.map((person) => (
-                        <li key={person.name}>
+                    {people.map((person, i) => (
+                        <li key={i}>
                             <Image
                                 src={person.imageUrl}
                                 alt="person"

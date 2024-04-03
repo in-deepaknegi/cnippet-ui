@@ -199,7 +199,8 @@ const Navbar = () => {
                                     className="inline-flex items-center justify-center gap-x-1 text-sm font-semibold leading-6 text-gray-900 hover:text-purple-800/95"
                                 >
                                     <span>{item.title}</span>
-                                    <ChevronDown className="h-5 w-5" aria-hidden="true" />
+
+                                    <ChevronDown className={`h-5 w-5 ${open === i ? 'rotate-180': ''} transition-all ease-linear duration-300`} aria-hidden="true" />
 
                                     {open === i && (
                                         <div className="absolute -left-5 top-1 z-10 mt-5 flex w-screen max-w-max px-4 pt-2">

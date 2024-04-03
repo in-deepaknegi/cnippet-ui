@@ -110,6 +110,9 @@ import CLG1 from '@/ui/logo/C1.mdx'
 import CLG2 from '@/ui/logo/C2.mdx'
 import CLG3 from '@/ui/logo/C3.mdx'
 
+import TE1 from '@/ui/team/S1';
+import TE2 from '@/ui/team/S2';
+
 const components = [
     {
         slug: "navbar",
@@ -500,6 +503,27 @@ const components = [
             },
         ],
     },
+    {
+        slug: "team",
+        name: "Team",
+        desc: "Component description",
+        image: Blogs,
+        imgurl: "/images/components/blogs.png",
+        number: "3 components",
+        data: [
+            {
+                title: "Simple team section 1",
+                component: <TE1 />,
+                code: <CLG1 />
+            },
+            {
+                title: "Simple team section 2",
+                component: <TE2 />,
+                code: <CLG2 />
+            },
+        ],
+    },
+
     // stats
     // contact section
     // team section
