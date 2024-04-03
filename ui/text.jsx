@@ -1,147 +1,48 @@
 import React from "react";
 import Image from "next/image";
-import Hero1 from "@/public/images/hero/hero5.jpg";
-import Hero2 from "@/public/images/hero/hero6.jpg";
-import Hero3 from "@/public/images/hero/hero7.jpg";
-import Hero4 from "@/public/images/hero/hero8.jpg";
-import Hero5 from "@/public/images/hero/hero9.jpg";
-import Hero6 from "@/public/images/hero/hero10.jpg";
-import Hero7 from "@/public/images/hero/hero11.jpg";
+import L0 from "@/public/images/logo/c00.svg";
+import L2 from "@/public/images/logo/c02.svg";
+import L3 from "@/public/images/logo/c03.svg";
+import L4 from "@/public/images/logo/c04.svg";
+import L5 from "@/public/images/logo/c05.svg";
+
+const logos = [
+    {
+        src: L0,
+    },
+    {
+        src: L2,
+    },
+    {
+        src: L3,
+    },
+    {
+        src: L4,
+    },
+    {
+        src: L5,
+    },
+];
 
 const S1 = () => {
     return (
-        <section className="relative isolate mb-20 overflow-hidden">
-            <div className="mx-auto max-w-4xl px-6 py-16 lg:px-0 lg:py-20">
-                <div className="flex gap-10">
-                    <div className="static ml-2 h-[1.25rem] rounded-2xl w-[20%] bg-blue-700 sm:ml-4 lg:ml-5 lg:mr-[-1.5rem] lg:flex-auto "></div>
-                    <div className="static ml-2 h-[1.25rem] rounded-2xl w-[40%] bg-blue-700 sm:ml-4 lg:ml-5 lg:mr-[-1.5rem] lg:flex-auto "></div>
-                    <div className="static ml-2 h-[1.25rem] rounded-2xl w-[10%] bg-blue-700 sm:ml-4 lg:ml-5 lg:mr-[-1.5rem] lg:flex-auto "></div>
-                    <div className="static ml-2 h-[1.25rem] rounded-2xl w-[30%] bg-blue-700 sm:ml-4 lg:ml-5 lg:mr-[-1.5rem] lg:flex-auto "></div>
-                </div>
-                <div className="flex gap-10 mt-10 max-w-xl mx-auto">
-                    <div className="static ml-2 h-[1.25rem] rounded-2xl w-[20%] bg-blue-700 sm:ml-4 lg:ml-5 lg:mr-[-1.5rem] lg:flex-auto "></div>
-                    <div className="static ml-2 h-[1.25rem] rounded-2xl w-[40%] bg-blue-700 sm:ml-4 lg:ml-5 lg:mr-[-1.5rem] lg:flex-auto "></div>
-                </div>
-
-                <div className="flex gap-10 mt-16">
-                    <div className="static ml-2 h-[0.8rem] rounded-2xl w-[20%] bg-gray-300 sm:ml-4 lg:ml-5 lg:mr-[-1.5rem] lg:flex-auto "></div>
-                    <div className="static ml-2 h-[0.8rem] rounded-2xl w-[40%] bg-gray-300 sm:ml-4 lg:ml-5 lg:mr-[-1.5rem] lg:flex-auto "></div>
-                    <div className="static ml-2 h-[0.8rem] rounded-2xl w-[10%] bg-gray-300 sm:ml-4 lg:ml-5 lg:mr-[-1.5rem] lg:flex-auto "></div>
-                    <div className="static ml-2 h-[0.8rem] rounded-2xl w-[30%] bg-gray-300 sm:ml-4 lg:ml-5 lg:mr-[-1.5rem] lg:flex-auto "></div>
-                </div>
-                <div className="flex gap-10 mt-8 mx-auto max-w-2xl">
-                    <div className="static ml-2 h-[0.8rem] rounded-2xl w-[20%] bg-gray-300 sm:ml-4 lg:ml-5 lg:mr-[-1.5rem] lg:flex-auto "></div>
-                    <div className="static ml-2 h-[0.8rem] rounded-2xl w-[40%] bg-gray-300 sm:ml-4 lg:ml-5 lg:mr-[-1.5rem] lg:flex-auto "></div>
-                    <div className="static ml-2 h-[0.8rem] rounded-2xl w-[10%] bg-gray-300 sm:ml-4 lg:ml-5 lg:mr-[-1.5rem] lg:flex-auto "></div>
-                    <div className="static ml-2 h-[0.8rem] rounded-2xl w-[30%] bg-gray-300 sm:ml-4 lg:ml-5 lg:mr-[-1.5rem] lg:flex-auto "></div>
-                </div>
-                <div className="flex gap-10 mt-8 mx-auto max-w-lg">
-                    <div className="static ml-2 h-[0.8rem] rounded-2xl w-[20%] bg-gray-300 sm:ml-4 lg:ml-5 lg:mr-[-1.5rem] lg:flex-auto "></div>
-                    <div className="static ml-2 h-[0.8rem] rounded-2xl w-[40%] bg-gray-300 sm:ml-4 lg:ml-5 lg:mr-[-1.5rem] lg:flex-auto "></div>
-                    <div className="static ml-2 h-[0.8rem] rounded-2xl w-[10%] bg-gray-300 sm:ml-4 lg:ml-5 lg:mr-[-1.5rem] lg:flex-auto "></div>
-                    <div className="static ml-2 h-[0.8rem] rounded-2xl w-[30%] bg-gray-300 sm:ml-4 lg:ml-5 lg:mr-[-1.5rem] lg:flex-auto "></div>
-                </div>
-
-                <div className="mx-auto mt-10 flex items-center justify-center gap-x-6">
-                    <form
-                        action=""
-                        className="col-span-12 mx-auto w-full max-w-md lg:col-span-5 lg:mx-0"
-                    >
-                        <div className="flex gap-x-3">
-                            <label htmlFor="email-address" className="sr-only">
-                                Email address
-                            </label>
-                            <input
-                                id="email-address"
-                                name="email"
-                                type="email"
-                                autoComplete="email"
-                                required
-                                className="min-w-0 flex-auto rounded-xl border-0 bg-white/5 px-3.5 py-2 text-black shadow-sm ring-1 ring-inset ring-black/30 focus:ring-inset sm:text-sm sm:leading-6"
-                                placeholder="Enter your email"
-                            />
-                            <button
-                                type="submit"
-                                className="mx-auto max-w-md rounded-md bg-black px-3.5 py-2.5 text-sm font-semibold tracking-wide text-white shadow-sm"
-                            >
-                                Subscribe
-                            </button>
-                        </div>
-                    </form>
+        <div className="relative isolate bg-white py-24 sm:py-32">
+            <div className="mx-auto max-w-full px-6 lg:max-w-[80%] lg:px-7">
+                <h2 className="text-center text-lg font-semibold leading-8 text-gray-900">
+                    Trusted by the world&apos;s most innovative teams
+                </h2>
+                <div className="mx-auto mt-10 grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-5">
+                    {logos.map((logo, i) => (
+                        <Image
+                            key={i}
+                            src={logo.src}
+                            alt="logo"
+                            className="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
+                        />
+                    ))}
                 </div>
             </div>
-
-            <div className="relative mx-auto flex max-w-5xl flex-row items-center justify-center px-6 md:px-8">
-                <div className="mt-4 flex justify-end gap-4 sm:justify-start md:mt-16 xl:mt-0">
-                    <div className="mt-16 hidden w-full lg:block">
-                        <div className="relative">
-                            <Image
-                                src={Hero1}
-                                alt="hero image 2"
-                                priority={false}
-                                className="aspect-[2/2.25] rounded-2xl bg-gray-50 object-cover shadow-xl"
-                            />
-                        </div>
-                    </div>
-                    <div className="hidden w-full sm:block">
-                        <div className="relative">
-                            <Image
-                                src={Hero2}
-                                alt="hero image 2"
-                                priority={false}
-                                className="aspect-[3/2] rounded-2xl bg-gray-50 object-cover shadow-xl"
-                            />
-                        </div>
-                        <div className="relative">
-                            <Image
-                                src={Hero3}
-                                alt="hero image 2"
-                                priority={false}
-                                className="mt-4 aspect-[2/2.25] rounded-2xl bg-gray-50 object-cover shadow-xl"
-                            />
-                        </div>
-                    </div>
-                    <div className="mt-16 hidden w-full md:block">
-                        <div className="relative">
-                            <Image
-                                src={Hero4}
-                                alt="hero image 2"
-                                priority={false}
-                                className="aspect-[2/2.25] rounded-2xl bg-gray-50 object-cover shadow-xl"
-                            />
-                        </div>
-                    </div>
-                    <div className="w-full">
-                        <div className="relative">
-                            <Image
-                                src={Hero5}
-                                alt="hero image 2"
-                                priority={false}
-                                className="aspect-[3/2] rounded-2xl bg-gray-50 object-cover shadow-xl"
-                            />
-                        </div>
-                        <div className="relative hidden sm:block">
-                            <Image
-                                src={Hero6}
-                                alt="hero image 2"
-                                priority={false}
-                                className="mt-4 aspect-[2/2.25] rounded-2xl bg-gray-50 object-cover shadow-xl"
-                            />
-                        </div>
-                    </div>
-                    <div className="mt-16 hidden w-full lg:block">
-                        <div className="relative">
-                            <Image
-                                src={Hero7}
-                                alt="hero image 2"
-                                priority={false}
-                                className="aspect-[2/2.25] rounded-2xl bg-gray-50 object-cover shadow-xl"
-                            />
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+        </div>
     );
 };
 

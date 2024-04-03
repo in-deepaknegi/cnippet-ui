@@ -103,6 +103,9 @@ import CAR1 from '@/ui/article/C1.mdx';
 import CAR2 from '@/ui/article/C2.mdx';
 import CAR3 from '@/ui/article/C3.mdx';
 
+import LG1 from '@/ui/logo/S1'
+import LG2 from '@/ui/logo/S2'
+import LG3 from '@/ui/logo/S3'
 
 const components = [
     {
@@ -478,21 +481,25 @@ const components = [
         number: "3 components",
         data: [
             {
-                title: "Simple article 1",
-                component: <AR1 />,
+                title: "Simple logo section 1",
+                component: <LG1 />,
                 code: <CAR1 />
             },
             {
-                title: "Simple article 2",
-                component: <AR2 />,
+                title: "Simple logo section 2",
+                component: <LG2 />,
                 code: <CAR2 />
             },
-            ],
+            {
+                title: "Simple logo section 3",
+                component: <LG3 />,
+                code: <CAR2 />
+            },
+        ],
     },
     // stats
     // contact section
     // team section
-    // logo
     // sidebar
     // modals
 ];
