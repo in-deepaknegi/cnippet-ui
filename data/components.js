@@ -4,10 +4,13 @@ import Hero from "@/public/images/components/hero.png";
 import Header from "@/public/images/components/header.png";
 import Feature from "@/public/images/components/feature.png";
 import FeatureList from "@/public/images/components/feature-list.png";
+import FlyourMenu from '@/public/images/components/flyout.png';
 import Feedback from "@/public/images/components/feedback.png";
 import Newsletter from "@/public/images/components/newsletter.png";
 import Article from "@/public/images/components/article.png";
 import Blogs from "@/public/images/components/blogs.png";
+import HH1 from '@/public/images/components/h1.png';
+import FF1 from '@/public/images/components/f1.png';
 
 import N1 from "@/ui/navbar/S1";
 import N2 from "@/ui/navbar/S2";
@@ -112,6 +115,9 @@ import CLG3 from '@/ui/logo/C3.mdx'
 
 import TE1 from '@/ui/team/S1';
 import TE2 from '@/ui/team/S2';
+import CTE1 from '@/ui/team/C1.mdx';
+import CTE2 from '@/ui/team/C1.mdx';
+
 
 const components = [
     {
@@ -266,7 +272,7 @@ const components = [
         slug: "flyout-menu",
         name: "Flyout Menu",
         desc: "Component description",
-        image: Navbar,
+        image: FlyourMenu,
         imgurl: "/images/components/feature-list.png",
         number: "3 components",
         data: [
@@ -514,12 +520,12 @@ const components = [
             {
                 title: "Simple team section 1",
                 component: <TE1 />,
-                code: <CLG1 />
+                code: <CTE1 />
             },
             {
                 title: "Simple team section 2",
                 component: <TE2 />,
-                code: <CLG2 />
+                code: <CTE2 />
             },
         ],
     },

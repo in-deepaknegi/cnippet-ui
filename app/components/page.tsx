@@ -38,7 +38,7 @@ const page = () => {
                                                 <Image
                                                     src={component.image}
                                                     alt="navbar-img"
-                                                    className="absolute inset-0 h-full w-full"
+                                                    className="absolute object-cover w-full"
                                                 />
                                             </div>
                                             <h4 className="mt-4 text-sm font-medium text-slate-800 group-hover:text-indigo-600 ">
