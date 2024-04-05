@@ -7,10 +7,14 @@ import FeatureList from "@/public/images/components/feature-list.png";
 import FlyourMenu from '@/public/images/components/flyout.png';
 import Feedback from "@/public/images/components/feedback.png";
 import Newsletter from "@/public/images/components/newsletter.png";
-import Article from "@/public/images/components/article.png";
 import Blogs from "@/public/images/components/blogs.png";
-import HH1 from '@/public/images/components/h1.png';
-import FF1 from '@/public/images/components/f1.png';
+import Pricing from '@/public/images/components/pricing.png';
+import Hiw from '@/public/images/components/hiw.png';
+import Container from '@/public/images/components/container.png';
+import Faq from '@/public/images/components/faq.png';
+import Article from "@/public/images/components/article.png";
+import Logo from '@/public/images/components/logo.png';
+import Team from '@/public/images/components/team.png';
 
 import N1 from "@/ui/navbar/S1";
 import N2 from "@/ui/navbar/S2";
@@ -384,7 +388,7 @@ const components = [
         slug: "pricing",
         name: "Pricing",
         desc: "Component description",
-        image: Blogs,
+        image: Pricing,
         imgurl: "/images/components/blogs.png",
         number: "2 components",
         data: [
@@ -403,7 +407,7 @@ const components = [
         slug: "hiw",
         name: "How it works",
         desc: "Component description",
-        image: Blogs,
+        image: Hiw,
         imgurl: "/images/components/blogs.png",
         number: "2 components",
         data: [
@@ -423,7 +427,7 @@ const components = [
         slug: "container",
         name: "Container",
         desc: "Component description",
-        image: Blogs,
+        image: Container,
         imgurl: "/images/components/blogs.png",
         number: "2 components",
         data: [
@@ -443,7 +447,7 @@ const components = [
         slug: "faq",
         name: "FAQ",
         desc: "Component description",
-        image: Blogs,
+        image: Faq,
         imgurl: "/images/components/blogs.png",
         number: "2 components",
         data: [
@@ -488,7 +492,7 @@ const components = [
         slug: "logo",
         name: "Logo",
         desc: "Component description",
-        image: Article,
+        image: Logo,
         imgurl: "/images/components/blogs.png",
         number: "3 components",
         data: [
@@ -513,7 +517,7 @@ const components = [
         slug: "team",
         name: "Team",
         desc: "Component description",
-        image: Blogs,
+        image: Team,
         imgurl: "/images/components/blogs.png",
         number: "3 components",
         data: [
