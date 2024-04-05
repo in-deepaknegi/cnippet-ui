@@ -3,7 +3,7 @@ import React from 'react'
 const Form = () => {
     return (
         <section className='isolate relative overflow-hidden'>
-            <div className='mx-auto grid max-w-7xl grid-cols-1 py-20 lg:grid-cols-2'>
+            <div className='mx-auto grid max-w-[90%] grid-cols-1 py-20 lg:grid-cols-2'>
                 <div className='relative px-6 lg:px-8'>
                     <div className='mx-auto max-w-xl lg:mx-0 lg:max-w-lg'>
                         <h2 className='text-4xl font-medium'>Get in touch</h2>

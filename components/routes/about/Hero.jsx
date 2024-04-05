@@ -20,7 +20,7 @@ const features = [
 const Hero = () => {
     return (
         <section className="overflow-hidden bg-white py-16 sm:py-20">
-            <div className="mx-auto px-6 lg:px-8">
+            <div className="mx-auto max-w-[90%] px-6 lg:px-8">
                 <div className="mx-auto grid grid-cols-12 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none">
                     <div className="col-span-12 lg:col-span-7 lg:py-4 lg:pr-8">
                         <h2 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">

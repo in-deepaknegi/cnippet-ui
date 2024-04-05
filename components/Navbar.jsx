@@ -95,7 +95,7 @@ const Navbar = () => {
         <>
             <nav>
                 <div className="bg-black">
-                    <div className="mx-auto flex h-10 max-w-full items-center justify-between px-4 sm:px-6 lg:px-8">
+                    <div className="mx-auto flex h-10 max-w-[95%] items-center justify-between px-4 sm:px-6 lg:px-8">
                         <div className="hidden text-sm text-white lg:block lg:flex-1">
                             English
                         </div>
@@ -142,7 +142,7 @@ const Navbar = () => {
                             className="-m-1.5 flex items-center gap-x-2 p-1.5 text-2xl text-black"
                         >
                             <Image src={L1} alt="site-logo" className="w-7" />
-                            Cnippet <span className="text-base">Ui.</span>
+                            Cnippet <span className="text-base mt-auto">Ui.</span>
                         </a>
                     </div>
                     <div className="flex lg:hidden">
@@ -248,8 +248,8 @@ const Navbar = () => {
                         ))}
                     </div>
 
-                    <div className="hidden lg:ml-8 lg:flex lg:flex-none lg:items-center lg:gap-4 lg:pl-8">
-                        <button onClick={toggleProfile} ref={sectionRef}>
+                    <div className="hidden h-full lg:flex lg:flex-none lg:items-center lg:gap-4">
+                        <button onClick={toggleProfile} ref={sectionRef} className="h-9">
                             <span className="sr-only">profile</span>
                             {status === "authenticated" ? (
                                 <Image
