@@ -3,6 +3,7 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import components from '@/data/components';
 import Layout from '@/components/Layout';
+import { Metadata } from 'next';
 
 
 const Product = ({ params }: { params: { slug: string } }) => {
@@ -19,7 +20,7 @@ const Product = ({ params }: { params: { slug: string } }) => {
         <>
             <Navbar />
             <main>
-            <section className="relative overflow-hidden pt-16 bg-white">
+                <section className="relative overflow-hidden pt-16 bg-white">
                     <div className="relative mx-auto w-full px-4 sm:px-6 lg:px-8">
                         <div className="flex flex-col">
                             <h1 className="mt-3 text-3xl font-extrabold tracking-tight text-slate-900">
@@ -27,7 +28,7 @@ const Product = ({ params }: { params: { slug: string } }) => {
                             </h1>
                             <nav className="order-first flex space-x-2 text-base font-semibold">
                                 <a href="/components" className="text-slate-500 hover:text-slate-600">
-                                Ui - Components
+                                    Ui - Components
                                 </a>
                                 <div className="select-none text-slate-400">/</div>
                                 <a href="/components/article" className="text-slate-500 hover:text-slate-600">
@@ -48,22 +49,43 @@ const Product = ({ params }: { params: { slug: string } }) => {
 
 export default Product
 
-export async function generateMetadata({ params }: { params: { slug: string } }) {
+export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
     const id = params.slug
 
     const component = components.find((component) => component.slug === id)
     const name = 'Ui - ' + component?.name + ' | Cnippet Ui';
     return {
-        title: name,
-        description: component?.name,
         metadataBase: new URL('http://ui.cnippet.com/'),
-        openGraph: {
+
+        title: name,
+        description: component?.description,       
+        applicationName: 'Cnippet Ui',
+
+        openGraph: component?.imgurl ? {
+            title: name,
+            description: component?.description,
             images: [
                 {
-                    url: component?.imgurl
+                    url: component?.imgurl,
+                    width: 1080,
+                    height: 680,
+                    alt: `${component?.slug}`
                 }
             ]
-        }
+        } : null,
+
+        twitter: component?.imgurl ? {
+            title: name,
+            description: component?.description,
+            images: [
+                {
+                    url: component?.imgurl,
+                    width: 1080,
+                    height: 680,
+                    alt: `${component?.slug}`
+                }
+            ]
+        } : null,
     }
 
 }

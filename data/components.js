@@ -127,7 +127,7 @@ const components = [
     {
         slug: "navbar",
         name: "Navbar",
-        desc: "Component description",
+        description: "The 'Navbar' section provides four variations of navigation bar components, offering simple and sticky navigation options with corresponding code snippets for easy integration.",
         image: Navbar,
         imgurl: "/images/components/navbar.png",
         number: "4 components",
@@ -157,7 +157,7 @@ const components = [
     {
         slug: "footer",
         name: "Footer",
-        desc: "Component description",
+        description: "The Footer section consists of two footer components designed to enhance web interfaces.",
         image: Footer,
         imgurl: "/images/components/footer.png",
         number: "2 components",
@@ -176,7 +176,7 @@ const components = [
     {
         slug: "hero",
         name: "Hero",
-        desc: "Component description",
+        description: "The hero section showcases five dynamic hero components, designed to elevate the visual appeal of web pages.",
         image: Hero,
         imgurl: "/images/components/hero.png",
         number: "5 components",
@@ -209,7 +209,7 @@ const components = [
     {
         slug: "header",
         name: "Header",
-        desc: "Component description",
+        description: "The header section offers three sleek header components designed to enhance web page aesthetics and functionality.",
         image: Header,
         imgurl: "/images/components/header.png",
         number: "3 components",
@@ -232,7 +232,7 @@ const components = [
     {
         slug: "feature",
         name: "Feature",
-        desc: "Component description",
+        description: "The feature section presents two versatile feature components for enhancing web interfaces, each with accompanying code snippets.",
         image: Feature,
         imgurl: "/images/components/feature.png",
         number: "2 components",
@@ -252,7 +252,7 @@ const components = [
     {
         slug: "feature-list",
         name: "Feature List",
-        desc: "Component description",
+        description: "The feature-list section offers three versatile feature list components for enriching web interfaces, each accompanied by code snippets.",
         image: FeatureList,
         imgurl: "/images/components/feature-list.png",
         number: "3 components",
@@ -275,7 +275,7 @@ const components = [
     {
         slug: "flyout-menu",
         name: "Flyout Menu",
-        desc: "Component description",
+        description: "The flyout-menu section provides three user-friendly fly-out menu components, each designed to enhance navigation experiences on web interfaces. ",
         image: FlyourMenu,
         imgurl: "/images/components/feature-list.png",
         number: "3 components",
@@ -300,7 +300,7 @@ const components = [
     {
         slug: "feedback",
         name: "Feedback",
-        desc: "Component description",
+        description: "The feedback section presents four feedback components, simplifying user interactions on web interfaces.",
         image: Feedback,
         imgurl: "/images/components/feadback.png",
         number: "4 components",
@@ -327,7 +327,7 @@ const components = [
     {
         slug: "newsletter",
         name: "Newsletter",
-        desc: "Component description",
+        description: "The newsletter section features four straightforward newsletter components, facilitating easy integration into web interfaces with accompanying code snippets.",
         image: Newsletter,
         imgurl: "/images/components/newsletter.png",
         number: "4 components",
@@ -357,7 +357,7 @@ const components = [
     {
         slug: "blogs",
         name: "Blogs",
-        desc: "Component description",
+        description: "The blogs section presents four straightforward blog components, each designed for easy integration into web interfaces with accompanying code snippets",
         image: Blogs,
         imgurl: "/images/components/blogs.png",
         number: "4 components",
@@ -387,18 +387,18 @@ const components = [
     {
         slug: "pricing",
         name: "Pricing",
-        desc: "Component description",
+        description: "The pricing section offers two straightforward pricing components, each designed for easy integration into web interfaces with accompanying code snippets.",
         image: Pricing,
         imgurl: "/images/components/blogs.png",
         number: "2 components",
         data: [
             {
-                title: "Simple blog 1",
+                title: "Simple pricing 1",
                 component: <PR1 />,
                 code: <CPR1 />,
             },
             {
-                title: "Simple blog 2",
+                title: "Simple pricing 2",
                 component: <PR2 />,
             },
         ],
@@ -406,7 +406,7 @@ const components = [
     {
         slug: "hiw",
         name: "How it works",
-        desc: "Component description",
+        description: "The how-it-works section presents two straightforward components explaining processes, each designed for easy integration into web interfaces with accompanying code snippets",
         image: Hiw,
         imgurl: "/images/components/blogs.png",
         number: "2 components",
@@ -426,7 +426,7 @@ const components = [
     {
         slug: "container",
         name: "Container",
-        desc: "Component description",
+        description: "The container section provides two simple container components, one utilizing grid and the other flex, with corresponding code snippets for easy integration into web interfaces",
         image: Container,
         imgurl: "/images/components/blogs.png",
         number: "2 components",
@@ -446,7 +446,7 @@ const components = [
     {
         slug: "faq",
         name: "FAQ",
-        desc: "Component description",
+        description: "The frequently-asked-questions section offers two straightforward FAQ components, each designed for easy integration into web interfaces with accompanying code snippets.",
         image: Faq,
         imgurl: "/images/components/blogs.png",
         number: "2 components",
@@ -466,7 +466,7 @@ const components = [
     {
         slug: "article",
         name: "Article",
-        desc: "Component description",
+        description: "The article section presents three straightforward article components, each designed for seamless integration into web interfaces with accompanying code snippets.",
         image: Article,
         imgurl: "/images/components/blogs.png",
         number: "3 components",
@@ -491,7 +491,7 @@ const components = [
     {
         slug: "logo",
         name: "Logo",
-        desc: "Component description",
+        description: "The logo section features three straightforward logo components, each designed for easy integration into web interfaces with corresponding code snippets.",
         image: Logo,
         imgurl: "/images/components/blogs.png",
         number: "3 components",
@@ -516,7 +516,7 @@ const components = [
     {
         slug: "team",
         name: "Team",
-        desc: "Component description",
+        description: "The team section offers three simple team components, each designed for easy integration into web interfaces with corresponding code snippets.",
         image: Team,
         imgurl: "/images/components/blogs.png",
         number: "3 components",

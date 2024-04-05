@@ -2,8 +2,12 @@
 import React, { useEffect, useRef, useState } from "react";
 import { signIn, signOut, useSession } from "next-auth/react";
 import Image from "next/image";
-import { ChevronDown } from 'lucide-react'
-import L1 from '@/public/logo.svg'
+import { ChevronDown } from "lucide-react";
+import L1 from "@/public/logo.svg";
+
+const BASE_URL = process.env.NEXT_PUBLIC_URL
+    ? `https://${process.env.NEXT_PUBLIC_URL}`
+    : "http://localhost:3000";
 
 const links = [
     {
@@ -26,23 +30,23 @@ const menu = [
         solutions: [
             {
                 name: "Hero",
-                href: "https://ui.cnippet.com/components/hero",
+                href: [`${BASE_URL}/components/hero`],
             },
             {
                 name: "Features",
-                href: "https://ui.cnippet.com/components/feature",
+                href: [`${BASE_URL}/components/feature`],
             },
             {
                 name: "Flyout Menu",
-                href: "https://ui.cnippet.com/components/flyout-menu",
+                href: [`${BASE_URL}/components/flyout-menu`],
             },
             {
                 name: "Blogs",
-                href: "https://ui.cnippet.com/components/blogs",
+                href: [`${BASE_URL}/components/blogs`],
             },
             {
                 name: "Show more...",
-                href: "https://ui.cnippet.com/components/",
+                href: [`${BASE_URL}/components/`],
             },
         ],
     },
@@ -67,28 +71,27 @@ const Navbar = () => {
     };
     const toggleProfile = () => {
         setProfile(!profile);
-    }
+    };
 
     const clickOutside = (e) => {
         if (sectionRef.current && !sectionRef.current.contains(e.target)) {
             setProfile(false);
         }
-    }
+    };
 
     useEffect(() => {
         setTimeout(() => {
             setLoading(false);
         }, 1500);
 
-        document.addEventListener('click', clickOutside);
+        document.addEventListener("click", clickOutside);
 
         return () => {
-            document.removeEventListener('click', clickOutside)
-        }
+            document.removeEventListener("click", clickOutside);
+        };
     });
 
     return (
-
         <>
             <nav>
                 <div className="bg-black">
@@ -102,7 +105,7 @@ const Navbar = () => {
                                 <span aria-hidden="true">→</span>
                             </a>
                         </div>
-                        <div className="flex lg:flex-1 ml-auto lg:items-center lg:justify-end lg:gap-2">
+                        <div className="ml-auto flex lg:flex-1 lg:items-center lg:justify-end lg:gap-2">
                             {loading ? (
                                 <span className="ldr mb-4 mr-20"></span>
                             ) : (
@@ -131,15 +134,14 @@ const Navbar = () => {
                 </div>
             </nav>
 
-            <header className="sticky top-0 bg-white z-20">
-                <div className="flex items-center justify-between border-b border-gray-100 bg-white px-6 py-5 shadow-lg shadow-purple-100/50 lg:px-8">
+            <header className="sticky top-0 z-20 border-b border-gray-100 bg-white shadow-lg shadow-purple-100/50">
+                <div className="mx-auto flex w-[95%] items-center justify-between px-6 py-6 lg:px-8">
                     <div className="flex lg:flex-none">
-                        <a href="/" className="-m-1.5 p-1.5 text-2xl text-black flex items-center gap-x-2">
-                            <Image
-                                src={L1}
-                                alt="site-logo"
-                                className='w-7'
-                            />
+                        <a
+                            href="/"
+                            className="-m-1.5 flex items-center gap-x-2 p-1.5 text-2xl text-black"
+                        >
+                            <Image src={L1} alt="site-logo" className="w-7" />
                             Cnippet <span className="text-base">Ui.</span>
                         </a>
                     </div>
@@ -200,7 +202,10 @@ const Navbar = () => {
                                 >
                                     <span>{item.title}</span>
 
-                                    <ChevronDown className={`h-5 w-5 ${open === i ? 'rotate-180': ''} transition-all ease-linear duration-300`} aria-hidden="true" />
+                                    <ChevronDown
+                                        className={`h-5 w-5 ${open === i ? "rotate-180" : ""} transition-all duration-300 ease-linear`}
+                                        aria-hidden="true"
+                                    />
 
                                     {open === i && (
                                         <div className="absolute -left-5 top-1 z-10 mt-5 flex w-screen max-w-max px-4 pt-2">
@@ -212,7 +217,6 @@ const Navbar = () => {
                                                                 key={j}
                                                                 className="group relative flex flex-col gap-y-3 rounded-lg px-8 py-2.5 text-left hover:bg-gray-100"
                                                             >
-
                                                                 <div>
                                                                     <a
                                                                         href={item.href}
@@ -221,7 +225,6 @@ const Navbar = () => {
                                                                         {item.name}
                                                                         <span className="absolute inset-0" />
                                                                     </a>
-
                                                                 </div>
                                                             </div>
                                                         ))}
@@ -246,17 +249,15 @@ const Navbar = () => {
                     </div>
 
                     <div className="hidden lg:ml-8 lg:flex lg:flex-none lg:items-center lg:gap-4 lg:pl-8">
-                        <button
-                            onClick={toggleProfile}
-                            ref={sectionRef}>
+                        <button onClick={toggleProfile} ref={sectionRef}>
                             <span className="sr-only">profile</span>
-                            {status === 'authenticated' ? (
+                            {status === "authenticated" ? (
                                 <Image
                                     src={session.user.image}
                                     alt="profile-image"
                                     width={36}
                                     height={36}
-                                    className=" rounded-full object-cover"
+                                    className="rounded-full object-cover"
                                 />
                             ) : (
                                 <svg
@@ -266,7 +267,7 @@ const Navbar = () => {
                                     strokeWidth="1.5"
                                     stroke="currentColor"
                                     aria-hidden="true"
-                                    className="h-6 w-6 text-gray-600"
+                                    className="h-7 w-7 text-gray-600"
                                 >
                                     <path
                                         strokeLinecap="round"
@@ -275,14 +276,13 @@ const Navbar = () => {
                                     ></path>
                                 </svg>
                             )}
-
                         </button>
 
                         {profile && (
-                            <div className="absolute top-6 z-50 right-7 mt-10 px-6 py-3 w-56 bg-white border rounded-lg shadow-xl">
-                                {status === 'authenticated' ? (
-                                    <div className="relative isolate inset-0" >
-                                        <div className="flex flex-col justify-center items-center space-y-2">
+                            <div className="absolute right-7 top-6 z-50 mt-10 w-56 rounded-lg border bg-white px-6 py-3 shadow-xl">
+                                {status === "authenticated" ? (
+                                    <div className="relative inset-0 isolate">
+                                        <div className="flex flex-col items-center justify-center space-y-2">
                                             <Image
                                                 src={session.user.image}
                                                 alt="profile-image"
@@ -290,18 +290,16 @@ const Navbar = () => {
                                                 height={40}
                                                 className=" rounded-full"
                                             />
-                                            <span className="text-sm text-gray-900 font-semibold">
+                                            <span className="text-sm font-semibold text-gray-900">
                                                 {session.user.name}
                                             </span>
-                                            <span className="text-sm text-gray-900 font-semibold">
+                                            <span className="text-sm font-semibold text-gray-900">
                                                 {session.user.email}
                                             </span>
                                         </div>
-                                        <ul className="mt-3 gap-y-2 flex flex-col text-sm cursor-pointer text-gray-600">
+                                        <ul className="mt-3 flex cursor-pointer flex-col gap-y-2 text-sm text-gray-600">
                                             <li className="border-l-2 pl-3 hover:border-gray-600 hover:text-black">
-                                                <a href="#">
-                                                    Account
-                                                </a>
+                                                <a href="#">Account</a>
                                             </li>
                                             <li className="border-l-2 pl-3 hover:border-gray-600 hover:text-black">
                                                 <a href="#" onClick={() => signOut()}>
@@ -312,7 +310,7 @@ const Navbar = () => {
                                     </div>
                                 ) : (
                                     <div>
-                                        <ul className="py-1 gap-y-2 flex flex-col text-sm cursor-pointer text-gray-600">
+                                        <ul className="flex cursor-pointer flex-col gap-y-2 py-1 text-sm text-gray-600">
                                             <li className="border-l-2 pl-3 hover:border-gray-600 hover:text-black">
                                                 <a href="/login" className="">
                                                     Sign in
@@ -327,7 +325,7 @@ const Navbar = () => {
                 </div>
                 {mobilemenu && (
                     <div className="lg:hidden" role="dialog" aria-modal="true">
-                        <div className="fixed inset-y-0 z-10 top-24 mt-3 right-0  overflow-y-auto px-6 py-10 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 h-full w-full bg-white bg-clip-padding backdrop-filter bg-opacity-80 backdrop-blur-md">
+                        <div className="fixed inset-y-0 right-0 top-24 z-10 mt-3  h-full w-full overflow-y-auto bg-white bg-opacity-80 bg-clip-padding px-6 py-10 backdrop-blur-md backdrop-filter sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
                             <div className="flex items-center justify-between">
                                 <a href="#" className="-m-1.5 p-1.5">
                                     <span className="sr-only">Your Company</span>
@@ -362,7 +360,6 @@ const Navbar = () => {
                 )}
             </header>
         </>
-
     );
 };
 
