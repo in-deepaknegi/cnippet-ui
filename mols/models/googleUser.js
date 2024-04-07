@@ -10,6 +10,10 @@ const userSchema = new Schema(
             type: String,
             required: true,
         },
+        pro: {
+            type: Boolean,
+            default: false
+        }
     },
     { timestamps: true }
 )
