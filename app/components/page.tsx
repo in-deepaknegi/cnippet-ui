@@ -1,9 +1,33 @@
-import React from 'react'
-import Image from 'next/image'
+import React from "react";
+import type { Metadata } from "next";
+import Image from "next/image";
 
-import Footer from '@/components/Footer'
-import Navbar from '@/components/Navbar'
-import components from '@/data/components'
+import Footer from "@/components/Footer";
+import Navbar from "@/components/Navbar";
+import components from "@/data/components";
+
+export const metadata: Metadata = {
+    title: "Components | Cnippet Ui",
+    description:
+        "Dive into our curated collection of React, Next.js, and Tailwind CSS components at Cnippet UI. Elevate your web projects with ease and efficiency.",
+    applicationName: "Cnippet Ui",
+
+    openGraph: {
+        title: "Cnippet Ui",
+        description:
+            "Dive into our curated collection of React, Next.js, and Tailwind CSS components at Cnippet UI. Elevate your web projects with ease and efficiency.",
+        url: "http://ui.cnippet.com/components",
+        images: ["/images/meta/components.png"],
+    },
+
+    twitter: {
+        card: "summary_large_image",
+        title: "Cnippet Ui",
+        description:
+            "Dive into our curated collection of React, Next.js, and Tailwind CSS components at Cnippet UI. Elevate your web projects with ease and efficiency.",
+        images: ["/images/meta/components.png"],
+    },
+};
 
 const page = () => {
     return (
@@ -22,11 +46,10 @@ const page = () => {
                         </div>
                         <div className="max-w-xl">
                             <p className="mt-4 text-base leading-7 text-slate-700 ">
-                                Over 500+ professionally designed, fully responsive, expertly crafted
-                                component examples you can drop into your Tailwind projects and
-                                customize to your heart&apos;s content.
+                                Over 500+ professionally designed, fully responsive, expertly
+                                crafted component examples you can drop into your Tailwind
+                                projects and customize to your heart&apos;s content.
                             </p>
-
                         </div>
 
                         <div className="relative mt-10 md:mt-8">
@@ -38,7 +61,7 @@ const page = () => {
                                                 <Image
                                                     src={component.image}
                                                     alt="navbar-img"
-                                                    className="absolute object-cover w-full"
+                                                    className="absolute w-full object-cover"
                                                 />
                                             </div>
                                             <h4 className="mt-4 text-sm font-medium text-slate-800 group-hover:text-indigo-600 ">
@@ -60,7 +83,7 @@ const page = () => {
             </main>
             <Footer />
         </>
-    )
-}
+    );
+};
 
-export default page
+export default page;

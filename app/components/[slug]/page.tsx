@@ -58,34 +58,20 @@ export async function generateMetadata({ params }: { params: { slug: string } })
         metadataBase: new URL('http://ui.cnippet.com/'),
 
         title: name,
-        description: component?.description,       
+        description: component?.description,
         applicationName: 'Cnippet Ui',
 
         openGraph: component?.imgurl ? {
             title: name,
             description: component?.description,
-            url: component.slug,
-            images: [
-                {
-                    url: component?.imgurl,
-                    width: 1080,
-                    height: 680,
-                    alt: `${component?.slug}`
-                }
-            ]
+            url: `components/${component.slug}`,
+            images: [component?.imgurl]
         } : null,
 
         twitter: component?.imgurl ? {
             title: name,
             description: component?.description,
-            images: [
-                {
-                    url: component?.imgurl,
-                    width: 1080,
-                    height: 680,
-                    alt: `${component?.slug}`
-                }
-            ]
+            images: [component?.imgurl]
         } : null,
     }
 

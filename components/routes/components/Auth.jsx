@@ -38,7 +38,6 @@ const Auth = ({ components }) => {
 
     // console.log(pro); //displayed in browser
 
-
     const changeTab = (index, tabIndex) => {
         const newActiveTab = [...activeTab];
         newActiveTab[index] = tabIndex;
