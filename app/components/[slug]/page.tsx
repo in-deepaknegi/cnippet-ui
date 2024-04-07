@@ -64,6 +64,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
         openGraph: component?.imgurl ? {
             title: name,
             description: component?.description,
+            url: component.slug,
             images: [
                 {
                     url: component?.imgurl,

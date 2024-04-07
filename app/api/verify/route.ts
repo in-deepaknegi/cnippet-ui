@@ -4,7 +4,6 @@ import crypto from 'crypto';
 import connectDb from '@/mols/library/mongo';
 import User from '@/mols/models/googleUser';
 
-
 const generatedSignature = (
     razorpayOrderId: string,
     razorpayPaymentId: string
