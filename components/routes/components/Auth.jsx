@@ -6,6 +6,7 @@ import Payment from '@/components/routes/components/Payment';
 
 const Auth = ({ components }) => {
     const [activeTab, setActiveTab] = useState([0, 0, 0, 0, 0]);
+    const [activeTab1, setActiveTab1] = useState([0, 0, 0, 0, 0]);
     const [pro, setPro] = useState('');
     const { data: session } = useSession();
     const [loading, setLoading] = useState(true);
@@ -53,6 +54,12 @@ const Auth = ({ components }) => {
         newActiveTab[index] = tabIndex;
         setActiveTab(newActiveTab);
     };
+    const changeTab1 = (index, tabIndex) => {
+        const newActiveTab = [...activeTab1];
+        newActiveTab[index] = tabIndex;
+        setActiveTab1(newActiveTab);
+    };
+
 
     const nonComponents = components.filter(component => component.pro === false);
 
@@ -164,8 +171,8 @@ const Auth = ({ components }) => {
                                         <div className="p-0.5">
                                             <div className="flex space-x-1 rounded-lg bg-slate-100 p-0.5">
                                                 <button
-                                                    onClick={() => changeTab(index, 0)}
-                                                    className={`flex items-center rounded-md py-[0.45rem] pl-2 pr-2 text-sm font-semibold lg:pr-3 ${activeTab[index] === 0 ? "bg-white shadow" : ""} transition-all ease-in-out duration-500`}
+                                                    onClick={() => changeTab1(index, 0)}
+                                                    className={`flex items-center rounded-md py-[0.45rem] pl-2 pr-2 text-sm font-semibold lg:pr-3 ${activeTab1[index] === 0 ? "bg-white shadow" : ""} transition-all ease-in-out duration-500`}
                                                 >
                                                     <svg
                                                         xmlns="http://www.w3.org/2000/svg"
@@ -187,8 +194,8 @@ const Auth = ({ components }) => {
                                                     </span>
                                                 </button>
                                                 <button
-                                                    onClick={() => changeTab(index, 1)}
-                                                    className={`flex items-center rounded-md py-[0.45rem] pl-2 pr-2 text-sm font-semibold lg:pr-3 ${activeTab[index] === 1 ? "bg-white shadow" : ""} transition-all ease-in-out duration-500`}
+                                                    onClick={() => changeTab1(index, 1)}
+                                                    className={`flex items-center rounded-md py-[0.45rem] pl-2 pr-2 text-sm font-semibold lg:pr-3 ${activeTab1[index] === 1 ? "bg-white shadow" : ""} transition-all ease-in-out duration-500`}
                                                 >
                                                     <svg
                                                         xmlns="http://www.w3.org/2000/svg"
@@ -212,7 +219,7 @@ const Auth = ({ components }) => {
                                         </div>
 
                                         <div className="col-span-2 row-start-2 mt-3 min-w-0 overflow-hidden rounded-2xl border border-gray-300">
-                                            {activeTab[index] === 0 ? (
+                                            {activeTab1[index] === 0 ? (
                                                 component.component
                                             ) : (
                                                 <div className="overflow-y-auto break-words text-sm">
