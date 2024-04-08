@@ -1,5 +1,5 @@
 import Navbar from '@/components/Navbar'
-import Hero from '@/components/routes/pro/Hero'
+import Hero from '@/components/routes/home/Pricing'
 import React from 'react'
 import Footer from '@/components/Footer'
 
