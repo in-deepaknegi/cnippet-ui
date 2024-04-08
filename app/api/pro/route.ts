@@ -10,7 +10,7 @@ export async function POST(request: NextRequest) {
     await connectDb();
     const user = await User.findOne({ email });
     const pro = user.pro;
-    // console.log(pro);
+    console.log(pro);
 
     if (pro == false) {
         return NextResponse.json(

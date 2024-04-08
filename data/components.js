@@ -218,14 +218,17 @@ const components = [
                 title: "Simple header 1",
                 component: <HE1 />,
                 code: <CHE1 />,
+                pro: false,
             },
             {
                 title: "Simple header 2",
                 component: <HE2 />,
+                pro: false,
             },
             {
-                title: "Simple header 2",
+                title: "Pro header 1",
                 component: <HE3 />,
+                pro: true,
             },
         ],
     },
