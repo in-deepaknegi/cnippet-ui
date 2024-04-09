@@ -1,8 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server';
 import crypto from 'crypto';
 
-import connectDb from '@/mols/library/mongo';
-import User from '@/mols/models/googleUser';
+import connectDb from '@/atoms/library/mongo';
+import User from '@/atoms/models/googleUser';
 
 const generatedSignature = (
     razorpayOrderId: string,

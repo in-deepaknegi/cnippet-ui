@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 
-import connectDb from '@/mols/library/mongo';
-import User from '@/mols/models/googleUser';
+import connectDb from '@/atoms/library/mongo';
+import User from '@/atoms/models/googleUser';
 
 export async function POST(request: NextRequest) {
     const { email } = await request.json();

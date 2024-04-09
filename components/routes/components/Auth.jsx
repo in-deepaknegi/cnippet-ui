@@ -1,53 +1,21 @@
 "use client"
+import React, { useEffect, useState } from 'react'
 import { useSession } from 'next-auth/react';
-import React, { useEffect } from 'react'
-import { useState } from 'react';
+
+import fetchPro from '@/atoms/library/getPro';
+
 import Payment from '@/components/routes/components/Payment';
 
 const Auth = ({ components }) => {
     const [activeTab, setActiveTab] = useState([0, 0, 0, 0, 0]);
     const [activeTab1, setActiveTab1] = useState([0, 0, 0, 0, 0]);
-    const [pro, setPro] = useState('');
     const { data: session } = useSession();
-    const [loading, setLoading] = useState(true);
 
     const email = session?.user?.email;
     // console.log(email);
+    const { pro, loading } = fetchPro(email);
 
-    useEffect(() => {
-        async function fetchPro() {
-            if (!email) return; // Add a guard clause if email is not available yet
-
-            try {
-                const data = { email };
-                const result = await fetch('/api/pro', {
-                    method: 'POST',
-                    body: JSON.stringify(data),
-                    headers: { 'Content-Type': 'application/json' },
-                });
-                const res = await result.json();
-
-                if (res.pro === true) {
-                    setPro(true);
-                } else {
-                    setPro(false);
-                }
-            } catch (error) {
-                console.error('Error fetching pro data:', error);
-            }
-        }
-
-        fetchPro();
-
-
-        setTimeout(() => {
-            setLoading(false);
-        }, 2500);
-
-    }, [email])
-
-
-    // console.log(pro); //displayed in browser
+    console.log(pro); //displayed in browser
 
     const changeTab = (index, tabIndex) => {
         const newActiveTab = [...activeTab];
