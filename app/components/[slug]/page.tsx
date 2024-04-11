@@ -5,7 +5,6 @@ import components from '@/data/components';
 import Layout from '@/components/Layout';
 import { Metadata } from 'next';
 
-
 const Product = ({ params }: { params: { slug: string } }) => {
     const id = params.slug
     // console.log(id)
@@ -31,16 +30,17 @@ const Product = ({ params }: { params: { slug: string } }) => {
                                     Ui - Components
                                 </a>
                                 <div className="select-none text-slate-400">/</div>
-                                <a href="/components/article" className="text-slate-500 hover:text-slate-600">
+                                <a href={`/components/${component.slug}`} className="text-slate-500 hover:text-slate-600">
                                     {component.name}
                                 </a>
                             </nav>
                         </div>
 
-                        <Layout components={component.data} />
-
+                        <Layout components={component.data} slug={id} />
                     </div>
                 </section>
+
+
             </main>
             <Footer />
         </>
@@ -54,8 +54,9 @@ export async function generateMetadata({ params }: { params: { slug: string } })
 
     const component = components.find((component) => component.slug === id)
     const name = 'Ui - ' + component?.name + ' | Cnippet Ui';
+    
     return {
-        metadataBase: new URL('http://ui.cnippet.com/'),
+        metadataBase: new URL('https://ui.cnippet.com/'),
 
         title: name,
         description: component?.description,
@@ -64,7 +65,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
         openGraph: component?.imgurl ? {
             title: name,
             description: component?.description,
-            url: `components/${component.slug}`,
+            url: `/components/${component.slug}`,
             images: [component?.imgurl]
         } : null,
 

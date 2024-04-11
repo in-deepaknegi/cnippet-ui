@@ -1,11 +1,13 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react";
-import { signIn, signOut, useSession } from "next-auth/react";
+import { signIn, signOut } from "next-auth/react";
 import Image from "next/image";
 
 import fetchPro from "@/atoms/library/getPro";
 import { ChevronDown } from "lucide-react";
 import L1 from "@/public/logo.svg";
+
+import GetSession from '@/atoms/library/getSession';
 
 const BASE_URL = process.env.NEXT_PUBLIC_URL
     ? `https://${process.env.NEXT_PUBLIC_URL}`
@@ -56,10 +58,8 @@ const menu = [
 
 const Navbar = () => {
     const [mobilemenu, setMobileMenu] = useState(false);
-    const { status, data: session } = useSession();
-    const [loading, setLoading] = useState(true);
+    const { status, session, loading } = GetSession();
     const [profile, setProfile] = useState(false);
-
     const email = session?.user?.email;
     const { pro } = fetchPro(email);
 
@@ -85,9 +85,6 @@ const Navbar = () => {
     };
 
     useEffect(() => {
-        setTimeout(() => {
-            setLoading(false);
-        }, 1500);
 
         document.addEventListener("click", clickOutside);
 

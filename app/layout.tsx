@@ -8,7 +8,7 @@ import { AuthProvider } from "@/atoms/context/authProvider";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("http://ui.cnippet.com/"),
+  metadataBase: new URL("https://ui.cnippet.com/"),
 
   title: "Cnippet Ui",
   description:
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     title: "Cnippet Ui",
     description:
       "Elevate your web projects effortlessly with Cnippet UI - your go-to source for premium React, Next.js, and Tailwind CSS components and templates. Craft captivating designs and streamline development with our meticulously designed building blocks. Dive into a world of innovation and efficiency, revolutionizing your web experience one snippet at a time.",
-    url: "http://ui.cnippet.com/",
+    url: "https://ui.cnippet.com/",
     images: [
       {
         url: "/images/meta/home.png",

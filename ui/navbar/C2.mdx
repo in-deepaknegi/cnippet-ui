@@ -5,22 +5,22 @@ import Link from "next/link";
 const links = [
     {
         id: 1,
-        title: 'Components',
-        url: '#',
+        title: "Components",
+        url: "#",
     },
-    // add more links here
-]
+    // add more data here
+];
 
 const Navbar = () => {
     return (
-        <header className="relative isolate bg-white overflow-hidden">
-            <nav className="flex flex-1 items-center justify-between px-6 py-5 lg:px-8">
+        <header className="relative isolate overflow-hidden border-b bg-white py-6">
+            <nav className="mx-auto flex max-w-full flex-1 items-center justify-between px-6 md:max-w-[97%] lg:px-8">
                 <div className="flex">
                     <Link href="/" className="-m-1.5 p-1.5 text-2xl">
                         Cnippet <span className="text-sm">Ui.</span>
                     </Link>
                 </div>
-                <div className="hidden lg:flex ml-auto lg:gap-x-12">
+                <div className="ml-auto hidden lg:flex lg:gap-x-12">
                     {links.map((link) => (
                         <Link
                             key={link.id}
@@ -31,7 +31,7 @@ const Navbar = () => {
                         </Link>
                     ))}
                 </div>
-                <div className="hidden lg:ml-4 lg:flex lg:items-center lg:pl-4 border-l border-gray-700">
+                <div className="hidden border-l border-gray-700 lg:ml-4 lg:flex lg:items-center lg:pl-4">
                     <Link href="#">Sign in</Link>
                     <Link
                         href="#"

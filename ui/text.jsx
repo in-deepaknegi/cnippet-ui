@@ -1,70 +1,82 @@
-import React from "react";
-import Image from "next/image";
-import P1 from "@/public/images/profile/profile1.jpg";
-import P2 from "@/public/images/profile/profile2.jpg";
-import P3 from "@/public/images/profile/profile3.jpg";
-import P4 from "@/public/images/profile/profile4.jpg";
-import P5 from "@/public/images/profile/profile5.jpg";
-import P6 from "@/public/images/profile/profile6.jpg";
+import React from 'react'
+import Image from 'next/image'
+import Hero1 from '@/public/images/hero/hero9.jpg'
+import Hero2 from '@/public/images/hero/hero5.jpg'
+import Hero3 from '@/public/images/hero/hero6.jpg'
 
-const people = [
+const features = [
     {
-        name: "Leslie Alexander",
-        role: "Co-Founder / CEO",
-        imageUrl: P6,
+        id: 1,
+        title: "Push to deploy",
+        image: Hero1,
+        para: "Commodo nec sagittis tortor mauris sed. Turpis tortor quis scelerisque diam id accumsan nullam tempus. Pulvinar etiam lacus volutpat eu. Phasellus praesent ligula sit faucibus.",
+        href: "#",
     },
     {
-        name: "Michael Foster",
-        role: "Co-Founder / CTO",
-        imageUrl: P5,
+        id: 2,
+        title: "SSL certificates",
+        image: Hero2,
+        para: "Pellentesque enim a commodo malesuada turpis eleifend risus. Facilisis donec placerat sapien consequat tempor fermentum nibh.",
+        href: "#",
     },
     {
-        name: "Lindsay Walton",
-        role: "Front-end Developer",
-        imageUrl: P2,
+        id: 3,
+        title: "Simple queues",
+        image: Hero3,
+        para: "Pellentesque sit elit congue ante nec amet. Dolor aenean curabitur viverra suspendisse iaculis eget. Nec mollis placerat ultricies euismod ut condimentum.",
+        href: "#",
     },
-    {
-        name: "Courtney Henry",
-        role: "Designer",
-        imageUrl: P3,
-    },
-];
+]
 
-const S2 = () => {
+const List3 = () => {
     return (
-        <section className="relative isolate bg-white py-24 sm:py-24">
-            <div className="mx-auto max-w-[90%] px-6 lg:px-8">
-                <div className="mx-auto max-w-2xl lg:mx-0">
-                    <h2 className="text-5xl font-semibold">Our Team</h2>
-                    <p className="mt-5 text-lg text-gray-700">
-                        We&apos;re a dynamic group of individuals who are passionate about
-                        what we do and dedicated to delivering the best results for our
-                        clients.
+        <section className='bg-white py-24 sm:py-28'>
+            <div className='mx-auto max-w-[90%] px-6 lg:px-8'>
+                <div className='mx-auto max-w-2xl text-center'>
+                    <h2 className='text-base font-semibold leading-7 text-blue-700'>
+                        Deploy faster
+                    </h2>
+                    <p className='mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl'>
+                        Everything you need to deploy your app
+                    </p>
+                    <p className='mt-6 text-lg leading-8 text-gray-600'>
+                        Quis tellus eget adipiscing convallis sit sit eget aliquet quis. Suspendisse eget egestas a elementum pulvinar et feugiat blandit at. In mi viverra elit nunc.
                     </p>
                 </div>
-                <ul
-                    role="list"
-                    className="mx-auto mt-20 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 md:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3 xl:grid-cols-4"
-                >
-                    {people.map((person) => (
-                        <li key={person.name}>
-                            <Image
-                                src={person.imageUrl}
-                                alt="person"
-                                className="aspect-[3/2] w-full rounded-2xl object-cover"
-                            />
-                            <h3 className="mt-6 text-lg font-semibold leading-7 tracking-tight text-gray-900">
-                                {person.name}
-                            </h3>
-                            <p className="text-sm font-semibold leading-6 text-blue-700">
-                                {person.role}
-                            </p>
-                        </li>
-                    ))}
-                </ul>
+                <div className='mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none'>
+                    <dl className='mx-auto grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-3'>
+                        {features.map((feature) => (
+                            <div key={feature.id} className='flex flex-col md:p-3'>
+                                <dt className='flex flex-col gap-y-5 text-xl font-semibold leading-7'>
+                                    <a
+                                        href={feature.href}
+                                        className="relative overflow-hidden rounded-2xl">
+                                        <Image
+                                            src={feature.image}
+                                            alt="post-img"
+                                            className="aspect-video w-full object-cover sm:aspect-[2/1] lg:aspect-[3/2] hover:scale-110 transform ease-in-out duration-300"
+                                        />
+                                    </a>
+                                    {feature.title}
+                                </dt>
+                                <dd className='mt-4 flex flex-auto flex-col text-base leading-7 text-gray-600'>
+                                    <p className='flex-auto'>
+                                        {feature.para}
+                                    </p>
+                                    <p className='mt-6'>
+                                        <a href={feature.href} className='text-sm font-semibold leading-6 text-blue-600'>
+                                            Learn more
+                                            <span> →</span>
+                                        </a>
+                                    </p>
+                                </dd>
+                            </div>
+                        ))}
+                    </dl>
+                </div>
             </div>
         </section>
-    );
-};
+    )
+}
 
-export default S2;
+export default List3

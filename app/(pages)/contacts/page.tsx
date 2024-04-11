@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     openGraph: {
         title: "Cnippet Ui",
         description: "Connect effortlessly with Cnippet UI's contact page. Reach out for inquiries, collaborations, or just to say hello. We're here to support your web development journey every step of the way.",
-        url: "http://ui.cnippet.com/contacts",
+        url: "https://ui.cnippet.com/contacts",
         images: ["/images/meta/contact.jpg"],
     },
 

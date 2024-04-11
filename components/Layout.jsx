@@ -2,21 +2,15 @@
 import { useSession } from "next-auth/react";
 import React, { useEffect, useState } from "react";
 
-
+import Related from '@/components/Related';
 import AuthContent from '@/components/routes/components/Auth';
 import UnAuthContext from '@/components/routes/components/Unauth';
 
-const Layout = ({ components }) => {
+import GetSession from '@/atoms/library/getSession';
 
-    const { status, data: session } = useSession();
-    const [loading, setLoading] = useState(true);
+const Layout = ({ components, slug }) => {
 
-    useEffect(() => {
-        if (session !== undefined) {
-            setLoading(false);
-        }
-    }, [session]);
-
+    const { status, session, loading } = GetSession();
 
     if (loading) {
         return (
@@ -28,12 +22,15 @@ const Layout = ({ components }) => {
 
     if (status === "authenticated") {
         return (
-            <AuthContent components={components} />
+            <>
+                <AuthContent components={components} />
+                <Related components={components}  slug={slug}/>
+            </>
         )
     }
 
     return (
-        <UnAuthContext components={components}/>
+        <UnAuthContext components={components} />
     );
 };
 

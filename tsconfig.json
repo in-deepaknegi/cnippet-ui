@@ -21,6 +21,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "components/routes/login/Hero.jsx", "app/api/auth/[...nextauth]/route.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "components/routes/login/Hero.jsx", "app/api/auth/[...nextauth]/route.js", "atoms/library/getPro.js"],
   "exclude": ["node_modules"]
 }

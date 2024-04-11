@@ -27,8 +27,8 @@ const links = [
 const Navbar4 = () => {
     return (
         <>
-            <nav>
-                <div className="bg-black">
+            <div className="relative isolate overflow-hidden bg-black ">
+                <div className="mx-auto max-w-full md:max-w-[97%]">
                     <div className="mx-auto flex h-10 items-center justify-between px-4 sm:px-6 lg:px-8">
                         <div className="hidden text-sm text-white lg:block lg:flex-1">
                             English
@@ -49,10 +49,10 @@ const Navbar4 = () => {
                         </div>
                     </div>
                 </div>
-            </nav>
+            </div>
 
-            <header className="sticky top-0 bg-white z-20">
-                <div className="flex items-center justify-between border-b border-gray-100 bg-white px-6 py-6 lg:px-8">
+            <header className="sticky top-0 z-20 border-b border-gray-100 bg-white py-6">
+                <div className="mx-auto flex max-w-full items-center justify-between px-6 md:max-w-[97%] lg:px-8">
                     <div className="flex lg:flex-none">
                         <Link href="/" className="-m-1.5 p-1.5 text-2xl text-black">
                             Cnippet <span className="text-base">Ui.</span>

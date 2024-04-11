@@ -65,7 +65,7 @@ const page = () => {
                                                 />
                                             </div>
                                             <h4 className="mt-4 text-sm font-medium text-slate-800 group-hover:text-indigo-600 ">
-                                                <a href={`components/${component.slug}`}>
+                                                <a href={`/components/${component.slug}`}>
                                                     <span className="absolute -inset-2.5 z-10"></span>
                                                     <span className="relative">{component.name}</span>
                                                 </a>

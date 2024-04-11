@@ -4,36 +4,36 @@ import Link from "next/link";
 const links = [
     {
         id: 1,
-        title: 'Components',
-        url: '#',
+        title: "Components",
+        url: "#",
     },
     {
         id: 2,
-        title: 'Templates',
-        url: '#',
+        title: "Templates",
+        url: "#",
     },
     {
         id: 3,
-        title: 'About',
-        url: '#',
+        title: "About",
+        url: "#",
     },
     {
         id: 4,
-        title: 'Contacts',
-        url: '#',
+        title: "Contacts",
+        url: "#",
     },
-]
+];
 
 const Navbar1 = () => {
     return (
-        <header className="relative isolate bg-white overflow-hidden">
-            <nav className="flex items-center justify-between px-6 py-5 lg:px-8">
+        <header className="relative isolate overflow-hidden bg-white py-6">
+            <div className="mx-auto flex max-w-full items-center justify-between px-6 md:max-w-[97%] lg:px-8">
                 <div className="flex">
                     <Link href="/" className="-m-1.5 p-1.5 text-2xl">
                         Cnippet <span className="text-sm">Ui.</span>
                     </Link>
                 </div>
-                <div className="hidden lg:flex lg:gap-x-12">
+                <nav className="hidden lg:flex lg:gap-x-12">
                     {links.map((link) => (
                         <Link
                             key={link.id}
@@ -43,7 +43,7 @@ const Navbar1 = () => {
                             {link.title}
                         </Link>
                     ))}
-                </div>
+                </nav>
                 <div className="hidden lg:ml-8 lg:flex lg:items-center lg:pl-8">
                     <Link href="#">Sign in</Link>
                     <Link
@@ -74,7 +74,7 @@ const Navbar1 = () => {
                         </svg>
                     </button>
                 </div>
-            </nav>
+            </div>
         </header>
     );
 };

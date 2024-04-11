@@ -26,32 +26,31 @@ const links = [
 
 const Navbar3 = () => {
     return (
-        <header className="relative overflow-hidden">
-            <nav>
-                <div className="bg-black">
-                    <div className="mx-auto flex h-10 items-center justify-between px-4 sm:px-6 lg:px-8">
-                        <div className="hidden text-sm text-white lg:block lg:flex-1">
-                            English
-                        </div>
-                        <div className="hidden flex-1 items-center lg:flex">
-                            <Link href="#" className="text-sm text-gray-200">
-                                Get free delivery on orders over $100
-                            </Link>
-                        </div>
-                        <div className="ml-auto flex lg:flex-1 lg:items-center lg:justify-end lg:gap-2">
-
-                            <Link href="#" className="text-sm text-gray-100">
-                                Sign In
-                            </Link>
-                            <span className="mx-2 h-4 w-[1px] bg-gray-200"></span>
-                            <Link href="#" className="text-sm text-gray-100">
-                                Create an account
-                            </Link>
-                        </div>
+        <header className="relative isolate overflow-hidden bg-black  ">
+            <div className="mx-auto max-w-full md:max-w-[97%]">
+                <div className="mx-auto flex h-10 items-center justify-between px-4 sm:px-6 lg:px-8">
+                    <div className="hidden text-sm text-white lg:block lg:flex-1">
+                        English
+                    </div>
+                    <div className="hidden flex-1 items-center lg:flex">
+                        <Link href="#" className="text-sm text-gray-200">
+                            Get free delivery on orders over $100
+                        </Link>
+                    </div>
+                    <div className="ml-auto flex lg:flex-1 lg:items-center lg:justify-end lg:gap-2">
+                        <Link href="#" className="text-sm text-gray-100">
+                            Sign In
+                        </Link>
+                        <span className="mx-2 h-4 w-[1px] bg-gray-200"></span>
+                        <Link href="#" className="text-sm text-gray-100">
+                            Create an account
+                        </Link>
                     </div>
                 </div>
+            </div>
 
-                <div className="flex items-center justify-between border-b border-gray-300 bg-white px-6 lg:px-8 lg:py-5">
+            <div className="border-gray-300 bg-white py-6">
+                <div className="mx-auto flex max-w-full items-center justify-between px-6 md:max-w-[97%] lg:px-8 ">
                     <div className="flex">
                         <Link href="/" className="-m-1.5 p-1.5 text-2xl">
                             Cnippet <span className="text-sm">Ui.</span>
@@ -117,8 +116,7 @@ const Navbar3 = () => {
                         </button>
                     </div>
                 </div>
-                <div className="bg-stripes-white h-8 bg-gray-200"></div>
-            </nav>
+            </div>
         </header>
     );
 };
