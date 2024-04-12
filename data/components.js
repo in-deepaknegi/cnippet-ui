@@ -28,6 +28,7 @@ import CN4 from "@/ui/navbar/C4.mdx";
 import F1 from "@/ui/footer/S1";
 import F2 from "@/ui/footer/S2";
 import CF1 from "@/ui/footer/C1.mdx";
+import CF2 from "@/ui/footer/C2.mdx";
 
 import H1 from "@/ui/hero/S1";
 import H2 from "@/ui/hero/S2";
@@ -176,7 +177,8 @@ const components = [
             {
                 title: "Simple footer 2",
                 component: <F2 />,
-                pro: true,
+                code: <CF2 />,
+                pro: false,
             },
         ],
     },
