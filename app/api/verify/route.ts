@@ -45,14 +45,14 @@ export async function POST(request: NextRequest) {
         // console.log("user updated")
 
         return NextResponse.json(
-            { message: 'user update success', user },
-            { status: 400 },
+            { message: 'user update success', isOk: true  },
+            { status: 200 },
         );
     } catch (error) {
         console.log(error)
     }
     return NextResponse.json(
-        { message: 'payment verified successfully', isOk: true },
-        { status: 200 }
+        { message: 'payment verified successfully', isOk: false },
+        { status: 400 }
     );
 }

@@ -4,7 +4,7 @@ import { useSession } from 'next-auth/react';
 
 import fetchPro from '@/atoms/library/getPro';
 
-import Payment from '@/components/routes/components/Payment';
+import Payment from '@/components/routes/home/Pricing';
 
 const Auth = ({ components }) => {
     const [activeTab, setActiveTab] = useState([0, 0, 0, 0, 0]);
@@ -33,7 +33,6 @@ const Auth = ({ components }) => {
 
     const proComponents = components.filter(component => component.pro === true);
     // console.log(proComponents)
-
 
     return (
         <div className="mt-10 space-y-28 bg-white pb-px">
