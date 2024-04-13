@@ -9,6 +9,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
     const urls = [
         `${BASE_URL}/components`,
+        `${BASE_URL}/templates`,
         `${BASE_URL}/contacts`,
         `${BASE_URL}/about`,
     ]
