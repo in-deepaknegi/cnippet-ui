@@ -1,9 +1,8 @@
-```jsx
+```tsx
 import React from "react";
 
 const features = [
     {
-        id: 1,
         title: "Push to deploy",
         para: "Commodo nec sagittis tortor mauris sed. Turpis tortor quis scelerisque diam id accumsan nullam tempus. Pulvinar etiam lacus volutpat eu. Phasellus praesent ligula sit faucibus.",
         href: "#",
@@ -11,10 +10,10 @@ const features = [
     // add more data here ...
 ];
 
-const List1 = () => {
+const Featurelist = () => {
     return (
         <section className="relative isolate bg-white py-24 sm:py-28">
-            <div className="mx-auto max-w-7xl px-6 lg:px-8">
+            <div className="mx-auto max-w-full px-6 md:max-w-[90%] lg:px-8">
                 <div className="mx-auto max-w-2xl text-center">
                     <h2 className="text-base font-semibold leading-7 text-blue-700">
                         Deploy faster
@@ -30,8 +29,8 @@ const List1 = () => {
                 </div>
                 <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
                     <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-3">
-                        {features.map((feature) => (
-                            <div key={feature.id} className="flex flex-col">
+                        {features.map((feature, i) => (
+                            <div key={i} className="flex flex-col">
                                 <dt className="flex gap-x-3 text-center text-base font-semibold leading-7">
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
@@ -73,5 +72,5 @@ const List1 = () => {
     );
 };
 
-export default List1;
+export default Featurelist;
 ```

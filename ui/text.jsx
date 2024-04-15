@@ -1,90 +1,86 @@
 import React from "react";
 import Image from "next/image";
-
-import Hero1 from "@/public/images/hero/hero8.jpg";
+import Hero1 from "@/public/images/hero/hero9.jpg";
+import Hero2 from "@/public/images/hero/hero5.jpg";
+import Hero3 from "@/public/images/hero/hero6.jpg";
 
 const features = [
     {
-        name: "Push to deploy.",
-        description:
-            "Morbi viverra dui mi arcu sed. Tellus semper adipiscing suspendisse semper morbi. Odio urna massa nunc massa.",
+        id: 1,
+        title: "Push to deploy",
+        image: Hero1,
+        para: "Commodo nec sagittis tortor mauris sed. Turpis tortor quis scelerisque diam id accumsan nullam tempus. Pulvinar etiam lacus volutpat eu. Phasellus praesent ligula sit faucibus.",
+        href: "#",
     },
     {
-        name: "SSL certificates.",
-        description:
-            "Sit quis amet rutrum tellus ullamcorper ultricies libero dolor eget. Sem sodales gravida quam turpis enim lacus amet.",
+        id: 2,
+        title: "SSL certificates",
+        image: Hero2,
+        para: "Pellentesque enim a commodo malesuada turpis eleifend risus. Facilisis donec placerat sapien consequat tempor fermentum nibh.",
+        href: "#",
+    },
+    {
+        id: 3,
+        title: "Simple queues",
+        image: Hero3,
+        para: "Pellentesque sit elit congue ante nec amet. Dolor aenean curabitur viverra suspendisse iaculis eget. Nec mollis placerat ultricies euismod ut condimentum.",
+        href: "#",
     },
 ];
 
-const Feature2 = () => {
+const List3 = () => {
     return (
-        <section className="relative bg-white py-16 sm:py-20">
+        <section className="bg-white py-24 sm:py-28">
             <div className="mx-auto max-w-full px-6 md:max-w-[90%] lg:px-8">
-                <div className="mx-auto flex h-full flex-col gap-x-0 gap-y-10 lg:flex-row lg:gap-x-10 lg:gap-y-0">
-                    <div className="order-last max-w-full lg:order-first">
-                        <h2 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
-                            Everything you need to deploy your app
-                        </h2>
-                        <p className="mt-6 text-base text-gray-700 md:text-lg">
-                            Quis tellus eget adipiscing convallis sit sit eget aliquet quis.
-                            Suspendisse eget egestas a elementum pulvinar et feugiat blandit
-                            at. In mi viverra elit nunc.
-                        </p>
-
-                        <div className="mt-10 grid max-w-xl gap-x-4 space-y-4 text-base leading-7 text-gray-600 md:grid-cols-2 md:space-y-0 lg:max-w-none">
-                            {features.map((feature) => (
-                                <div key={feature.name}>
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        width="24"
-                                        height="24"
-                                        viewBox="0 0 24 24"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        strokeWidth="2"
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
+                <div className="mx-auto max-w-2xl text-center">
+                    <h2 className="text-base font-semibold leading-7 text-blue-700">
+                        Deploy faster
+                    </h2>
+                    <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+                        Everything you need to deploy your app
+                    </p>
+                    <p className="mt-6 text-lg leading-8 text-gray-600">
+                        Quis tellus eget adipiscing convallis sit sit eget aliquet quis.
+                        Suspendisse eget egestas a elementum pulvinar et feugiat blandit at.
+                        In mi viverra elit nunc.
+                    </p>
+                </div>
+                <div className="mx-auto mt-16 max-w-2xl px-0 sm:mt-20 md:px-5 lg:mt-24 lg:max-w-none lg:px-10">
+                    <dl className="mx-auto grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-3">
+                        {features.map((feature) => (
+                            <div key={feature.id} className="flex flex-col md:p-3">
+                                <dt className="flex flex-col gap-y-5 text-xl font-semibold leading-7">
+                                    <a
+                                        href={feature.href}
+                                        className="relative overflow-hidden rounded-2xl"
                                     >
-                                        <rect width="6" height="16" x="4" y="2" rx="2" />
-                                        <rect width="6" height="9" x="14" y="9" rx="2" />
-                                        <path d="M22 22H2" />
-                                    </svg>
-                                    <h2 className="text-2x my-2 font-semibold text-gray-900">
-                                        {feature.name}
-                                    </h2>
-                                    <p>{feature.description}</p>
-                                </div>
-                            ))}
-                        </div>
-
-                        <div className="mt-10 flex gap-x-6">
-                            <a
-                                href="#"
-                                className="rounded-md bg-black px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-gray-800"
-                            >
-                                Discover more
-                            </a>
-                            <a
-                                href="#"
-                                className="my-auto text-sm font-semibold leading-6 text-gray-900"
-                            >
-                                Join us <span aria-hidden="true">→</span>
-                            </a>
-                        </div>
-                    </div>
-                    <div className="relative order-first mx-auto lg:order-last lg:max-w-[40%]">
-                        <Image
-                            src={Hero1}
-                            alt="Product screenshot"
-                            quality={100}
-                            loading="eager"
-                            className="h-full w-full rounded-2xl object-cover"
-                        />
-                    </div>
+                                        <Image
+                                            src={feature.image}
+                                            alt="post-img"
+                                            className="aspect-video w-full transform object-cover duration-300 ease-in-out hover:scale-110 sm:aspect-[2/1] lg:aspect-[3/2]"
+                                        />
+                                    </a>
+                                    {feature.title}
+                                </dt>
+                                <dd className="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-600">
+                                    <p className="flex-auto">{feature.para}</p>
+                                    <p className="mt-6">
+                                        <a
+                                            href={feature.href}
+                                            className="text-sm font-semibold leading-6 text-blue-600"
+                                        >
+                                            Learn more
+                                            <span> →</span>
+                                        </a>
+                                    </p>
+                                </dd>
+                            </div>
+                        ))}
+                    </dl>
                 </div>
             </div>
         </section>
     );
 };
 
-export default Feature2;
+export default List3;

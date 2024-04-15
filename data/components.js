@@ -53,6 +53,8 @@ import FL1 from "@/ui/feature-list/S1";
 import FL2 from "@/ui/feature-list/S2";
 import FL3 from "@/ui/feature-list/S3";
 import CFL1 from "@/ui/feature-list/C1.mdx";
+import CFL2 from "@/ui/feature-list/C2.mdx";
+import CFL3 from "@/ui/feature-list/C3.mdx";
 
 import FM1 from "@/ui/flyout-menu/S1";
 import FM2 from "@/ui/flyout-menu/S2";
@@ -277,19 +279,21 @@ const components = [
         number: "3 components",
         data: [
             {
-                title: "Simple feature list 1",
+                title: "Simple feature list section 1",
                 component: <FL1 />,
                 code: <CFL1 />,
                 pro: false,
             },
             {
-                title: "Simple feature list 2",
+                title: "Simple feature list section 2",
                 component: <FL2 />,
+                code: <CFL2 />,
                 pro: false,
             },
             {
-                title: "Simple feature list 2",
+                title: "Pro feature list section 1",
                 component: <FL3 />,
+                code: <CFL3 />,
                 pro: true,
             },
         ],
