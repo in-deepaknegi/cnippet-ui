@@ -1,9 +1,10 @@
 import React from 'react'
+import Image from 'next/image';
+import { Metadata } from 'next';
+
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import templates from '@/data/templates';
-import { Metadata } from 'next';
-import Image from 'next/image';
 
 const Product = ({ params }: { params: { slug: string } }) => {
     const id = params.slug
@@ -12,7 +13,7 @@ const Product = ({ params }: { params: { slug: string } }) => {
     const a = template?.slug
 
     if (!template) {
-        return <div>component Not Found</div>
+        return <div>template not found</div>
     }
 
     return (

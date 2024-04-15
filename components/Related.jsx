@@ -5,7 +5,7 @@ import components from '@/data/components';
 const Related = ({ slug }) => {
 
     const cmp = components.filter((item)=> item.slug !== slug);
-    console.log(cmp)
+    // console.log(cmp)
 
     const shuffle = shuffleArray(cmp);
 

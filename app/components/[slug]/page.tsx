@@ -53,7 +53,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
     const id = params.slug
 
     const component = components.find((component) => component.slug === id)
-    const name = 'Ui - ' + component?.name + ' | Cnippet Ui';
+    const name = 'Ui - ' + component?.name;
     
     return {
         metadataBase: new URL('https://ui.cnippet.com/'),

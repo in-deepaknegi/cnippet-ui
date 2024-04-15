@@ -255,16 +255,16 @@ const components = [
         number: "2 components",
         data: [
             {
-                title: "Simple header 1",
+                title: "Simple feature section 1",
                 component: <FE1 />,
                 code: <CFE1 />,
                 pro: false,
             },
             {
-                title: "Simple header 2",
+                title: "Simple feature section 2",
                 component: <FE2 />,
                 code: <CFE2 />,
-                pro: true,
+                pro: false,
             },
         ],
     },

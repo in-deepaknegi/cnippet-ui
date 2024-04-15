@@ -10,7 +10,7 @@ const templates = [
         description:
             "Move as fast as you can with a UI library without compromising on your own vision with modern UI components that are part of your own codebase.",
         rate: "98",
-        href: "#",
+        href: "https://explorely-ui.cnippet.com/",
         image: H1,
         imageurl: "/images/home/T1.webp",
         gallery : [

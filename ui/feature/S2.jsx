@@ -19,7 +19,7 @@ const features = [
 const Feature2 = () => {
     return (
         <section className="relative bg-white py-16 sm:py-20">
-            <div className="mx-auto max-w-7xl px-6 lg:px-8">
+            <div className="mx-auto max-w-full px-6 md:max-w-[90%] lg:px-8">
                 <div className="mx-auto flex h-full flex-col gap-x-0 gap-y-10 lg:flex-row lg:gap-x-10 lg:gap-y-0">
                     <div className="order-last max-w-full lg:order-first">
                         <h2 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">

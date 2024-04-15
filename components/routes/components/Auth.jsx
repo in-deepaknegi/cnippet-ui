@@ -15,7 +15,7 @@ const Auth = ({ components }) => {
     // console.log(email);
     const { pro, loading } = fetchPro(email);
 
-    console.log(pro); //displayed in browser
+    // console.log(pro); //displayed in browser
 
     const changeTab = (index, tabIndex) => {
         const newActiveTab = [...activeTab];

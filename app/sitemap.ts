@@ -1,5 +1,6 @@
 import { MetadataRoute } from "next";
 import components from "@/data/components";
+import templates from "@/data/templates";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
@@ -21,8 +22,15 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         priority: 0.8,
     }))
 
-    const entries: MetadataRoute.Sitemap = components.map(({ slug }) => ({
+    const entries_c: MetadataRoute.Sitemap = components.map(({ slug }) => ({
         url: `${BASE_URL}/components/${slug}`,
+        lastModified: new Date(),
+        changeFrequency: 'weekly',
+        priority: 0.8,
+    }))
+
+    const entries_t: MetadataRoute.Sitemap = templates.map(({ slug }) => ({
+        url: `${BASE_URL}/templates/${slug}`,
         lastModified: new Date(),
         changeFrequency: 'weekly',
         priority: 0.8,
@@ -36,6 +44,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
             priority: 1,
         },
         ...allUrls,
-        ...entries,
+        ...entries_c,
+        ...entries_t
     ]
 }
