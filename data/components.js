@@ -68,6 +68,9 @@ import FED2 from "@/ui/feedback/S2";
 import FED3 from "@/ui/feedback/S3";
 import FED4 from "@/ui/feedback/S4";
 import CFED1 from "@/ui/feedback/C1.mdx";
+import CFED2 from "@/ui/feedback/C2.mdx";
+import CFED3 from "@/ui/feedback/C3.mdx";
+import CFED4 from "@/ui/feedback/C4.mdx";
 
 import NL1 from "@/ui/newsletter/S1";
 import NL2 from "@/ui/newsletter/S2";
@@ -343,16 +346,19 @@ const components = [
             {
                 title: "Simple feedback 2",
                 component: <FED2 />,
+                code: <CFED2 />,
                 pro: false,
             },
             {
                 title: "Simple feedback 3",
                 component: <FED3 />,
+                code: <CFED3 />,
                 pro: false,
             },
             {
                 title: "Simple feedback 4",
                 component: <FED4 />,
+                code: <CFED4 />,
                 pro: true,
             },
         ],
