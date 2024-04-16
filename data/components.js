@@ -4,7 +4,7 @@ import Hero from "@/public/images/components/hero.png";
 import Header from "@/public/images/components/header.png";
 import Feature from "@/public/images/components/feature.png";
 import FeatureList from "@/public/images/components/feature-list.png";
-import FlyourMenu from '@/public/images/components/flyout.png';
+import FlyoutMenu from '@/public/images/components/flyout.png';
 import Feedback from "@/public/images/components/feedback.png";
 import Newsletter from "@/public/images/components/newsletter.png";
 import Blogs from "@/public/images/components/blogs.png";
@@ -305,8 +305,8 @@ const components = [
         slug: "flyout-menu",
         name: "Flyout Menu",
         description: "The flyout-menu section provides three user-friendly fly-out menu components, each designed to enhance navigation experiences on web interfaces. ",
-        image: FlyourMenu,
-        imgurl: "/images/components/feature-list.png",
+        image: FlyoutMenu,
+        imgurl: "/images/components/flyout.png",
         number: "3 components",
         data: [
             {
@@ -334,7 +334,7 @@ const components = [
         name: "Feedback",
         description: "The feedback section presents four feedback components, simplifying user interactions on web interfaces.",
         image: Feedback,
-        imgurl: "/images/components/feadback.png",
+        imgurl: "/images/components/feedback.png",
         number: "4 components",
         data: [
             {
@@ -436,7 +436,7 @@ const components = [
         name: "Pricing",
         description: "The pricing section offers two straightforward pricing components, each designed for easy integration into web interfaces with accompanying code snippets.",
         image: Pricing,
-        imgurl: "/images/components/blogs.png",
+        imgurl: "/images/components/pricing.png",
         number: "2 components",
         data: [
             {
@@ -457,7 +457,7 @@ const components = [
         name: "How it works",
         description: "The how-it-works section presents two straightforward components explaining processes, each designed for easy integration into web interfaces with accompanying code snippets",
         image: Hiw,
-        imgurl: "/images/components/blogs.png",
+        imgurl: "/images/components/hiw.png",
         number: "2 components",
         data: [
             {
@@ -479,7 +479,7 @@ const components = [
         name: "Container",
         description: "The container section provides two simple container components, one utilizing grid and the other flex, with corresponding code snippets for easy integration into web interfaces",
         image: Container,
-        imgurl: "/images/components/blogs.png",
+        imgurl: "/images/components/container.png",
         number: "2 components",
         data: [
             {
@@ -501,7 +501,7 @@ const components = [
         name: "FAQ",
         description: "The frequently-asked-questions section offers two straightforward FAQ components, each designed for easy integration into web interfaces with accompanying code snippets.",
         image: Faq,
-        imgurl: "/images/components/blogs.png",
+        imgurl: "/images/components/faq.png",
         number: "2 components",
         data: [
             {
@@ -523,7 +523,7 @@ const components = [
         name: "Article",
         description: "The article section presents three straightforward article components, each designed for seamless integration into web interfaces with accompanying code snippets.",
         image: Article,
-        imgurl: "/images/components/blogs.png",
+        imgurl: "/images/components/article.png",
         number: "3 components",
         data: [
             {
@@ -551,7 +551,7 @@ const components = [
         name: "Logo",
         description: "The logo section features three straightforward logo components, each designed for easy integration into web interfaces with corresponding code snippets.",
         image: Logo,
-        imgurl: "/images/components/blogs.png",
+        imgurl: "/images/components/logo.png",
         number: "3 components",
         data: [
             {
@@ -579,7 +579,7 @@ const components = [
         name: "Team",
         description: "The team section offers three simple team components, each designed for easy integration into web interfaces with corresponding code snippets.",
         image: Team,
-        imgurl: "/images/components/blogs.png",
+        imgurl: "/images/components/team.png",
         number: "3 components",
         data: [
             {
