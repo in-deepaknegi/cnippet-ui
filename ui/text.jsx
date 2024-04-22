@@ -11,6 +11,7 @@ import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import Image from "next/image";
 import Hero1 from "@/public/images/profile/profile3.jpg";
 import Hero2 from "@/public/images/profile/profile5.jpg";
+import Hero3 from "@/public/images/profile/profile2.jpg";
 
 const feedbacks = [
     {
@@ -29,11 +30,11 @@ const feedbacks = [
         name: "Judith Black 3",
         para: "Commodo amet fugiat excepteur sunt qui ea elit cupidatat ullamco consectetur ipsum elit consequat. Elit sunt proident ea nulla ad nulla dolore ad pariatur tempor non. Sint veniam minim et ea.",
         social: "@judithblack",
-        image: Hero2,
+        image: Hero3,
     },
 ];
 
-export default function App() {
+const Feedback4 = () => {
     const data = [...feedbacks, ...feedbacks, ...feedbacks];
 
     return (
@@ -47,10 +48,10 @@ export default function App() {
                             centeredSlides={true}
                             autoplay={{
                                 delay: 0,
-                                disableOnInteraction: false,
+                                // disableOnInteraction: false,
                             }}
                             loop={true}
-                            speed={15500}
+                            speed={5000}
                             breakpoints={{
                                 768: {
                                     slidesPerView: 1,
@@ -101,3 +102,5 @@ export default function App() {
         </>
     );
 }
+
+export default Feedback4;

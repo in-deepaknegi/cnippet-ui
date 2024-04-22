@@ -19,6 +19,10 @@ const links = [
         url: "/templates",
     },
     {
+        title: "Layouts",
+        url: "/layouts",
+    },
+    {
         title: "Contacts",
         url: "/contacts",
     },

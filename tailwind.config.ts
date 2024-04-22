@@ -10,6 +10,14 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontSize: {
+        md: '1.085rem',
+      },
+      fontFamily: {
+        swim: ["switzer-med"],
+        swir: ["switzer-reg"],
+        paris: ["paris-reg"],
+      },
       colors: {
         'dusk': {
           100: '#fafafa',
