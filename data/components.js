@@ -43,6 +43,8 @@ import HE1 from "@/ui/header/S1";
 import HE2 from "@/ui/header/S2";
 import HE3 from "@/ui/header/S3";
 import CHE1 from "@/ui/header/C1.mdx";
+import CHE2 from "@/ui/header/C2.mdx";
+import CHE3 from "@/ui/header/C3.mdx";
 
 import FE1 from "@/ui/feature/S1";
 import FE2 from "@/ui/feature/S2";
@@ -242,11 +244,13 @@ const components = [
             {
                 title: "Simple header 2",
                 component: <HE2 />,
+                code: <CHE2 />,
                 pro: false,
             },
             {
                 title: "Pro header 1",
                 component: <HE3 />,
+                code: <CHE3 />,
                 pro: true,
             },
         ],
