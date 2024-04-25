@@ -36,8 +36,8 @@ const Feature2 = () => {
                                 <div key={feature.name}>
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
-                                        width="24"
-                                        height="24"
+                                        width="28"
+                                        height="28"
                                         viewBox="0 0 24 24"
                                         fill="none"
                                         stroke="currentColor"
@@ -60,7 +60,7 @@ const Feature2 = () => {
                         <div className="mt-10 flex gap-x-6">
                             <a
                                 href="#"
-                                className="rounded-md bg-black px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-gray-800"
+                                className="rounded-full bg-black px-4 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-gray-800"
                             >
                                 Discover more
                             </a>

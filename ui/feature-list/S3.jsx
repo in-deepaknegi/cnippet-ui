@@ -45,8 +45,11 @@ const Featurelist = () => {
                 <div className="mx-auto mt-16 max-w-2xl px-0 sm:mt-20 md:px-5 lg:mt-24 lg:max-w-none lg:px-10">
                     <dl className="mx-auto grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-3">
                         {features.map((feature, i) => (
-                            <div key={i} className="flex flex-col md:p-3">
-                                <dt className="flex flex-col gap-y-5 text-xl font-semibold leading-7">
+                            <div
+                                key={i}
+                                className="group flex flex-col overflow-hidden md:p-3"
+                            >
+                                <dt className="flex flex-col gap-y-5 text-2xl font-semibold">
                                     <a
                                         href={feature.href}
                                         className="relative overflow-hidden rounded-2xl"
@@ -61,15 +64,13 @@ const Featurelist = () => {
                                 </dt>
                                 <dd className="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-600">
                                     <p className="flex-auto">{feature.para}</p>
-                                    <p className="mt-6">
-                                        <a
-                                            href={feature.href}
-                                            className="text-sm font-semibold leading-6 text-blue-600"
-                                        >
-                                            Learn more
-                                            <span> →</span>
-                                        </a>
-                                    </p>
+                                    <a
+                                        href={feature.href}
+                                        className="mt-3 -translate-x-32 text-sm font-semibold leading-6 text-blue-600 transition-all duration-500 ease-in-out group-hover:translate-x-1"
+                                    >
+                                        Learn more
+                                        <span> →</span>
+                                    </a>
                                 </dd>
                             </div>
                         ))}

@@ -49,7 +49,7 @@ const Feature1 = () => {
                         <div className="mt-10 flex gap-x-6">
                             <a
                                 href="#"
-                                className="rounded-md bg-black px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-gray-800"
+                                className="rounded-full bg-black px-5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-gray-800"
                             >
                                 Discover more
                             </a>
