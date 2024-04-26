@@ -66,8 +66,8 @@ const Unauth = ({ components }) => {
                                             Preview
                                         </span>
                                     </button>
-                                    <button
-                                        onClick={() => changeTab(index, 1)}
+                                    <a
+                                        href='#login'
                                         className={`flex items-center rounded-md py-[0.45rem] pl-2 pr-2 text-sm font-semibold lg:pr-3 ${activeTab[index] === 1 ? "bg-white shadow" : ""} transition-all ease-in-out duration-500`}
                                     >
                                         <svg
@@ -85,9 +85,9 @@ const Unauth = ({ components }) => {
                                             <polyline points="8 6 2 12 8 18" />
                                         </svg>
                                         <span className="sr-only text-stone-900 lg:not-sr-only lg:ml-2">
-                                            Code
+                                            Log in
                                         </span>
-                                    </button>
+                                    </a>
                                 </div>
                             </div>
 
@@ -105,7 +105,7 @@ const Unauth = ({ components }) => {
                 ))}
             </div>
 
-            <section className="bg-white py-8 sm:py-16">
+            <section id='login' className="bg-white py-8 sm:py-16">
                 <div className="mx-auto max-w-[90%] px-6 lg:px-8">
                     <div className="mx-auto mt-16 max-w-2xl rounded-3xl ring-1 ring-gray-200  sm:mt-20 lg:mx-0 lg:flex lg:max-w-none">
                         <div className="p-8 sm:p-10 lg:flex-auto">

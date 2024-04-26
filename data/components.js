@@ -323,7 +323,7 @@ const components = [
                 title: "Simple fly-out menu 2",
                 component: <FM2 />,
                 code: <CFM2 />,
-                pro: false,
+                pro: true,
             },
             {
                 title: "Simple fly-out menu 3",
